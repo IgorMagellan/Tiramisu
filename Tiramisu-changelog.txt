@@ -1,0 +1,8 @@
+﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Tiramisu 4.0  for OpenAndroMap *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(mapsforge V4+)
+
+06/01/2022
+Global renaming Tiramisu_3/  -> res/
+
