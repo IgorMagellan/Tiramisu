@@ -1,7 +1,7 @@
 # Tiramisu
  rendertheme OpenAndroMaps for Locus, Orux and other mapsforge-compatible programms
  
-[Changelog](Tiramisu-changelog.txt)  
+[Changelog (in Russian)](Tiramisu-changelog.txt)  
 
 Links:
 
