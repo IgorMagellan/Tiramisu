@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Tiramisù 3.0 beta for Oruxmaps and MapsForge compatible applications
+Tiramisù 4.0 beta for Oruxmaps and MapsForge compatible applications
 
 by Maki
 
@@ -24,11 +24,11 @@ https://www.mapbox.com/maki/	- Licensed under the BSD license https://github.com
 (BTW,my nickname has nothing to do with the mapbox one)
 
 Contact me through: http://tartamillo.wordpress.com
-
 -->
-<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme renderTheme-v4.xsd" version="4" map-background="#ffffff">
 
-<!-- http://www.openandromaps.org/en/important-please-update-your-renderthemes -->
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
+	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
+	version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
 
@@ -195,10 +195,10 @@ Contact me through: http://tartamillo.wordpress.com
 
 	<layer id="tms_velo" parent="tms_base" visible="true">
 		<name lang="en" value="Velo"/>
+		<cat id="tms_crossings"/>
 		<overlay id="tms_tracks-cycle"/>
 		<overlay id="tms_cynw"/>
 		<overlay id="tms_barriers-cy"/>
-		<cat id="tms_crossings"/>
 	</layer>
 
 </stylemenu>

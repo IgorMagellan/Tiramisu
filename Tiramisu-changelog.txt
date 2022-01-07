@@ -4,5 +4,8 @@
 (mapsforge V4+)
 
 06/01/2022
-Global renaming Tiramisu_3/  -> res/
+Переименование каталога графических ресурсов Tiramisu_3/  -> res/
+07/01/2022
+Исправление xsi:schemaLocation на правильный путь к схеме
+переставил cat id="tms_crossings"
 
