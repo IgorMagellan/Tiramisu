@@ -37,22 +37,42 @@ Contact me through: http://tartamillo.wordpress.com
 <!-- Layers -->
 	<layer id="tms_contours" enabled="true">
 		<name lang="en" value="Contour lines"/>
+		<name lang="ru" value="Контурные линии высот" />
+		<name lang="es" value="Líneas de contorno" />
+		<name lang="de" value="Höhenlinien"/>
+		<name lang="it" value="Linee di contorno"/>
 		<cat id="tms_contours"/>
 	</layer>
 	<layer id="tms_contours-lz" enabled="false">
 		<name lang="en" value="Contour lines (low zoom)"/>
+		<name lang="ru" value="Контурные линии высот (малые масштабы, ≤ z13)" />
+		<name lang="es" value="Líneas de contorno (zoom bajo)" />
+		<name lang="de" value="Höhenlinien (geringer Zoom)"/>
+		<name lang="it" value="Linee di contorno (zoom basso)"/>
 		<cat id="tms_contours-lz"/>
 	</layer>
 	<layer id="tms_land-base" enabled="true">
 		<name lang="en" value="Terrain (basic)"/>
+		<name lang="ru" value="Местность (basic)"/>
+		<name lang="es" value="Terreno (básico)" />
+		<name lang="de" value="Gelände (Grundkenntnisse)"/>
+		<name lang="it" value="Terrain (base)"/>		
 		<cat id="tms_land-base"/>
 	</layer>
 	<layer id="tms_land-detail" enabled="true">
 		<name lang="en" value="Terrain (detailed)"/>
+		<name lang="ru" value="Местность (detail)"/>
+		<name lang="es" value="Terreno (detalle)" />
+		<name lang="de" value="Gelände (Detail)"/>
+		<name lang="it" value="Terreno (dettaglio)"/>
 		<cat id="tms_land-detail"/>
 	</layer>
 	<layer id="tms_land-ele" enabled="true">
 		<name lang="en" value="Landscape elements"/>
+		<name lang="ru" value="Элементы ландшафта" />
+		<name lang="es" value="Elementos del paisaje" />
+		<name lang="de" value="Landschaftselemente"/>
+		<name lang="it" value="Elementi del paesaggio"/>
 		<cat id="tms_water-land"/>
 		<cat id="tms_man-made"/>
 		<cat id="tms_aerial"/>
@@ -60,92 +80,176 @@ Contact me through: http://tartamillo.wordpress.com
 	</layer>
 	<layer id="tms_water" enabled="true">
 		<name lang="en" value="Water points"/>
+		<name lang="ru" value="Вода (Water points)" />
+		<name lang="es" value="Puntos de agua" />
+		<name lang="de" value="Wasserstellen"/>
+		<name lang="it" value="Punti d'acqua"/>
 		<cat id="tms_water"/>
 	</layer>
 	<layer id="tms_huts" enabled="true">
 		<name lang="en" value="Huts and shelters"/>
+		<name lang="ru" value="Укрытия, хижины, избушки" />
+		<name lang="es" value="Cabañas y refugios" />
+		<name lang="de" value="Hütten und Schutzhütten"/>
+		<name lang="it" value="Capanne e rifugi"/>
 		<cat id="tms_huts"/>
 	</layer>
 	<layer id="tms_acco" enabled="false">
 		<name lang="en" value="Accommodation"/>
+		<name lang="ru" value="Проживание: Турбазы, дачи, гостиницы, хостелы..." />
+		<name lang="es" value="Alojamiento" />
+		<name lang="de" value="Unterkunft"/>
+		<name lang="it" value="Alloggio"/>
 		<cat id="tms_acco"/>
 	</layer>
 	<layer id="tms_picnic" enabled="true">
 		<name lang="en" value="Camping &amp; Picnic"/>
+		<name lang="ru" value="Отдых: Стоянки, кемпинги, места д/пикника, скамейки, туалеты.." />
+		<name lang="es" value="Camping y picnic" />
+		<name lang="de" value="Camping &amp; Picknick"/>
+		<name lang="it" value="Campeggio e Picnic"/>
 		<cat id="tms_camp"/>
 		<cat id="tms_picnic"/>
 	</layer>
 	<layer id="tms_hknw" enabled="true">
-		<name lang="en" value="Hiking networks"/>
+		<name lang="en" value="Hiking networks ^"/>
+		<name lang="ru" value="Пешеходные сети ^" />
+		<name lang="es" value="Redes de senderismo ^" />
+		<name lang="de" value="Wandernetzwerke ^"/>
+		<name lang="it" value="Reti escursionistiche ^"/>
 		<cat id="tms_hknw"/>
 	</layer>
 	<layer id="tms_mtbnw" enabled="true">
-		<name lang="en" value="MTB networks"/>
+		<name lang="en" value="MTB networks ^"/>
+		<name lang="ru" value="MTB-сети ^" />
+		<name lang="es" value="Redes MTB ^" />
+		<name lang="de" value="MTB-Netzwerke ^"/>
+		<name lang="it" value="reti MTB ^"/>
 		<cat id="tms_mtbnw"/>
 	</layer>
 	<layer id="tms_hknw-mtb" enabled="false">
-		<name lang="en" value="Hiking networks"/>
+		<name lang="en" value="Hiking networks ^"/>
+		<name lang="ru" value="Пешеходные сети ^" />
+		<name lang="es" value="Redes de senderismo ^" />
+		<name lang="de" value="Wandernetzwerke ^"/>
+		<name lang="it" value="Reti escursionistiche ^"/>
 		<cat id="tms_hknw"/>
 	</layer>
 	<layer id="tms_cynw-mtb" enabled="false">
-		<name lang="en" value="Cycling networks"/>
+		<name lang="en" value="Cycling networks ^"/>
+		<name lang="ru" value="Велосипедные сети ^" />
+		<name lang="es" value="Redes ciclistas ^" />
+		<name lang="de" value="Fahrradnetzwerke ^"/>
+		<name lang="it" value="Reti ciclistiche ^"/>
 		<cat id="tms_cynw"/>
 	</layer>
 	<layer id="tms_cynw" enabled="true">
-		<name lang="en" value="Cycling networks"/>
+		<name lang="en" value="Cycling networks ^"/>
+		<name lang="ru" value="Велосипедные сети ^" />
+		<name lang="es" value="Redes ciclistas ^" />
+		<name lang="de" value="Fahrradnetzwerke ^"/>
+		<name lang="it" value="Reti ciclistiche ^"/>
 		<cat id="tms_cynw"/>
 	</layer>
 	<layer id="tms_barriers-cy" enabled="true">
 		<name lang="en" value="Barriers"/>
+		<name lang="ru" value="Барьеры и препятствия" />
+		<name lang="es" value="Barreras" />
+		<name lang="de" value="Barrieren"/>
+		<name lang="it" value="Barriere"/>
 		<cat id="tms_barriers"/>
 	</layer>
 	<layer id="tms_barriers-hk" enabled="false">
 		<name lang="en" value="Barriers"/>
+		<name lang="ru" value="Барьеры и препятствия" />
+		<name lang="es" value="Barreras" />
+		<name lang="de" value="Barrieren"/>
+		<name lang="it" value="Barriere"/>
 		<cat id="tms_barriers"/>
 	</layer>
 	<layer id="tms_tracks-cycle" enabled="false">
 		<name lang="en" value="Easy Tracks"/>
+		<name lang="ru" value="Легкие треки ^" />
+		<name lang="es" value="Easy Tracks" />
+		<name lang="de" value="Easy Tracks"/>		
+		<name lang="it" value="Easy Tracks"/>
 		<cat id="tms_tracks-cycle"/>
 	</layer>
 	<layer id="tms_trans-priv" enabled="false">
 		<name lang="en" value="Transportation (private)"/>
+		<name lang="ru" value="Транспорт (частный): парковки, заправки" />
+		<name lang="es" value="Transporte (privado)" />
+		<name lang="de" value="Transport (privat)"/>
+		<name lang="it" value="Trasporti (privati)"/>
 		<cat id="tms_trans-priv"/>
 	</layer>
 	<layer id="tms_trans-pub" enabled="false">
 		<name lang="en" value="Transportation (public)"/>
+		<name lang="ru" value="Транспорт (общественный): станции, остановки автобусные, ж/д, трамвайные, метро" />
+		<name lang="es" value="Transporte (público)" />
+		<name lang="de" value="Transport (öffentlich)"/>
+		<name lang="it" value="Trasporti (pubblici)"/>
 		<cat id="tms_trans-pub"/>
 	</layer>
 	<layer id="tms_tourism" enabled="true">
 		<name lang="en" value="Tourism"/>
+		<name lang="ru" value="Туризм, +пещеры, зоопарки" />
+		<name lang="es" value="Turismo" />
+		<name lang="de" value="Tourismus"/>
+		<name lang="it" value="Turismo"/>
 		<cat id="tms_tour"/>
 		<cat id="tms_info"/>
 		<cat id="tms_attraction"/>
 	</layer>
 	<layer id="tms_culture" enabled="false">
 		<name lang="en" value="Cultural stuff"/>
+		<name lang="ru" value="Культура: Музеи, памятники, монументы, зáмки.." />
+		<name lang="es" value="Cosas culturales" />
+		<name lang="de" value="Kulturelles"/>
+		<name lang="it" value="Cose culturali"/>
 		<cat id="tms_culture"/>
 		<cat id="tms_schools"/>
 	</layer>
 	<layer id="tms_freetime" enabled="false">
 		<name lang="en" value="Free time"/>
+		<name lang="ru" value="Развлечения: Спорт, кино, театры, игр.площадки" />
+		<name lang="es" value="Tiempo libre" />
+		<name lang="de" value="Freizeit"/>
+		<name lang="it" value="Tempo libero"/>
 		<cat id="tms_sport"/>
 		<cat id="tms_leisure"/>
 	</layer>
 	<layer id="tms_food" enabled="false">
 		<name lang="en" value="Food"/>
+		<name lang="ru" value="Питание: Магазины, супермаркеты, кафе, бары, рестораны" />
+		<name lang="es" value="Comida" />
+		<name lang="de" value="Essen"/>
+		<name lang="it" value="Cibo"/>
 		<cat id="tms_food"/>
 	</layer>
 	<layer id="tms_shops" enabled="false">
 		<name lang="en" value="Shopping"/>
+		<name lang="ru" value="Почта, банки, терминалы, хоз. и рем.магазины" />
+		<name lang="es" value="Compras" />
+		<name lang="de" value="Einkaufen"/>
+		<name lang="it" value="Shopping"/>
 		<cat id="tms_shops"/>
 		<cat id="tms_bureaucracy"/>
 	</layer>
 	<layer id="tms_religion" enabled="true">
 		<name lang="en" value="Religion"/>
+		<name lang="ru" value="Религия" />
+		<name lang="es" value="Religión" />
+		<name lang="de" value="Religion"/>
+		<name lang="it" value="Religione"/>
 		<cat id="tms_religion"/>
 	</layer>
 	<layer id="tms_emergency" enabled="false">
 		<name lang="en" value="Emergency"/>
+		<name lang="ru" value="Экстренные службы, полиция, больницы, аптеки, доктора.." />
+		<name lang="es" value="Emergencia" />
+		<name lang="de" value="Notfall"/>
+		<name lang="it" value="Emergenza"/>
 		<cat id="tms_emergency"/>
 	</layer>
 
@@ -174,6 +278,10 @@ Contact me through: http://tartamillo.wordpress.com
 <!-- Menu -->
 	<layer id="tms_hiking" parent="tms_base" visible="true">
 		<name lang="en" value="Hiking"/>
+		<name lang="ru" value="Пеший туризм" />
+		<name lang="es" value="Senderismo" />
+		<name lang="de" value="Wandern"/>
+		<name lang="it" value="Escursionismo"/>
 		<cat id="tms_tracks"/>
 		<cat id="tms_paths"/>
 		<cat id="tms_hk"/>
@@ -183,6 +291,10 @@ Contact me through: http://tartamillo.wordpress.com
 
 	<layer id="tms_mtb" parent="tms_base" visible="true">
 		<name lang="en" value="Mountain biking"/>
+		<name lang="ru" value="Горный велосипед (MTB)" />
+		<name lang="es" value="Bicicleta de montaña" />
+		<name lang="de" value="Mountainbiking"/>
+		<name lang="it" value="andare in mountain bike"/>
 		<cat id="tms_tracks"/>
 		<cat id="tms_paths"/>
 		<cat id="tms_mtb"/>
@@ -195,6 +307,10 @@ Contact me through: http://tartamillo.wordpress.com
 
 	<layer id="tms_velo" parent="tms_base" visible="true">
 		<name lang="en" value="Velo"/>
+		<name lang="ru" value="Велосипед" />
+		<name lang="es" value="Velo" />
+		<name lang="de" value="Velo"/>
+		<name lang="it" value="Velo"/>
 		<cat id="tms_crossings"/>
 		<overlay id="tms_tracks-cycle"/>
 		<overlay id="tms_cynw"/>
