@@ -417,7 +417,7 @@ Contact me through: http://tartamillo.wordpress.com
 		<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"> <area src="file:/res/p_quarry.svg" symbol-width="015" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"> <area src="file:/res/p_quarry.svg" symbol-width="025" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"> <area src="file:/res/p_quarry.svg" symbol-width="035" /> </rule>
-		<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"> <area src="file:/res/p_quarry.svg" symbol-width="050" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="16" zoom-max="99"> <area src="file:/res/p_quarry.svg" symbol-width="050" /> </rule>
 		<area stroke="#9EA199" stroke-width="0.2" />
 	</rule>
 
@@ -2353,8 +2353,8 @@ Contact me through: http://tartamillo.wordpress.com
 	</rule>
 	
 <!-- pic-nic -->
-	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.png" /> </rule>
-	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.png" /> </rule>
+	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.svg" symbol-width="12" /> </rule>
+	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="16" /> </rule>
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism" v="picnic_site">	<symbol priority="235" src="file:/res/s_picnic_site.png" /> </rule>
 
 <!-- huts and shelters -->

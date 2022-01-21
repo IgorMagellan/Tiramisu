@@ -10,3 +10,14 @@
 переставил cat id="tms_crossings"
 16/01/2022
 В меню добавлен перевод на русский, испанский, немецкий и итальянский языки; добавлена иконка для Locusmap; легенды карты (pdf) объединены и создан lnk
+21/01/2022
+исключен font-style из p_scrub, p_wood-coniferous, p_wood-mixed, p_military.svg (cruiser-gl давал warnings)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Исправление ошибок:
+zoom-max=16 у quarry
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PNG --> SVG
+bench, toilets
