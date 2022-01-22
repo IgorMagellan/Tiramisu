@@ -1,0 +1,19 @@
+<svg width="32" height="25" version="1.1" viewBox="0 0 32 25" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#f00">
+  <path d="m15.994 4-10 5.9938v13.476h20v-13.381z" stroke="#fff" stroke-width="2"/>
+  <path d="m15.994 1-0.93126 0.608-13.069 8.128a1.8875 1.8865 0 1 0 1.8936 3.264l12.137-7.52 12.075 7.488a1.9013 1.9004 0 0 0 1.8936-3.296l-13.007-8.064z" color="#000000" stroke="#fff" stroke-width="2" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  <path d="m15.995 4.1633-10 5.9938v13.476h20v-13.381z"/>
+  <path d="m15.995 1.1633-0.93126 0.608-13.069 8.128a1.8875 1.8865 0 1 0 1.8936 3.264l12.137-7.52 12.075 7.488a1.9013 1.9004 0 0 0 1.8936-3.296l-13.007-8.064z" color="#000000" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+ </g>
+ <path d="m16.038 5.8478-8.0726 4.753v13.043h16.07v-12.967z" fill="#fff"/>
+ <circle cx="18.123" cy="10.267" r="1.8921" color="#000000"/>
+ <g fill="none" stroke="#000" stroke-linecap="round">
+  <g stroke-linejoin="round">
+   <path d="m12.204 22.008 3.4911-4.1501" stroke-width="2"/>
+   <path d="m15.914 18.061 5.3123 3.8452" stroke-width="2.6"/>
+   <path d="m19.332 13.471-3.453 1.8129-3.5699-0.29348" stroke-width="1.7"/>
+   <path d="m19.298 14.079 2.0237 7.5642" stroke-width="3.2"/>
+  </g>
+  <path d="m9.7781 20.959 2.4854 1.4349" stroke-width="1.4"/>
+ </g>
+</svg>

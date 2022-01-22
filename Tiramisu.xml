@@ -252,6 +252,14 @@ Contact me through: http://tartamillo.wordpress.com
 		<name lang="it" value="Emergenza"/>
 		<cat id="tms_emergency"/>
 	</layer>
+	<layer id="tms_landnames" enabled="true">
+		<name lang="en" value="Names of places, POIs"/>
+		<name lang="ru" value="Названия мест, POI"/>
+		<name lang="es" value="Nombres de lugares, puntos de interés" />
+		<name lang="de" value="Ortsnamen, POIs"/>
+		<name lang="it" value="Nomi di luoghi, POI"/>		
+		<cat id="tms_landnames"/>
+	</layer>
 
 <!-- Base -->
 		<layer id="tms_base">
@@ -260,6 +268,7 @@ Contact me through: http://tartamillo.wordpress.com
 			<overlay id="tms_land-base"/>
 			<overlay id="tms_land-detail"/>
 			<overlay id="tms_land-ele"/>
+			<overlay id="tms_landnames"/>
 			<overlay id="tms_water"/>
 			<overlay id="tms_huts"/>
 			<overlay id="tms_acco"/>
@@ -2331,12 +2340,24 @@ Contact me through: http://tartamillo.wordpress.com
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
-	<rule e="node" k="natural" v="cave_entrance" zoom-min="13">
-		<symbol priority="425" id="tms_cave" src="file:/res/s_cave_entrance.png" />
-		<caption priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
- 		<caption symbol-id="tms_cave" position="below" k="ele"  font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" >
+		<symbol priority="425" id="tms_cave" display="always" src="file:/res/s_cave_entrance.svg" symbol-width="17" />
+		<caption cat="tms_landnames" priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+		<caption cat="tms_landnames" symbol-id="tms_cave" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-	
+
+	<rule cat="tms_tour" e="any" k="man_made" v="adit" >
+		<symbol priority="425" id="tms_adit" display="always" src="file:/res/adit.svg" symbol-width="20" />
+		<caption cat="tms_landnames" priority="310" symbol-id="tms_adit" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+		<caption cat="tms_landnames" symbol-id="tms_adit" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+
+	<rule cat="tms_tour" e="any" k="man_made" v="adit_disused" >
+		<symbol priority="425" id="tms_adit" display="always" src="file:/res/adit-dis.svg" symbol-width="20" />
+		<caption cat="tms_landnames" symbol-id="tms_adit" priority="310" k="name" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+		<caption cat="tms_landnames" symbol-id="tms_adit" k="ele" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+
 	<rule e="node" k="natural" v="tree">
 		<symbol id="tms_tree" src="file:/res/s_tree.png" />
 		<caption symbol-id="tms_tree" position="above" k="name" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2353,8 +2374,8 @@ Contact me through: http://tartamillo.wordpress.com
 	</rule>
 	
 <!-- pic-nic -->
-	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.svg" symbol-width="12" /> </rule>
-	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="16" /> </rule>
+	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
+	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="21" /> </rule>
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism" v="picnic_site">	<symbol priority="235" src="file:/res/s_picnic_site.png" /> </rule>
 
 <!-- huts and shelters -->
@@ -2387,7 +2408,7 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule cat="tms_huts" e="any" k="amenity" v="shelter" zoom-min="14">
 		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">								<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.png" /> </rule>
 		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">									<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_basic_hut.png" /> </rule>
-		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter.png" /> </rule>
+		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter.svg" symbol-width="21"/> </rule>
 		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="14"> <caption priority="320" symbol-id="tms_hut"  k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="17"> <caption priority="320" symbol-id="tms_hut"  k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		<rule e="node" k="tourism" v="~">
@@ -2620,11 +2641,22 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule cat="tms_man-made" e="node" k="tower" v="observation"><symbol src="file:/res/s_tower_observation.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/res/s_windmill.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/res/s_lighthouse.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="wind"><symbol src="file:/res/s_power_wind.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave"><symbol src="file:/res/s_power.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="solar"><symbol src="file:/res/s_power_solar.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol src="file:/res/s_power.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="coal"><symbol src="file:/res/s_power.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear"><symbol src="file:/res/s_power.png" /></rule>
+	<rule cat="tms_man-made" e="any" k="man_made" v="water_tower" zoom-min="14">
+		<symbol display="always" id="s_water_tower" src="file:/res/s_water_tower.svg" symbol-height="21"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_water_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="wind">	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave"><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="solar"><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="gas">	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
+	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="coal">	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear"><symbol display="always" id="s_generator" src="file:/res/s_power_nuclear.svg" symbol-width="21" /></rule>
+
+	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
+        <caption cat="tms_landnames" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#BFffff00" stroke-width="2" />
+    </rule>	
 	
 </rendertheme>

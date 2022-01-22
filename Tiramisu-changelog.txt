@@ -13,11 +13,13 @@
 21/01/2022
 исключен font-style из p_scrub, p_wood-coniferous, p_wood-mixed, p_military.svg (cruiser-gl давал warnings)
 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Исправление ошибок:
 zoom-max=16 у quarry
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PNG --> SVG
-bench, toilets
+PNG --> SVG, Размер в правилах: Px * 2/3 
+Добавлены новые adit, adit_disused, water_tower; generator:source=coal,nuclear,water,gas;
+категории "Названия мест, POI" - tms_landnames;
