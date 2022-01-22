@@ -21,5 +21,5 @@ zoom-max=16 у quarry
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PNG --> SVG, Размер в правилах: Px * 2/3 
-Добавлены новые adit, adit_disused, water_tower; generator:source=coal,nuclear,water,gas;
+Добавлены новые adit, adit_disused, water_tower; generator:source=coal,nuclear,water,gas; hunting_stand, 
 категории "Названия мест, POI" - tms_landnames;

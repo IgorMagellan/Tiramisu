@@ -2637,16 +2637,48 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_office">	<symbol src="file:/res/s_postoffice.png" /></rule>
 
 <!-- man_made -->
-	<rule cat="tms_man-made" e="node" k="tower" v="communication"><symbol src="file:/res/s_tower_communication.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="tower" v="observation"><symbol src="file:/res/s_tower_observation.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/res/s_windmill.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/res/s_lighthouse.png" /></rule>
-	<rule cat="tms_man-made" e="any" k="man_made" v="water_tower" zoom-min="14">
-		<symbol display="always" id="s_water_tower" src="file:/res/s_water_tower.svg" symbol-height="21"/>
+	<rule cat="tms_man-made" e="node" k="tower" v="communication" >
+		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_communication.svg" symbol-height="30"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="node" k="tower" v="observation" >
+		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_observation.svg" symbol-height="25" />
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" zoom-min="14" >
+		<symbol id="hunting_stand" display="always" src="file:/res/hunting_stand.svg" symbol-width="18"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="hunting_stand" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="node" k="man_made" v="windmill">
+		<symbol priority="200" display="always" id="s_windmill" src="file:/res/s_windmill.svg" symbol-width="25" />
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_windmill" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse">
+		<symbol display="always" id="s_lighthouse" src="file:/res/s_lighthouse.svg" symbol-width="24"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_lighthouse" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="any" k="man_made" v="water_tower" zoom-min="13">
+		<symbol display="always" id="s_water_tower" src="file:/res/s_water_tower_tms.svg" symbol-height="21"/>
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_water_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+
 	<rule cat="tms_man-made" e="any" k="generator:source" v="wind">	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
 	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave"><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
 	<rule cat="tms_man-made" e="any" k="generator:source" v="solar"><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
