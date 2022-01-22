@@ -1,0 +1,14 @@
+<svg width="34" height="34" version="1.1" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-26.1 -83.5)">
+  <path d="m27.2 84.9v.265 5.82.265h.265.265v-.265h.794v.265h4.23v-.265h.794v.265h.265.265v-.265-5.82-.265h-.265-.265v.529h-.794v-.529h-4.23v.529h-.794v-.529h-.265z" color="#000000" fill="#fc0" stroke="#00d400" stroke-width=".529"/>
+  <g transform="translate(-24.4 -13.2)">
+   <circle cx="55" cy="101" r="4.23" fill="#12ef12" stroke="#00dc00" stroke-width=".529"/>
+   <path d="m51.6 98.1v6.35h.529v-.265h.794v.265h4.23v-.265h.794v.265h.529v-6.35h-.529v.529h-.794v-.529h-4.23v.529h-.794v-.529h-.265zm.529 1.32h.794v.794h-.794zm5.03 0h.794v.794h-.794zm-5.03 1.59h.794v.794h-.794zm5.03 0h.794v.794h-.794zm-5.03 1.59h.794v.794h-.794zm5.03 0h.794v.794h-.794z" fill="#004900" stroke-width=".265"/>
+   <g fill="#03ff03">
+    <rect x="53.5" y="103" width="3.18" height="1.84" opacity=".488"/>
+    <rect x="53.5" y="100" width="3.18" height="2.08" opacity=".488"/>
+    <rect x="53.5" y="98.1" width="3.18" height="1.31" opacity=".488"/>
+   </g>
+  </g>
+ </g>
+</svg>
