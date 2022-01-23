@@ -750,12 +750,12 @@ Contact me through: http://tartamillo.wordpress.com
 	
 	<rule e="way" k="tourism" v="attraction" closed="yes">
 		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
-		<symbol id="tms_attraction" src="file:/res/s_attraction.svg" symbol-width="27" />
+		<symbol id="tms_attraction" src="file:/res/s_attraction.svg" symbol-width="17" />
 		<rule e="any" k="*" v="*" zoom-min="15"><caption  cat="tms_landnames" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	</rule>
 	<rule e="way" k="tourism" v="attraction" closed="no">
 		<line stroke="#BBF2CAEA" stroke-width="0.8" stroke-dasharray="6,12" stroke-linecap="round" />
-		<rule e="any" k="*" v="*" zoom-max="14"> <symbol id="tms_attraction"  src="file:/res/s_attraction.svg" symbol-width="27" /> </rule>
+		<rule e="any" k="*" v="*" zoom-max="14"> <symbol id="tms_attraction"  src="file:/res/s_attraction.svg" symbol-width="17" /> </rule>
 		<rule e="any" k="*" v="*" zoom-min="15"> <caption cat="tms_landnames" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	</rule>
 	<rule e="way" k="tourism" v="zoo"> <area fill="#BBC7F1A3" stroke="#6FC18E" stroke-width="0.2" /> </rule>
@@ -2285,29 +2285,29 @@ Contact me through: http://tartamillo.wordpress.com
 
 <!-- natural -->
 	<rule e="node" k="natural" v="peak" zoom-min="10" zoom-max="12">
-		<symbol display="ifspace" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" />
+		<symbol display="ifspace" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule e="node" k="natural" v="peak" zoom-min="13" zoom-max="13">
-		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" />
+		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule e="node" k="natural" v="peak" zoom-min="14">
-		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_peak.svg" />
+		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
 	<rule e="node" k="natural" v="volcano" zoom-min="10" zoom-max="12">
-		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" />
+		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule e="node" k="natural" v="volcano" zoom-min="13" zoom-max="13">
-		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" />
+		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule e="node" k="natural" v="volcano" zoom-min="14">
-		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_volcano.svg" />
+		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
@@ -2539,9 +2539,9 @@ Contact me through: http://tartamillo.wordpress.com
 
 <!-- cultural stuff -->
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="library"><symbol id="tms_school" src="file:/res/s_library.png" /></rule>
-	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school"><symbol  id="tms_school" src="file:/res/s_school.png" /></rule>
-	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="university|college"><symbol id="tms_school" src="file:/res/s_university.png" /></rule>
-	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school|library|university|college"><caption symbol-id="tms_school" k="name" font-style="normal" font-size="8" fill="#000090" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school"><symbol  id="tms_school" src="file:/res/s_school.svg" symbol-width="23" /></rule>
+	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="university|college"><symbol id="tms_school" src="file:/res/s_university.svg" display="always" symbol-width="23" /></rule>
+	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school|library|university|college"><caption symbol-id="tms_school" k="name" cat="tms_landnames" font-style="normal" font-size="8" fill="#000090" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="ruins">
 		<symbol src="file:/res/s_ruins.png" />
@@ -2574,10 +2574,15 @@ Contact me through: http://tartamillo.wordpress.com
 
 <!-- car stuff -->
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking">
-		<rule e="any" k="access" v="private">	<symbol priority="210" src="file:/res/s_parking_private.png" /></rule>
-		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/res/s_parking.png" /></rule>
+		<rule e="any" k="access" v="private">	<symbol priority="210" src="file:/res/s_parking_private.svg" symbol-width="16" /></rule>
+		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/res/s_parking.svg" symbol-width="16" /></rule>
 	</rule>
-	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel"><symbol priority="210" src="file:/res/s_fuel.png" /></rule>
+
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" >
+		<symbol priority="310" id="s_trans-priv" display="always" src="file:/res/s_fuel.svg" symbol-height="19" />
+		<caption priority="310" symbol-id="s_trans-priv" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+
 
 <!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
@@ -2613,11 +2618,11 @@ Contact me through: http://tartamillo.wordpress.com
 		</rule>
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
-		<symbol priority="220" id="tms_attraction" src="file:/res/s_attraction.svg" symbol-width="27" />
+		<symbol priority="220" id="tms_attraction" src="file:/res/s_attraction.svg" symbol-width="17" />
 		<caption cat="tms_landnames" priority="15" symbol-id="tms_attraction" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="1.2" />
 	</rule>
 	<rule cat="tms_attraction" e="any" k="tourism" v="zoo">
-		<symbol priority="220" id="tms_zoo" src="file:/res/s_zoo.png" />
+		<symbol priority="220" id="tms_zoo" src="file:/res/s_zoo.svg" symbol-height="29"/>
 		<caption cat="tms_landnames" priority="115" symbol-id="tms_zoo" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
