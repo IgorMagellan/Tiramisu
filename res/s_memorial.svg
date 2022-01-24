@@ -1,0 +1,18 @@
+<svg width="32" height="32" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+ <rect x="1" y="1.183" width="30" height="30" rx="5" fill="#6a3600" stroke="#fff" stroke-width="2"/>
+ <rect x="1" y="1.183" width="30" height="30" rx="5" fill="#743a00"/>
+ <g fill="#fff">
+  <path d="m8.9972 4.183c-0.3643 0-1 0.606-1 1.3182v16.682h16v-16.682c0-0.71217-0.6372-1.3182-1.3858-1.3182z" color="#000000" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  <path d="m8.4972 23.683h15.172l0.8551 1h-17.027z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m6.4972 27.683h19v-1h-18.989l-0.011 1z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+ </g>
+ <g fill="#808080">
+  <rect x="11.997" y="10.183" width="8" height="1"/>
+  <rect x="9.9972" y="8.183" width="12" height="1"/>
+  <rect x="9.9972" y="12.183" width="12" height="1"/>
+  <rect x="10.997" y="14.183" width="10" height="1"/>
+  <rect x="9.9972" y="16.183" width="12" height="1"/>
+  <rect x="10.997" y="18.183" width="10" height="1"/>
+  <rect x="10.997" y="6.183" width="10" height="1"/>
+ </g>
+</svg>

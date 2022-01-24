@@ -1,0 +1,23 @@
+<svg width="35" height="29" version="1.1" viewBox="0 0 35 29" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#743a00">
+  <path d="m1 1v2 25h9 24v-15-10-2h-2v2h-1v-2h-3v2h-1v-2h-2v2 8.9688h-2v-2h-2v2h-2v-2h-3v2h-2v-2h-2v2h-2v-8.9688-2h-2v2h-1v-2h-3v2h-1v-2z" color="#000000" stroke="#fff" stroke-width="2"/>
+  <rect x="25" y="3" width="9" height="25" color="#000000"/>
+  <rect x="1" y="3" width="9" height="25" color="#000000"/>
+  <rect x="1" y="12" width="33" height="16" color="#000000"/>
+  <rect x="28" y="1" width="3" height="3.0625" color="#000000"/>
+  <rect x="4" y="1" width="3" height="3.0625" color="#000000"/>
+  <rect x="32" y="1" width="2" height="3.0625" color="#000000"/>
+  <rect x="8" y="1" width="2" height="3.0625" color="#000000"/>
+  <rect x="16" y="10" width="3" height="2.7812" color="#000000"/>
+  <rect x="21" y="10" width="2" height="3.0938" color="#000000"/>
+  <rect x="12" y="10" width="2" height="3" color="#000000"/>
+  <rect x="25" y="1" width="2" height="3.0625" color="#000000"/>
+  <rect x="1" y="1" width="2" height="3.0625" color="#000000"/>
+ </g>
+ <g fill="#fff">
+  <rect x="28" y="6.0391" width="3" height="3"/>
+  <rect x="4" y="6.0391" width="3" height="3"/>
+  <ellipse cx="17.5" cy="22" rx="4.5" ry="4" color="#000000"/>
+  <rect x="13" y="22" width="9" height="6" color="#000000"/>
+ </g>
+</svg>

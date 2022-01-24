@@ -764,8 +764,8 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> <area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> </rule>
 	<rule e="way" k="amenity" v="fountain" closed="yes">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
-		<rule e="any" k="drinking_water" v="yes"> <symbol src="file:/res/s_fountain_d.png" /> </rule>
-		<rule e="any" k="drinking_water" v="*|~"> <symbol src="file:/res/s_fountain.png" /> </rule>
+		<rule e="any" k="drinking_water" v="yes"> <symbol src="file:/res/s_fountain_d.svg" symbol-width="25" /> </rule>
+		<rule e="any" k="drinking_water" v="*|~"> <symbol src="file:/res/s_fountain.svg" symbol-width="25" /> </rule>
 	</rule>
 
 <!-- leisure areas -->
@@ -2445,27 +2445,27 @@ Contact me through: http://tartamillo.wordpress.com
 	</rule>
 
 <!-- water sources -->
-	<rule cat="tms_water" e="any" k="amenity|waterway|natural" v="drinking_water|water_point|spring|fountain" zoom-max="15">
-		<symbol display="always" priority="305" symbol-width="9" src="file:/res/s_water.svg" />
+	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-max="15">
+		<symbol display="always" priority="305" symbol-width="9" src="file:/res/s_water.svg" symbol-width="14"/>
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
-		<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_drinking_water.png" />
-		<caption symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
+		<caption cat="tms_landnames" symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water" e="node" k="natural" v="spring" zoom-min="16">
-		<rule e="node" k="drinking_water" v="~">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring.png" /> </rule>
-		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_nd.png" /> </rule>
-		<rule e="node" k="drinking_water" v="yes">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_d.png" /> </rule>
-		<caption symbol-id="tms_drop" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<rule e="node" k="drinking_water" v="~">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring.svg" symbol-height="17" /> </rule>
+		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_nd.svg" symbol-height="17" /> </rule>
+		<rule e="node" k="drinking_water" v="yes">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_d.svg" symbol-height="17" /> </rule>
+		<caption cat="tms_landnames" symbol-id="tms_drop" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain.png" />
-			<caption symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#743a00" stroke="#FFFFFF" stroke-width="2.0" />
+			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain.svg" symbol-width="25" />
+			<caption cat="tms_landnames" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#743a00" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 		<rule e="node" k="drinking_water" v="yes">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain_d.png" />
-			<caption symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain_d.svg" symbol-width="25" />
+			<caption cat="tms_landnames" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 	</rule>
 
@@ -2480,7 +2480,7 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="cafe">		<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_cafe.svg" symbol-width="23" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="pub|bar|beverages"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_pub.svg" symbol-width="23" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_marketplace.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_mall3.svg" symbol-width="25" /></rule>
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">			<symbol priority="250" id="tms_shop" display="always" src="file:/res/s_mall3.svg" symbol-width="25" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="organic|shop_farm|greengrocer|cheese"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_organic.svg" symbol-width="23" /></rule>
 	<rule cat="tms_food" e="any"  zoom-min="15" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
 		<caption cat="tms_landnames" priority="135" symbol-id="tms_shop" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2530,37 +2530,44 @@ Contact me through: http://tartamillo.wordpress.com
 
 <!-- water -->
 	<rule cat="tms_water-land" e="node" k="natural" v="geyser" zoom-min="13">
-		<symbol priority="260" id="tms_geyser" src="file:/res/s_geyser.png" />
-		<caption priority="140" symbol-id="tms_geyser" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="260" id="tms_geyser" display="always" src="file:/res/s_geyser.svg" symbol-height="27" />
+		<caption cat="tms_landnames" priority="140" symbol-id="tms_geyser" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
-		<symbol priority="260" id="tms_waterfall" src="file:/res/s_waterfall.png" />
-		<caption priority="140" symbol-id="tms_waterfall" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="260" id="tms_waterfall" display="always" src="file:/res/s_waterfall.svg" symbol-width="17" />
+		<caption cat="tms_landnames" priority="140" symbol-id="tms_waterfall" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
-		<symbol priority="260" id="tms_rapids" src="file:/res/s_rapids.png" />
-		<caption priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<rule  e="way" k="*" v="*" closed="yes">
+			<area fill="#80bfefff" stroke="#a3dde8" stroke-width="0.1" />
+			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
+		</rule>
+		<rule  e="way" k="*" v="*" closed="no">
+			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
+		</rule>		
+		<symbol priority="260" id="tms_rapids" display="always" src="file:/res/s_rapids.svg" symbol-width="21" />
+		<caption cat="tms_landnames" priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 <!-- cultural stuff -->
-	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="library"><symbol id="tms_school" src="file:/res/s_library.png" /></rule>
+	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="library"><symbol id="tms_school" src="file:/res/s_library.svg" symbol-width="23" /></rule>
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school"><symbol  id="tms_school" src="file:/res/s_school.svg" symbol-width="23" /></rule>
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="university|college"><symbol id="tms_school" src="file:/res/s_university.svg" display="always" symbol-width="23" /></rule>
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="school|library|university|college"><caption symbol-id="tms_school" k="name" cat="tms_landnames" font-style="normal" font-size="8" fill="#000090" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="ruins">
-		<symbol src="file:/res/s_ruins.png" />
+		<symbol src="file:/res/s_ruins.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument"><symbol id="tms_monument" src="file:/res/s_monument.png" /></rule>
-	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial"><symbol id="tms_monument" src="file:/res/s_memorial.png" /></rule>
-	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial|monument"><caption symbol-id="tms_monument" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument"><symbol id="tms_monument" src="file:/res/s_monument.svg" display="always" symbol-width="27" /></rule>
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial"><symbol id="tms_monument" src="file:/res/s_memorial.svg" display="always" symbol-width="21" /></rule>
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial|monument"><caption cat="tms_landnames" symbol-id="tms_monument" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="castle">
-		<symbol id="tms_castle" src="file:/res/s_castle.png" />
-		<caption symbol-id="tms_castle" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol id="tms_castle" src="file:/res/s_castle.svg" display="always" symbol-width="24" />
+		<caption cat="tms_landnames" symbol-id="tms_castle" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_culture" e="any" k="tourism|building" v="museum">
-		<symbol id="tms_museum" src="file:/res/s_museum.png" />
-		<caption symbol-id="tms_museum" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol id="tms_museum" src="file:/res/s_museum.svg" display="always" symbol-width="27" />
+		<caption cat="tms_landnames" symbol-id="tms_museum" k="name" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 <!-- sport -->
@@ -2575,17 +2582,26 @@ Contact me through: http://tartamillo.wordpress.com
 		<rule e="any" k="sport" v="shooting"><symbol priority="225" src="file:/res/s_shooting.png" /></rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium"><symbol priority="225" src="file:/res/s_stadium.png" /></rule>
-	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental"><symbol priority="225" src="file:/res/s_bicycle_rental.png" /></rule>
+	
+	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental">
+		<symbol display="always" priority="225" id="s_bicycle_rental" src="file:/res/s_bicycle_rental.svg" symbol-width="24" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_bicycle_rental" position="below" font-size="8" font-style="bold" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>
 
 <!-- car stuff -->
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking">
-		<rule e="any" k="access" v="private">	<symbol priority="210" src="file:/res/s_parking_private.svg" symbol-width="16" /></rule>
-		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/res/s_parking.svg" symbol-width="16" /></rule>
+		<rule e="any" k="access" v="private">	<symbol priority="210" id="s_parking" src="file:/res/s_parking_private.svg" symbol-width="16" /></rule>
+		<rule e="any" k="*" v="*">				<symbol priority="210" id="s_parking" src="file:/res/s_parking.svg" symbol-width="16" /></rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_parking" font-size="10" font-style="bold" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
 	</rule>
 
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" >
 		<symbol priority="310" id="s_trans-priv" display="always" src="file:/res/s_fuel.svg" symbol-height="19" />
-		<caption priority="310" symbol-id="s_trans-priv" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+		<caption priority="310" cat="tms_landnames" symbol-id="s_trans-priv" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 
