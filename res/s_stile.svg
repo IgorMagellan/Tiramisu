@@ -1,0 +1,17 @@
+<svg width="32" height="29" version="1.1" viewBox="0 0 8.4667 7.6729" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -289.33)">
+  <g>
+   <path d="m4.2371 290.12 3.4314 6.0854h-6.871z" fill="#f00" stroke="#ff0" stroke-dashoffset=".18" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5875"/>
+   <path d="m4.2371 290.12 3.4314 6.0854h-6.871z" fill="#f00" stroke="#f00" stroke-dashoffset=".18" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0583"/>
+   <path d="m3.3956 295.98v.5209h.20913 1.1651.20913v-.5209h-.20913-1.1651z" color="#000000" fill="#ff0" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  </g>
+  <path d="m2.0685 294.91h4.2333" fill="none" stroke="#ff0" stroke-linecap="round" stroke-width=".52917"/>
+  <rect x="3.3914" y="294.91" width="1.5875" height=".79375" fill="#f00"/>
+  <path d="m3.6643 295.19v.52503h1.0501v-.52503z" color="#000000" fill="#ff0" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  <g fill="none" stroke="#ff0" stroke-linecap="round" stroke-width=".52917">
+   <path d="m2.0685 293.85h4.2333"/>
+   <path d="m2.5977 293.32v2.6458"/>
+   <path d="m5.7727 293.32v2.6458"/>
+  </g>
+ </g>
+</svg>

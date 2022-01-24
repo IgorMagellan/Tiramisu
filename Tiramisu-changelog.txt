@@ -16,10 +16,14 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Исправление ошибок:
-zoom-max=16 у quarry
+zoom-max=16 у quarry, 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PNG --> SVG, Размер в правилах: Px * 2/3 
-Добавлены новые adit, adit_disused, water_tower; generator:source=coal,nuclear,water,gas; hunting_stand, 
-категории "Названия мест, POI" - tms_landnames;
+PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ширина или высота иконки
+Добавлены новые adit, adit_disused; water_tower; generator:source=coal,nuclear,water,gas; hunting_stand; barrier=log,turnstile
+shop=sports, hairdresser, travel_agency, chemist, books, mall, organic|shop_farm|greengrocer|cheese
+
+Добавлены категории "Названия мест, POI" - tms_landnames;
+
+10 новых иконок, сделанных в точном соответствии с оригинальным стилем и цветами

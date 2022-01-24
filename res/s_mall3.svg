@@ -1,0 +1,14 @@
+<svg width="120" height="120" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <title>mall</title>
+ <path d="m54.915 5.9057-48.613 27.007-0.066889 11.131c1.1252 1.775 3.6734 2.5852 5.5181 2.9205l-0.049731 56.168c0 5.4014 0 10.803 5.4015 10.803h86.423c5.4014 0 5.4014-5.4015 5.4014-10.803v-56.622c1.9734-0.11389 3.9125-1.4561 5.4015-2.7939v-10.803l-48.613-27.007z" fill="#ffc400" fill-rule="evenodd" stop-color="#000000" stroke="#f2b800" stroke-width="1.6955" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+ <path d="m19.806 35.614v69.474h81.022v-69.474l-40.511-24.307z" display="none" fill="#ac39ac" fill-rule="evenodd" stroke="#ac39ac" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.4014"/>
+ <path d="m11.703 38.314 48.613-27.007 48.613 27.007" fill="none" stroke="#5d0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.4014"/>
+ <g transform="matrix(1.2034 0 0 1.2034 -11.918 -3.9724)">
+  <path d="m90.632 37.741-9.2028 5.2145-6.2359 28.978-0.34333 16.241h-38.905" fill="none" stroke="#5d0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.3816"/>
+  <g fill="#5d0000">
+   <path d="m80.339 48.093h-50.476l6.1465 23.841h39.183z" stop-color="#000000" stroke="#5d0000" stroke-width="8" style="font-variation-settings:normal"/>
+   <path d="m46.716 94.648c-7.45e-4 2.9568-2.4012 5.3534-5.362 5.3528-2.9607-5.6e-4 -5.3603-2.3981-5.3599-5.3549 5.59e-4 -2.9568 2.4009-5.3536 5.3616-5.3532 2.9607 3.72e-4 5.3607 2.3975 5.3605 5.3543" stop-color="#000000" stroke="#f2b800" stroke-width="1.7" style="font-variation-settings:normal"/>
+   <path d="m69.276 94.648c-7.45e-4 2.9568-2.4012 5.3534-5.362 5.3528-2.9607-5.6e-4 -5.3603-2.3981-5.3599-5.3549 5.59e-4 -2.9568 2.4009-5.3536 5.3616-5.3532 2.9607 3.72e-4 5.3607 2.3975 5.3605 5.3543" stop-color="#000000" stroke="#f2b800" stroke-width="1.7" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  </g>
+ </g>
+</svg>
