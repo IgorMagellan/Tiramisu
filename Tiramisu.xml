@@ -2377,18 +2377,24 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- accommodation -->
-	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="camp_site">		<symbol priority="235" id="tms_touring" src="file:/res/s_camp_site.png" /> </rule>
-	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="caravan_site">	<symbol priority="235" id="tms_touring" src="file:/res/s_caravan_site.png" /> </rule>
-	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism" v="hostel">			<symbol priority="235" id="tms_touring" src="file:/res/s_hostel.png" /> </rule>
-	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism|building" v="hotel|motel|chalet|guest_house"> <symbol priority="235" id="tms_touring" src="file:/res/s_hotel.png" /> </rule>
-	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism|building" v="hostel|hotel|motel|chalet|guest_house|camp_site|caravan_site">
-		<caption priority="130" symbol-id="tms_touring" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="camp_site">		
+		<symbol priority="235" id="s_camp" display="always" src="file:/res/s_camp_site.svg" symbol-width="21" /> 
+		<caption cat="tms_landnames" priority="510" symbol-id="s_camp" k="name" position="above" font-size="9" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="caravan_site">	<symbol priority="235" id="tms_touring" display="always" src="file:/res/s_caravan_site.svg" symbol-width="21" /> </rule>
+	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism" v="hostel">			<symbol priority="235" id="tms_touring" display="always" src="file:/res/s_hostel.svg" symbol-width="21" /> </rule>
+	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism|building" v="hotel|motel|chalet|guest_house"> <symbol priority="235" id="tms_touring" display="always" src="file:/res/s_hotel.svg" symbol-width="21" /> </rule>
+	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism|building" v="caravan_site|hostel|hotel|motel|chalet|guest_house">
+		<caption cat="tms_landnames" priority="130" symbol-id="tms_touring" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
 <!-- pic-nic -->
 	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="21" /> </rule>
-	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism" v="picnic_site">	<symbol priority="235" src="file:/res/s_picnic_site.png" /> </rule>
+	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism|leisure" v="picnic_site|picnic_table">	
+		<symbol priority="235" id="s_picnic_site" src="file:/res/s_picnic_site.svg" symbol-width="21" /> 
+		<caption cat="tms_landnames" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="8" fill="#66001a" stroke="#ffffff" stroke-width="2" />			
+	</rule>
 
 <!-- huts and shelters -->
 	<rule cat="tms_huts" e="any" k="tourism|amenity" v="alpine_hut|wilderness_hut|basic_hut" zoom-max="13">
