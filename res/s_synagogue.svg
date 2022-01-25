@@ -1,0 +1,10 @@
+<svg width="32" height="28" version="1.1" viewBox="0 0 32 28" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <path d="m15.994 3.9555-10 5.9938v17.006h20v-16.911z" fill="#fff" stroke="#fff" stroke-width="2"/>
+  <path d="m15.994 0.95551-0.93126 0.60801-13.069 8.128a1.8875 1.8865 0 1 0 1.8936 3.264l12.137-7.52 12.075 7.488a1.9014 1.9004 0 0 0 1.8936-3.296l-13.007-8.064z" color="#000000" fill="#fff" stroke="#fff" stroke-width="2" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  <path d="m15.994 3.8863-10 5.9938v17.006h20v-16.911z" fill="#4d4d4d"/>
+  <path d="m15.994 0.88626-0.93126 0.60801-13.069 8.128a1.8875 1.8865 0 1 0 1.8936 3.264l12.137-7.52 12.075 7.488a1.9014 1.9004 0 0 0 1.8936-3.296l-13.007-8.064z" color="#000000" fill="#4d4d4d" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+ </g>
+ <path transform="matrix(1.3826 0 0 1.3826 284.49 5.0892)" d="m-189.18 10.061-10.021-1e-6 5.0107-8.6788z" fill="none" stroke="#fff" stroke-width=".71034"/>
+ <path transform="matrix(-1.3826 0 0 -1.3826 -252.49 24.91)" d="m-189.18 10.061-10.021-1e-6 5.0107-8.6788z" fill="none" stroke="#fff" stroke-width=".71034"/>
+</svg>

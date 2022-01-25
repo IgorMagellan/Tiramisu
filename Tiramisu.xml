@@ -2398,48 +2398,51 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- huts and shelters -->
 	<rule cat="tms_huts" e="any" k="tourism|amenity" v="alpine_hut|wilderness_hut|basic_hut" zoom-max="13">
-		<symbol display="always" priority="435" symbol-width="9" src="file:/res/s_hut.svg" />
-		<symbol display="always" priority="435" symbol-width="9" src="file:/res/s_hut.svg" />
+		<symbol display="always" priority="435" src="file:/res/s_hut.svg" symbol-width="12" />
 	</rule>
 	<rule cat="tms_huts" e="any" k="tourism" v="alpine_hut" zoom-min="14">
 		<rule e="any" k="name" v="*">
 			<rule e="any" k="access|reservation" v="private|no|members_only">
-				<rule e="any" k="winter_room" v="wr_yes">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_pr_w.png" /> </rule>
-				<rule e="any" k="winter_room" v="~">		<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_pr.png" /> </rule>
+				<rule e="any" k="winter_room" v="wr_yes">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_pr_w.svg" symbol-width="21" /> </rule>
+				<rule e="any" k="winter_room" v="~">		<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_pr.svg" symbol-width="21" /> </rule>
 			</rule>
 			<rule e="any" k="access" v="~|open|public|designated|permissive">
-				<rule e="any" k="winter_room" v="wr_yes">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_w.png" /> </rule>
-				<rule e="any" k="winter_room" v="~">		<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut.png" /> </rule>
+				<rule e="any" k="winter_room" v="wr_yes">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut_w.svg" symbol-width="21" /> </rule>
+				<rule e="any" k="winter_room" v="~">		<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_alpine_hut.svg" symbol-width="21" /> </rule>
 			</rule>
-			<rule e="node" k="*" v="*" zoom-min="14"> <caption priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="node" k="*" v="*" zoom-min="17"> <caption priority="320" symbol-id="tms_hut" k="ele"  position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="way"  k="*" v="*" zoom-min="14"> <caption priority="320" symbol-id="tms_hut" k="name" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="node" k="*" v="*" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="node" k="*" v="*" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="way"  k="*" v="*" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		</rule>
 	</rule>
 	<rule cat="tms_huts" e="any" k="tourism" v="wilderness_hut" zoom-min="14">
-			<rule e="any" k="access|reservation" v="private|no|members_only"> <symbol display="always" priority="435" id="tms_hut" src="file:/res/s_wilderness_hut_private.png" /> </rule>
-			<rule e="any" k="access|reservation" v="~|*">						<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_wilderness_hut.png" /> </rule>
-			<rule e="node" k="*" v="*" zoom-min="14"> <caption priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="node" k="*" v="*" zoom-min="17"> <caption priority="320" symbol-id="tms_hut" k="ele"  position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="way"  k="*" v="*" zoom-min="14"> <caption priority="320" symbol-id="tms_hut" k="name" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="any" k="access|reservation" v="private|no|members_only"> <symbol display="always" priority="435" id="tms_hut" src="file:/res/s_wilderness_hut_private.svg" symbol-width="21" /> </rule>
+			<rule e="any" k="access|reservation" v="~|*">						<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_wilderness_hut.svg" symbol-width="21" /> </rule>
+			<rule e="node" k="*" v="*" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="node" k="*" v="*" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="way"  k="*" v="*" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	</rule>
 	<rule cat="tms_huts" e="any" k="amenity" v="shelter" zoom-min="14">
-		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">								<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.png" /> </rule>
-		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">									<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_basic_hut.png" /> </rule>
+		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">								<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">									<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_basic_hut.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">	<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter.svg" symbol-width="21"/> </rule>
-		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="14"> <caption priority="320" symbol-id="tms_hut"  k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="17"> <caption priority="320" symbol-id="tms_hut"  k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut"  k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+		<rule e="node" k="shelter_type" v="basic_hut" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut"  k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		<rule e="node" k="tourism" v="~">
-			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="1"> <caption priority="320" symbol-id="tms_hut" k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="17"> <caption priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="1"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		</rule>
 	</rule>
 
 <!-- crossings -->
-	<rule cat="tms_crossings" e="node" k="railway" v="crossing" zoom-min="13">			<symbol priority="410" src="file:/res/s_railway-crossing-small.png" /></rule>
-	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="13">	<symbol priority="410" src="file:/res/s_railway-crossing.png" /></rule>
-	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" zoom-min="16">	<symbol priority="405" src="file:/res/s_traffic_signal.png" /></rule>
+	<rule cat="tms_crossings" e="node" k="railway" v="crossing" zoom-min="13">			<symbol priority="410" display="always" src="file:/res/s_railway-crossing-small.svg" symbol-width="25" /></rule>
+	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="13">	<symbol priority="410" display="always" src="file:/res/s_railway-crossing.svg" symbol-width="29" /></rule>
+	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" zoom-min="16">	<symbol priority="405" display="always" src="file:/res/s_traffic_signal_tms.svg" symbol-height="21" /></rule>
 
+	<rule cat="tms_landnames" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
+		<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#80111111" stroke="#bbbbbb" stroke-width="0.4" />
+	</rule>
+	
 <!-- barriers -->
 	<rule cat="tms_barriers" e="any" k="barrier" v="*" zoom-min="15">
 		<rule e="any" k="barrier" v="bollard">			<symbol priority="415" display="always" src="file:/res/s_bollard.svg" symbol-width="21" /> </rule>
@@ -2630,19 +2633,19 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
-		<symbol priority="205" id="tms_bus-station" src="file:/res/s_bus_station.png" />
+		<symbol priority="205" id="tms_bus-station" src="file:/res/s_bus_station.svg" />
 		<caption priority="100" symbol-id="tms_bus-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
-		<symbol priority="205" id="tms_bus-stop" src="file:/res/s_bus.png" />
+		<symbol priority="205" id="tms_bus-stop" src="file:/res/s_bus.svg" />
 		<caption priority="100" symbol-id="tms_bus-stop" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="railway|building|light_rail" v="station|train_station">
-		<symbol priority="205" id="tms_train-station" src="file:/res/s_trainstation.png" />
+		<symbol priority="205" id="tms_train-station" src="file:/res/s_trainstation.svg" />
 		<caption priority="100" symbol-id="tms_train-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="railway" v="halt|tram_stop">
-		<symbol priority="205" id="tms_tram-stop" src="file:/res/s_tram_stop.png" />
+		<symbol priority="205" id="tms_tram-stop" src="file:/res/s_tram_stop.svg" />
 		<caption priority="100" symbol-id="tms_tram-stop"  k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
@@ -2671,13 +2674,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- place of worship -->
-	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/res/s_wayside_cross.png" /></rule>
-	<rule cat="tms_religion" e="any" k="building" v="church"><symbol src="file:/res/s_church.png" /></rule>
+	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/res/s_wayside_cross.svg" symbol-height="15" /></rule>
+	<rule cat="tms_religion" e="any" k="building" v="church"><symbol src="file:/res/s_church.svg" symbol-width="21" /></rule>
 	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
-		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/res/s_church.png" /></rule>
-		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/res/s_synagogue.png" /></rule>
-		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/res/s_mosque.png" /></rule>
-		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/res/s_place_of_worship.png" /></rule>
+		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/res/s_church.svg" symbol-width="21" /></rule>
+		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/res/s_synagogue.svg" symbol-width="21" /></rule>
+		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/res/s_mosque.svg" symbol-width="21" /></rule>
+		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/res/s_place_of_worship.svg" symbol-width="17" /></rule>
 	</rule>
 	<rule cat="tms_religion" e="node" k="amenity" v="place_of_worship"><caption cat="tms_landnames" symbol-id="tms_worship" k="name" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
@@ -2689,7 +2692,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- man_made -->
 	<rule cat="tms_man-made" e="node" k="tower" v="communication" >
-		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_communication.svg" symbol-height="30"/>
+		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_communication.svg" symbol-height="30" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>

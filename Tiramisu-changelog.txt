@@ -21,9 +21,13 @@ zoom-max=16 у quarry; не включено cat id="tms_peak" в Элемент
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ширина или высота иконки
+
 Добавлены новые adit, adit_disused; water_tower; generator:source=coal,nuclear,water,gas; hunting_stand; barrier=log,turnstile
 shop=sports, hairdresser, travel_agency, chemist, books, mall, organic|shop_farm|greengrocer|cheese; survey_point; tree_row
 
 Добавлены категории "Названия мест, POI" - tms_landnames;
+
+Добавлены подписи landuse=retail|commercial|industrial|brownfield|garages|construction|greenfield;
+picnic_site, camp_site и др
 
 10 новых иконок, сделанных в точном соответствии с оригинальным стилем и цветами
