@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locusActions>
+  <download>
+    <source size="22075830" date="2022-01-25_19-11-54">
+      <![CDATA[https://github.com/IgorMagellan/Tiramisu/archive/refs/heads/main.zip]]>
+    </source>
+    <dest><![CDATA[/mapsVector/_themes/tiramisu.zip]]></dest>
+    <after>refreshMap</after>
+  </download>
+</locusActions>
