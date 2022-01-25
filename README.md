@@ -15,3 +15,4 @@ Links:
 - [Tiramisu EOL](https://tartamillo.wordpress.com/2022/01/03/tiramisu-eol/)
 
 
+[Quick Install in Locus(zipped)](locus-actions://https/github.com/IgorMagellan/Tiramisu/archive/refs/heads/main.zip)
