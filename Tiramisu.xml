@@ -2517,10 +2517,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_shops" e="any" k="shop" v="travel_agency">		<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_travel_agency.svg" symbol-width="23" /></rule>
 	<rule cat="tms_shops" e="any" k="shop" v="chemist">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_chemist.svg" symbol-width="23" /></rule>
 	<rule cat="tms_shops" e="any" k="shop" v="books">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_books.svg" symbol-width="23" /></rule>
+	<rule cat="tms_trans-priv" e="any" k="shop" v="car">			<symbol priority="225" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" /></rule>
 	
-	<rule cat="tms_shops" e="any"  zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books">
-		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+	<rule cat="tms_shops" e="any" zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books|car">
+		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+
 
 <!-- tourist info -->
 	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="office">	<symbol priority="240" src="file:/res/s_info_office.png" /> </rule>
@@ -2535,7 +2537,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- emergency -->
 	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		<symbol priority="400" src="file:/res/s_hospital.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="pharmacy">		<symbol priority="400" src="file:/res/s_pharmacy.png" /></rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="doctors">		<symbol priority="400" src="file:/res/s_doctors.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors"><symbol priority="400" src="file:/res/s_doctors.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="400" src="file:/res/s_telephone.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/res/s_police.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/res/s_firebrigade.png" /></rule>
@@ -2545,9 +2547,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- aeroway symbols and captions -->
-	<rule e="any" k="aeroway" v="helipad" zoom-min="13"><symbol priority="255" src="file:/res/s_helipad.png" /></rule>
-	<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="12"><symbol src="file:/res/s_airport.png" /></rule>
-	<rule e="any" k="aeroway" v="*" zoom-min="16"><caption k="name" font-style="bold" font-size="8" fill="#005DD5" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+	<rule e="any" k="aeroway" v="helipad" zoom-min="13"><symbol priority="255" display="always" id="tms_air" src="file:/res/s_helipad.svg" symbol-width="23" /></rule>
+	<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="12"><symbol display="always" id="tms_air" src="file:/res/s_airport.svg" symbol-width="19" /></rule>
+	<rule e="any" k="aeroway" v="*" zoom-min="16"><caption cat="tms_landnames" symbol-id="tms_air" k="name" font-style="bold" font-size="8" fill="#005DD5" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 <!-- water -->
 	<rule cat="tms_water-land" e="node" k="natural" v="geyser" zoom-min="13">
@@ -2633,20 +2635,20 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
-		<symbol priority="205" id="tms_bus-station" src="file:/res/s_bus_station.svg" />
-		<caption priority="100" symbol-id="tms_bus-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="205" display="always" id="tms_bus-station" src="file:/res/s_bus_station.svg" symbol-width="21" />
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_bus-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
-		<symbol priority="205" id="tms_bus-stop" src="file:/res/s_bus.svg" />
-		<caption priority="100" symbol-id="tms_bus-stop" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="205" display="always" id="tms_bus-stop" src="file:/res/s_bus.svg" symbol-width="19" />
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_bus-stop" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="railway|building|light_rail" v="station|train_station">
-		<symbol priority="205" id="tms_train-station" src="file:/res/s_trainstation.svg" />
-		<caption priority="100" symbol-id="tms_train-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="205" display="always" id="tms_train-station" src="file:/res/s_trainstation.svg" symbol-width="19" />
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_train-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="railway" v="halt|tram_stop">
-		<symbol priority="205" id="tms_tram-stop" src="file:/res/s_tram_stop.svg" />
-		<caption priority="100" symbol-id="tms_tram-stop"  k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+		<symbol priority="205" display="always" id="tms_tram-stop" src="file:/res/s_tram_stop.svg" symbol-width="19" />
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_tram-stop"  k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 <!-- leisure time -->
@@ -2660,8 +2662,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
 		<symbol priority="215" id="tms_viewpoint" src="file:/res/s_viewpoint.svg" display="always" symbol-width="17" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
-			<caption priority="15" symbol-id="tms_viewpoint" k="name" position="above" font-size="8" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
-			<caption priority="10" symbol-id="tms_viewpoint" k="ele" position="below" font-size="8" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
+			<caption cat="tms_landnames" priority="15" symbol-id="tms_viewpoint" k="name" position="above" font-size="8" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
+			<caption cat="tms_landnames" priority="10" symbol-id="tms_viewpoint" k="ele" position="below" font-size="8" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
 		</rule>
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
