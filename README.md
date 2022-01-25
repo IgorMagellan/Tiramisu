@@ -14,6 +14,5 @@ Links:
 - [Tiramisu main post](https://tartamillo.wordpress.com/tiramisu/)
 - [Tiramisu EOL](https://tartamillo.wordpress.com/2022/01/03/tiramisu-eol/)
 
-[Quick Install in Locus(zipped)](locus-actions://https/github.com/IgorMagellan/Tiramisu/blob/main/locusaction.xml)
+[Quick Install in Locus(zipped) ](locus-actions://https/github.com/IgorMagellan/Tiramisu/blob/main/locusaction.xml)
 
-locus-actions://https/github.com/IgorMagellan/Tiramisu/blob/main/locusaction.xml
