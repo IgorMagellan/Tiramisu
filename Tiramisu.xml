@@ -25,10 +25,9 @@ https://www.mapbox.com/maki/	- Licensed under the BSD license https://github.com
 
 Contact me through: http://tartamillo.wordpress.com
 -->
-
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
-	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
-	version="5" map-background="#ffffff" map-background-outside="#ffffff">
+xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
+version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
 
@@ -77,6 +76,7 @@ Contact me through: http://tartamillo.wordpress.com
 		<cat id="tms_man-made"/>
 		<cat id="tms_aerial"/>
 		<cat id="tms_power"/>
+		<cat id="tms_peak"/>
 	</layer>
 	<layer id="tms_water" enabled="true">
 		<name lang="en" value="Water points"/>
@@ -460,6 +460,10 @@ Contact me through: http://tartamillo.wordpress.com
 	</rule>
 	<rule cat="tms_land-detail" e="way" k="landuse|leisure" v="village_green|recreation_ground|grass|military|park|garden|common|green|dog_park" zoom-min="15">
 		<caption k="name" font-style="italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+	
+	<rule cat="tms_land-detail" e="way" k="natural" v="tree_row">
+		<line stroke="#90679632" cat="tms_land-base" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
 
 <!-- Contour lines -->
@@ -2284,57 +2288,57 @@ Contact me through: http://tartamillo.wordpress.com
 	<rule e="node" k="place" v="island" zoom-min="7">				<caption priority="540" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="0.1" /> </rule>
 
 <!-- natural -->
-	<rule e="node" k="natural" v="peak" zoom-min="10" zoom-max="12">
+	<rule cat="tms_peak" e="node" k="natural" v="peak" zoom-min="10" zoom-max="12">
 		<symbol display="ifspace" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="node" k="natural" v="peak" zoom-min="13" zoom-max="13">
+	<rule cat="tms_peak" e="node" k="natural" v="peak" zoom-min="13" zoom-max="13">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="node" k="natural" v="peak" zoom-min="14">
+	<rule cat="tms_peak" e="node" k="natural" v="peak" zoom-min="14">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_peak.svg" symbol-percent="200" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
-	<rule e="node" k="natural" v="volcano" zoom-min="10" zoom-max="12">
+	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="10" zoom-max="12">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="node" k="natural" v="volcano" zoom-min="13" zoom-max="13">
+	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="13" zoom-max="13">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="node" k="natural" v="volcano" zoom-min="14">
+	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="14">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_volcano.svg" symbol-percent="350" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
-	<rule e="any" k="mountain_pass" v="yes" zoom-min="10" zoom-max="12">
+	<rule cat="tms_peak" e="any" k="mountain_pass" v="yes" zoom-min="10" zoom-max="12">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="any" k="mountain_pass" v="yes" zoom-min="13" zoom-max="13">
+	<rule cat="tms_peak" e="any" k="mountain_pass" v="yes" zoom-min="13" zoom-max="13">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="any" k="mountain_pass" v="yes" zoom-min="14" >
+	<rule cat="tms_peak" e="any" k="mountain_pass" v="yes" zoom-min="14" >
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
-	<rule e="any" k="natural" v="saddle" zoom-min="10" zoom-max="12">
+	<rule cat="tms_peak" e="any" k="natural" v="saddle" zoom-min="10" zoom-max="12">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="any" k="natural" v="saddle" zoom-min="13" zoom-max="13">
+	<rule cat="tms_peak" e="any" k="natural" v="saddle" zoom-min="13" zoom-max="13">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule e="any" k="natural" v="saddle" zoom-min="14" >
+	<rule cat="tms_peak" e="any" k="natural" v="saddle" zoom-min="14" >
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_pass.svg" />
 		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2358,12 +2362,20 @@ Contact me through: http://tartamillo.wordpress.com
 		<caption cat="tms_landnames" symbol-id="tms_adit" k="ele" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
-	<rule e="node" k="natural" v="tree">
-		<symbol id="tms_tree" src="file:/res/s_tree.png" />
-		<caption symbol-id="tms_tree" position="above" k="name" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
- 		<caption symbol-id="tms_tree" position="below" k="ele"  font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
+	<rule cat="tms_land-detail" e="node" k="natural" v="tree" >
+		<symbol id="tms_tree" display="always" src="file:/res/s_tree.svg" symbol-height="20" />
+		<caption cat="tms_landnames" symbol-id="tms_tree" position="above" k="name" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
+ 		<caption cat="tms_landnames" symbol-id="tms_tree" position="below" k="ele"  font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
+	<rule cat="tms_peak" e="node" k="man_made" v="survey_point">
+		<symbol id="s_survey_point" display="always" priority="101" src="file:/res/s_survey_point.svg" symbol-height="16" />
+		<caption cat="tms_landnames" display="always" k="ele" priority="105" symbol-id="s_survey_point" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" priority="88" symbol-id="s_survey_point" position="above" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
 <!-- accommodation -->
 	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="camp_site">		<symbol priority="235" id="tms_touring" src="file:/res/s_camp_site.png" /> </rule>
 	<rule cat="tms_camp" e="any"  zoom-min="14" k="tourism" v="caravan_site">	<symbol priority="235" id="tms_touring" src="file:/res/s_caravan_site.png" /> </rule>
@@ -2581,7 +2593,12 @@ Contact me through: http://tartamillo.wordpress.com
 		<rule e="any" k="sport|leisure" v="golf|golf_course"><symbol priority="225" src="file:/res/s_golf.png" /></rule>
 		<rule e="any" k="sport" v="shooting"><symbol priority="225" src="file:/res/s_shooting.png" /></rule>
 	</rule>
-	<rule cat="tms_sport" e="any" k="leisure" v="stadium"><symbol priority="225" src="file:/res/s_stadium.png" /></rule>
+	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
+		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" symbol-width="28"/>
+		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
+			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>
 	
 	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental">
 		<symbol display="always" priority="225" id="s_bicycle_rental" src="file:/res/s_bicycle_rental.svg" symbol-width="24" />

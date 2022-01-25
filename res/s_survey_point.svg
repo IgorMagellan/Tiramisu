@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="580" width="580" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title>survey_point</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>survey_point</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill-rule="evenodd">
+  <path opacity=".8" d="m87 464h406c29 0 39.932-16.255 29-33l-208.46-359.98c-13.79-24.568-32.29-24.046-47.79-2.121l-207.75 362.1c-12.333 19.844 0 33 29 33z" fill="#fff"/>
+  <path d="m290 83.4-203 351.6h406z" stroke="#000" stroke-width="1px" fill="#202020"/>
+  <path d="m141 406h298l-149-261z" fill="#fff"/>
+  <path d="m319 313a29 29 0 0 1 -29 29 29 29 0 0 1 -29 -29 29 29 0 0 1 29 -29 29 29 0 0 1 29 29z" fill="#202020"/>
+ </g>
+</svg>
