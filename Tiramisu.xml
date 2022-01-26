@@ -713,7 +713,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="waterway" v="dock"> <area fill="#90CCCCCC" /> <line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
-			<rule e="node" k="waterway" v="weir"> <symbol src="file:/res/s_weir.png" /> </rule>
+			<rule e="node" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
 			<rule e="way" k="man_made" v="pipeline">
 				  <rule e="way" k="tunnel" v="~|no">
 						<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
@@ -731,7 +731,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<area fill="#CCCCCC" />
 		</rule>
 	</rule>
-
+	<rule e="any" k="waterway" v="dam" zoom-min="15">
+		<symbol src="file:/res/s_dam.svg" symbol-width="17"/>
+	</rule>
+	
 <!-- natural ways -->
 	<rule cat="tms_land-base" e="way" k="natural" v="valley|gorge" zoom-min="13">
 		<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
@@ -1295,7 +1298,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="20" zoom-max="99"><line stroke="#333333" stroke-width="0.19" /></rule>
 
 			<rule e="way" k="railway" v="funicular" zoom-min="14">
-				<symbol src="file:/res/s_rail_funicular.png" />
+				<symbol src="file:/res/s_rail_funicular.svg" display="always" symbol-width="21" />
 			</rule>
 		</rule>
 	</rule>
@@ -2447,8 +2450,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="13">	<symbol priority="410" display="always" src="file:/res/s_railway-crossing.svg" symbol-width="29" /></rule>
 	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" zoom-min="16">	<symbol priority="405" display="always" src="file:/res/s_traffic_signal_tms.svg" symbol-height="21" /></rule>
 
-	<rule cat="tms_landnames" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
-		<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#80111111" stroke="#bbbbbb" stroke-width="0.4" />
+	<rule cat="tms_land-base" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
+		<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#80111111" stroke="#bbbbbb" stroke-width="0.4" />
 	</rule>
 	
 <!-- barriers -->
@@ -2725,10 +2728,25 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_religion" e="node" k="amenity" v="place_of_worship"><caption cat="tms_landnames" symbol-id="tms_worship" k="name" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 <!-- bureaucracy -->
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">			<symbol priority="230" src="file:/res/s_atm.png" /></rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">			<symbol priority="230" src="file:/res/s_bank.png" /></rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_box">		<symbol src="file:/res/s_postbox.png" /></rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_office">	<symbol src="file:/res/s_postoffice.png" /></rule>
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">			
+		<symbol priority="225" id="s_atm" src="file:/res/s_atm.svg" display="always" symbol-width="13" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="8" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+		</rule>	
+	</rule>
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">			
+		<symbol priority="230" id="s_bank" src="file:/res/s_bank.svg" display="always" symbol-height="19" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="9" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+		</rule>	
+	</rule>
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_box">		<symbol src="file:/res/s_postbox.svg" display="always" symbol-width="15" /></rule>
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_office">	
+		<symbol priority="240" id="s_postoffice" src="file:/res/s_postoffice.svg" display="always" symbol-width="21" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="240" k="name" symbol-id="s_postoffice" position="above" font-style="bold" font-size="9" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
 
 <!-- man_made -->
 	<rule cat="tms_man-made" e="node" k="tower" v="communication" >
@@ -2746,7 +2764,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" zoom-min="14" >
-		<symbol id="hunting_stand" display="always" src="file:/res/hunting_stand.svg" symbol-width="18"/>
+		<symbol id="hunting_stand" display="always" src="file:/res/s_hunting_stand.svg" symbol-width="18"/>
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="hunting_stand" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>

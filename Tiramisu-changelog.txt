@@ -16,8 +16,6 @@
 22-26/01/2022
 version 4.0 beta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Исправление ошибок:
-не включено cat id="tms_peak" в Элементы ландшафта; zoom-max=16 у quarry;
 
 PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ширина или высота иконки
 
@@ -25,12 +23,15 @@ PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ши
 shop=sports, hairdresser, travel_agency, chemist, books, mall, car, organic|shop_farm|greengrocer|cheese; sport=gym
 survey_point; tree_row
 
-
 Добавлены категории "Названия мест, POI" - tms_landnames;
 
 Добавлены подписи landuse=retail|commercial|industrial|brownfield|garages|construction|greenfield;
 all sports, all emergency, all tourism, picnic_site, camp_site и др
+
+Исправление ошибок:
+не включено cat id="tms_peak" в Элементы ландшафта; zoom-max=16 у quarry; отсут.иконка waterway=dam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-14 новых иконок, сделанных в точном соответствии с оригинальным стилем и цветами
-разобраться с источником воды- скважина на Кусинских Печах
+14 новых иконок, сделанных в соответствии с оригинальным стилем и цветами
+разобраться с источником воды - скважина на Кусинских Печах
+разобраться c tms_land-base и tms_land-detail
