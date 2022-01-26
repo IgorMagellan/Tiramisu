@@ -28,9 +28,11 @@ survey_point; tree_row
 Добавлены подписи landuse=retail|commercial|industrial|brownfield|garages|construction|greenfield;
 all sports, all emergency, all tourism, picnic_site, camp_site и др
 
+Восстановлено из предыдущих версий оригинальной темы: cliff
+
 Исправление ошибок:
-не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; отсут.иконка waterway=dam, guidepost
-отсутствют via_ferrata
+не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
+отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 14 новых иконок, сделанных в соответствии с оригинальным стилем и цветами
