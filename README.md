@@ -7,6 +7,8 @@
 
 </div>
 
+Legend: [Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf)
+
 [Changelog (in Russian)](Tiramisu-changelog.txt)  
 
 Links:
