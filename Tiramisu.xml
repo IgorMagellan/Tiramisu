@@ -2458,7 +2458,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="barrier" v="lift_gate|chain">	<symbol priority="415" display="always" src="file:/res/s_lift_gate.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="stile">			<symbol priority="415" display="always" src="file:/res/s_stile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="cycle_barrier">	<symbol priority="415" display="always" src="file:/res/s_cycle_barrier.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="gate">			<symbol priority="415" display="always" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="barrier" v="gate">				<symbol priority="415" display="always" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="turnstile">		<symbol priority="415" display="always" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="log">				<symbol priority="415" display="always" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>		
 	</rule>
@@ -2533,28 +2533,42 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 
 <!-- tourist info -->
-	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="office">	<symbol priority="240" src="file:/res/s_info_office.png" /> </rule>
-	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="board">		<symbol priority="240" src="file:/res/s_info_board.png" /> </rule>
-	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="terminal">	<symbol priority="240" src="file:/res/s_info_terminal.png" /> </rule>
+	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="office">	<symbol priority="240" src="file:/res/s_info_office.png" /> </rule>
+	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="board">	<symbol priority="240" src="file:/res/s_info_board.png" /> </rule>
+	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="terminal"><symbol priority="240" src="file:/res/s_info_terminal.png" /> </rule>
 
 <!-- safety measures -->
-	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes">	<symbol priority="250" src="file:/res/s_safety_rope.png" /> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes"><symbol priority="250" src="file:/res/s_safety_rope.png" /> </rule>
 	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="ld_yes">		<symbol priority="250" src="file:/res/s_ladder.png" /> </rule>
 	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="rn_yes">		<symbol priority="250" src="file:/res/s_rungs.png" /> </rule>
 
 <!-- emergency -->
-	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		<symbol priority="400" src="file:/res/s_hospital.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		
+		<symbol priority="400" id="s_hospital" src="file:/res/s_hospital.svg" display="always" symbol-width="19" />
+		<caption priority="400" symbol-id="s_hospital" cat="tms_landnames" k="name" position="above" display="always" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />		
+	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="pharmacy">		
 		<symbol priority="400" id="s_pharmacy" src="file:/res/s_pharmacy.svg" display="always" symbol-width="17" />
 		<caption priority="300" symbol-id="s_pharmacy" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#336600" stroke="#FFFFFF" stroke-width="2" />	
 	</rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors"><symbol priority="400" src="file:/res/s_doctors.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors">
+		<symbol priority="400" id="s_doctors" src="file:/res/s_doctors.svg" display="always" symbol-width="17" />
+		<caption priority="200" symbol-id="s_doctors" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="9" fill="#D90000" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="320" display="always" src="file:/res/s_telephone.svg" symbol-width="17" /></rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/res/s_police.png" /></rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/res/s_firebrigade.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">		
+		<symbol priority="400" id="s_police" src="file:/res/s_police.svg" display="always" symbol-width="19" />
+		<caption priority="300" cat="tms_landnames" symbol-id="s_police" k="name" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2" />	
+	</rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	
+		<symbol priority="400" id="s_fire_station" src="file:/res/s_firebrigade.svg" display="always" symbol-width="21" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption priority="400" cat="tms_landnames" symbol-id="s_fire_station" k="name" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2" />
+		</rule>	
+	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity|building" v="embassy">
 		<symbol id="tms_embassy" priority="400" src="file:/res/s_embassy.svg" display="always" symbol-width="17" />
-		<caption symbol-id="tms_embassy" cat="tms_landnames" display="always" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" symbol-id="tms_embassy" display="always" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
 <!-- aeroway symbols and captions -->
