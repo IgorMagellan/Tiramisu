@@ -1,0 +1,14 @@
+<svg id="SVGRoot" width="23" height="33" version="1.1" viewBox="0 0 23 33" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#5a2700" stroke="#ffffff" stroke-linejoin="round" stroke-width="2">
+  <rect x="10" y="1.5" width="3" height="30"/>
+  <path d="m4 2.5h15l3 3-3 3h-15z"/>
+  <path d="m19 10.5h-15l-3 3 3 3h15z"/>
+  <rect x="10" y="17.5" width="3" height="14"/>
+ </g>
+ <g fill="#743a00">
+  <rect x="10" y="1.5" width="3" height="30"/>
+  <path d="m4 2.5h15l3 3-3 3h-15z"/>
+  <path d="m19 10.5h-15l-3 3 3 3h15z"/>
+  <rect x="10" y="17.5" width="3" height="14"/>
+ </g>
+</svg>

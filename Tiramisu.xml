@@ -2536,10 +2536,52 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 
 <!-- tourist info -->
-	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="office">	<symbol priority="240" src="file:/res/s_info_office.png" /> </rule>
-	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="board">	<symbol priority="240" src="file:/res/s_info_board.png" /> </rule>
-	<rule cat="tms_info" e="any" zoom-min="14" k="information" v="terminal"><symbol priority="240" src="file:/res/s_info_terminal.png" /> </rule>
 
+	<rule cat="tms_info" e="any" k="information" v="office">
+		<symbol priority="240" id="s_info_office" display="always" src="file:/res/s_info_office.svg" symbol-height="19" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_info_office" position="below" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_info" e="node" k="information" v="board">
+		<symbol priority="240" id="s_info_board" display="always" src="file:/res/s_info_board.svg" symbol-width="19" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_info_board" position="below" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_info" e="any" k="information" v="terminal">
+		<symbol priority="240" id="s_info_terminal" display="always" src="file:/res/s_info_terminal.svg" symbol-width="13" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_info_terminal" position="below" font-style="bold" font-size="8" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_info" e="any" k="tourism" v="information">
+		<rule e="any" k="information" v="~">
+			<symbol priority="240" id="s_info_terminal" display="always" src="file:/res/s_info_terminal.svg" symbol-width="13" />
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<caption cat="tms_landnames" k="name" symbol-id="s_info_terminal" position="below" font-style="bold" font-size="8" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+	</rule>
+
+	<rule cat="tms_info" e="node" k="information" v="guidepost">
+		<symbol id="s_guidepost" priority="240" src="file:/res/s_guidepost.svg" display="always" symbol-height="21" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_guidepost" k="name" position="above" font-family="sans_serif" font-style="bold_italic" font-size="9" fill="#734A08" stroke="#FFFFFF" stroke-width="2.5" />
+			<caption cat="tms_landnames" symbol-id="s_guidepost" k="addr:housenumber" position="below" display="always" font-family="sans_serif" font-style="bold_italic" font-size="8" fill="#734A08" stroke="#FFFFFF" stroke-width="2.5" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_info" e="any" k="tourism" v="artwork" zoom-min="14">
+		<symbol priority="240" id="s_artwork" display="always" src="file:/res/s_artwork.svg" symbol-width="21"/>
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_artwork" position="below" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>	
+	
 <!-- safety measures -->
 	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes"><symbol priority="250" src="file:/res/s_safety_rope.png" /> </rule>
 	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="ld_yes">		<symbol priority="250" src="file:/res/s_ladder.png" /> </rule>
