@@ -2354,13 +2354,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_tour" e="any" k="man_made" v="adit" >
-		<symbol priority="425" id="tms_adit" display="always" src="file:/res/adit.svg" symbol-width="20" />
+		<symbol priority="425" id="tms_adit" display="always" src="file:/res/s_adit.svg" symbol-width="20" />
 		<caption cat="tms_landnames" priority="310" symbol-id="tms_adit" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_landnames" symbol-id="tms_adit" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 	<rule cat="tms_tour" e="any" k="man_made" v="adit_disused" >
-		<symbol priority="425" id="tms_adit" display="always" src="file:/res/adit-dis.svg" symbol-width="20" />
+		<symbol priority="425" id="tms_adit" display="always" src="file:/res/s_adit-dis.svg" symbol-width="20" />
 		<caption cat="tms_landnames" symbol-id="tms_adit" priority="310" k="name" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_landnames" symbol-id="tms_adit" k="ele" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
