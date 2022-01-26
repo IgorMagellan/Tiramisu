@@ -341,30 +341,29 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- vegetation -->
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood">
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="13" zoom-max="13">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="060" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="14" zoom-max="14">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="080" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="15" zoom-max="15">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="100" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="16" zoom-max="16">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="120" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="17" zoom-max="17">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="140" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="mixed" zoom-min="18" zoom-max="99">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="160" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="13" zoom-max="13">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="060" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="14" zoom-max="14">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="080" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="15" zoom-max="15">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="100" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="16" zoom-max="16">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="120" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="17" zoom-max="17">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="140" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="coniferous" zoom-min="18" zoom-max="99">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="160" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="13" zoom-max="13">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="060" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="14" zoom-max="14">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="080" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="15" zoom-max="15">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="100" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="16" zoom-max="16">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="120" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="17" zoom-max="17">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="140" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="deciduous" zoom-min="18" zoom-max="99">	<area src="file:/res/p_wood-deciduous.png"   symbol-width="160" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="13" zoom-max="13">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="060" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="14" zoom-max="14">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="080" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="15" zoom-max="15">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="100" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="16" zoom-max="16">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="120" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="17" zoom-max="17">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="140" /> </rule>
-		<rule e="any" k="wood|leaf_type" v="~|*" zoom-min="18" zoom-max="99">			<area src="file:/res/p_wood-mixed.svg"		symbol-width="160" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" ><area fill="#40125f16" /></rule> 
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#409fdd0d" /></rule>
+		<!-- <rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="13" ><area fill="#40709110" /></rule>	 -->
+		
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" zoom-max="13">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="060" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="14" zoom-max="14">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="080" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="15" zoom-max="15">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="100" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="16" zoom-max="16">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="120" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="17" zoom-max="17">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="140" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="18" zoom-max="99">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="160" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" zoom-max="13">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="060" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="14" zoom-max="14">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="080" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="15" zoom-max="15">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="100" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="16" zoom-max="16">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="120" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="17" zoom-max="17">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="140" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="18" zoom-max="99">	<area src="file:/res/p_wood-deciduous.svg"   symbol-width="160" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="13" zoom-max="13">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="060" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="14" zoom-max="14">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="080" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="15" zoom-max="15">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="100" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="16" zoom-max="16">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="120" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="17" zoom-max="17">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="140" /> </rule>
+		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="18" zoom-max="99">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="160" /> </rule>
+		
 	</rule>
 
 	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scrub.svg" symbol-width="25" /> </rule>
