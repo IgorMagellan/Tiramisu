@@ -294,6 +294,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<cat id="tms_tracks"/>
 		<cat id="tms_paths"/>
 		<cat id="tms_hk"/>
+		<cat id="tms_safety"/>		
 		<overlay id="tms_hknw"/>
 		<overlay id="tms_barriers-hk"/>
 	</layer>
@@ -2478,7 +2479,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- water sources -->
 	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-max="15">
-		<symbol display="always" priority="305" symbol-width="9" src="file:/res/s_water.svg" symbol-width="14"/>
+		<symbol display="always" priority="305" src="file:/res/s_water.svg" symbol-width="10"/>
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
 		<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
@@ -2583,9 +2584,20 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 	
 <!-- safety measures -->
-	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes"><symbol priority="250" src="file:/res/s_safety_rope.png" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="ld_yes">		<symbol priority="250" src="file:/res/s_ladder.png" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="rn_yes">		<symbol priority="250" src="file:/res/s_rungs.png" /> </rule>
+	<rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set" zoom-min="13">
+		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
+		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
+		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" scale="all" stroke-linecap="butt" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<symbol id="s_via_ferrata" display="always" src="file:/res/s_via_ferrata.svg" symbol-height="17" />
+			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="8" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes"><symbol priority="250" display="always" src="file:/res/s_safety_rope.svg" symbol-width="17" /> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="ld_yes">		<symbol priority="250" display="always" src="file:/res/s_ladder.svg" symbol-width="17" /> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="rn_yes">		<symbol priority="250" display="always" src="file:/res/s_rungs.svg" symbol-width="17" /> </rule>
+
 
 <!-- emergency -->
 	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		

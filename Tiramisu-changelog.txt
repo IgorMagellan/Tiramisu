@@ -29,7 +29,8 @@ survey_point; tree_row
 all sports, all emergency, all tourism, picnic_site, camp_site и др
 
 Исправление ошибок:
-не включено cat id="tms_peak" в Элементы ландшафта; zoom-max=16 у quarry; отсут.иконка waterway=dam, guidepost
+не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; отсут.иконка waterway=dam, guidepost
+отсутствют via_ferrata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 14 новых иконок, сделанных в соответствии с оригинальным стилем и цветами
