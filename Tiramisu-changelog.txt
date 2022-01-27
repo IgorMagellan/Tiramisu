@@ -34,6 +34,8 @@ all sports, all emergency, all tourism, picnic_site, camp_site и др
 не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
 не отображается разница в лесе needleleaved, broadleaved, только mixed
 отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
+
+Изменил рисунок cliff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 14 новых иконок, сделанных в соответствии с оригинальным стилем и цветами

@@ -2317,10 +2317,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 		<rule e="node" k="summit:cross|man_made" v="yes|cross"  zoom-min="10" >
-			<symbol id="s_peak_cross" priority="88" display="always" src="file:/res/s_peak_cross.svg" symbol-height="19" />
-			<caption cat="tms_landnames" k="ele" priority="-5" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1" />
+			<symbol id="s_peak_cross" priority="300" display="always" src="file:/res/s_peak_cross.svg" symbol-height="19" />
+			<caption cat="tms_landnames"priority="200"  k="ele" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1" />
 			<rule e="any" k="*" v="*" zoom-min="13">
-				<caption cat="tms_landnames" k="name" priority="88" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption cat="tms_landnames" priority="88" k="name" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>		
 	</rule>
@@ -2392,10 +2392,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_peak" e="node" k="man_made" v="survey_point">
-		<symbol id="s_survey_point" display="always" priority="101" src="file:/res/s_survey_point.svg" symbol-height="16" />
+		<symbol id="s_survey_point" display="always" priority="101" src="file:/res/s_survey_point.svg" symbol-height="20" />
 		<caption cat="tms_landnames" display="always" k="ele" priority="105" symbol-id="s_survey_point" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" priority="88" symbol-id="s_survey_point" position="above" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" priority="100" symbol-id="s_survey_point" position="above" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	
