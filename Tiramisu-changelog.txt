@@ -13,13 +13,15 @@
 21/01/2022
 исключен font-style из p_scrub, p_wood-coniferous, p_wood-mixed, p_military.svg (cruiser-gl давал warnings)
 
-22-26/01/2022
-version 4.0 beta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+22-26/01/2022 
+Исправление ошибок:
+не отображается разница в лесе needleleaved, broadleaved, только mixed
+не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
+отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
 
 PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ширина или высота иконки
 
-Добавлены новые adit, adit_disused; water_tower; generator:source=coal,nuclear,water,gas; hunting_stand; barrier=log,turnstile
+Добавлены новые: adit, adit_disused; water_tower; generator:source=coal,nuclear,water,gas; hunting_stand; barrier=log,turnstile
 shop=sports, hairdresser, travel_agency, chemist, books, mall, car, organic|shop_farm|greengrocer|cheese; sport=gym
 survey_point; tree_row
 
@@ -28,16 +30,7 @@ survey_point; tree_row
 Добавлены подписи landuse=retail|commercial|industrial|brownfield|garages|construction|greenfield;
 all sports, all emergency, all tourism, picnic_site, camp_site и др
 
-Восстановлено из предыдущих версий оригинальной темы: cliff
+Изменил рисунок cliff|earth_bank
 
-Исправление ошибок:
-не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
-не отображается разница в лесе needleleaved, broadleaved, только mixed
-отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
-
-Изменил рисунок cliff
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-14 новых иконок, сделанных в соответствии с оригинальным стилем и цветами
-разобраться с источником воды - скважина на Кусинских Печах
-разобраться c tms_land-base и tms_land-detail
+27/01/2022
+Release version 4.0 beta
