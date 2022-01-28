@@ -15,22 +15,22 @@
 
 22-26/01/2022 
 Исправление ошибок:
-не отображается разница в лесе needleleaved, broadleaved, только mixed
-не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
-отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
-
+Не отображается разница в лесе needleleaved, broadleaved, только mixed
+Не включено cat id="tms_peak" в Элементы ландшафта, tms_safety в layer Hiking; zoom-max=16 у quarry; 
+Отсутствуют waterway=dam, guidepost, via_ferrata, peak_cross, ridge|arete
 PNG --> SVG, Размер в правилах: round(Px * 2/3), где Px - ширина или высота иконки
-
 Добавлены новые: adit, adit_disused; water_tower; generator:source=coal,nuclear,water,gas; hunting_stand; barrier=log,turnstile
 shop=sports, hairdresser, travel_agency, chemist, books, mall, car, organic|shop_farm|greengrocer|cheese; sport=gym
 survey_point; tree_row
-
 Добавлены категории "Названия мест, POI" - tms_landnames;
-
 Добавлены подписи landuse=retail|commercial|industrial|brownfield|garages|construction|greenfield;
 all sports, all emergency, all tourism, picnic_site, camp_site и др
-
 Изменил рисунок cliff|earth_bank
-
 27/01/2022
 Release version 4.0 beta
+
+28/01/2022
+создан tms_relief: в нём tree, cliff, ridge, valley
+переместил детские сады kindergarden в tms_schools
+в tms_schools из к=amenity|building убрал building
+Release version 4
