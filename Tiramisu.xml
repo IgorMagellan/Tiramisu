@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Tiramisù 4.0 for Oruxmaps and MapsForge compatible applications
+Tiramisù 4.1 for Oruxmaps and MapsForge compatible applications
 
 by Maki
 
@@ -31,7 +31,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
 
-<stylemenu id="tiramisu_4_0" defaultvalue="tms_hiking" defaultlang="en">
+<stylemenu id="tiramisu_4_1" defaultvalue="tms_hiking" defaultlang="en">
 
 <!-- Layers -->
 	<layer id="tms_contours" enabled="true">
@@ -50,21 +50,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="it" value="Linee di contorno (zoom basso)"/>
 		<cat id="tms_contours-lz"/>
 	</layer>
-	<layer id="tms_land-base" enabled="true">
-		<name lang="en" value="Terrain (basic)"/>
-		<name lang="ru" value="Местность (basic)"/>
-		<name lang="es" value="Terreno (básico)" />
-		<name lang="de" value="Gelände (Grundkenntnisse)"/>
-		<name lang="it" value="Terrain (base)"/>		
-		<cat id="tms_land-base"/>
-	</layer>
-	<layer id="tms_land-detail" enabled="true">
-		<name lang="en" value="Terrain (detailed)"/>
-		<name lang="ru" value="Местность (detail)"/>
-		<name lang="es" value="Terreno (detalle)" />
-		<name lang="de" value="Gelände (Detail)"/>
-		<name lang="it" value="Terreno (dettaglio)"/>
-		<cat id="tms_land-detail"/>
+	<layer id="tms_terrain" enabled="true">
+		<name lang="en" value="Terrain"/>
+		<name lang="ru" value="Местность"/>
+		<name lang="es" value="Terreno" />
+		<name lang="de" value="Gelände"/>
+		<name lang="it" value="Terrain"/>		
+		<cat id="tms_terrain"/>
 	</layer>
 	<layer id="tms_land-ele" enabled="true">
 		<name lang="en" value="Landscape elements"/>
@@ -264,10 +256,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- Base -->
 		<layer id="tms_base">
+			<overlay id="tms_terrain"/>
 			<overlay id="tms_contours"/>
 			<overlay id="tms_contours-lz"/>
-			<overlay id="tms_land-base"/>
-			<overlay id="tms_land-detail"/>
 			<overlay id="tms_land-ele"/>
 			<overlay id="tms_landnames"/>
 			<overlay id="tms_water"/>
@@ -331,17 +322,17 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 </stylemenu>
 
 <!-- Background -->
-	<rule cat="tms_land-base" e="way" k="natural" v="sea"> <area fill="#85a7ff" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="nosea"> <area fill="#ffffff" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="sea"> <area fill="#85a7ff" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="nosea"> <area fill="#ffffff" /> </rule>
 	
 <!-- landcover -->
-	<rule cat="tms_land-base" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
 
 <!-- vegetation -->
-	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood">
+	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
 <!-- 		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" ><area fill="#40125f16" /></rule> 
 		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#409fdd0d" /></rule> -->
 		<!-- <rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="13" ><area fill="#40709110" /></rule>	 -->
@@ -369,63 +360,63 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#289fdd0d" /></rule>		
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scrub.svg" symbol-width="25" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="14" zoom-max="14"> <area src="file:/res/p_scrub.svg" symbol-width="35" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="15" zoom-max="15"> <area src="file:/res/p_scrub.svg" symbol-width="45" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="16" zoom-max="16"> <area src="file:/res/p_scrub.svg" symbol-width="55" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="17" zoom-max="17"> <area src="file:/res/p_scrub.svg" symbol-width="70" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub" zoom-min="18" zoom-max="99"> <area src="file:/res/p_scrub.svg" symbol-width="90" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scrub.svg" symbol-width="25" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="14" zoom-max="14"> <area src="file:/res/p_scrub.svg" symbol-width="35" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="15" zoom-max="15"> <area src="file:/res/p_scrub.svg" symbol-width="45" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="16" zoom-max="16"> <area src="file:/res/p_scrub.svg" symbol-width="55" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="17" zoom-max="17"> <area src="file:/res/p_scrub.svg" symbol-width="70" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="18" zoom-max="99"> <area src="file:/res/p_scrub.svg" symbol-width="90" /> </rule>
 
-	<rule cat="tms_land-detail" e="way" k="natural" v="heath" zoom-min="13" zoom-max="13"> <area src="file:/res/p_heat.svg" symbol-width="20" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="heath" zoom-min="14" zoom-max="14"> <area src="file:/res/p_heat.svg" symbol-width="30" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="heath" zoom-min="15" zoom-max="15"> <area src="file:/res/p_heat.svg" symbol-width="40" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="heath" zoom-min="16" zoom-max="99"> <area src="file:/res/p_heat.svg" symbol-width="50" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="heath" zoom-min="13" zoom-max="13"> <area src="file:/res/p_heat.svg" symbol-width="20" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="heath" zoom-min="14" zoom-max="14"> <area src="file:/res/p_heat.svg" symbol-width="30" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="heath" zoom-min="15" zoom-max="15"> <area src="file:/res/p_heat.svg" symbol-width="40" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="heath" zoom-min="16" zoom-max="99"> <area src="file:/res/p_heat.svg" symbol-width="50" /> </rule>
 
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="13" zoom-max="13"> <area src="file:/res/p_fell.svg" symbol-width="015" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="14" zoom-max="14"> <area src="file:/res/p_fell.svg" symbol-width="025" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="15" zoom-max="15"> <area src="file:/res/p_fell.svg" symbol-width="035" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="16" zoom-max="16"> <area src="file:/res/p_fell.svg" symbol-width="050" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="17" zoom-max="17"> <area src="file:/res/p_fell.svg" symbol-width="070" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="fell" zoom-min="18" zoom-max="99"> <area src="file:/res/p_fell.svg" symbol-width="090" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="13" zoom-max="13"> <area src="file:/res/p_fell.svg" symbol-width="015" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="14" zoom-max="14"> <area src="file:/res/p_fell.svg" symbol-width="025" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="15" zoom-max="15"> <area src="file:/res/p_fell.svg" symbol-width="035" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="16" zoom-max="16"> <area src="file:/res/p_fell.svg" symbol-width="050" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="17" zoom-max="17"> <area src="file:/res/p_fell.svg" symbol-width="070" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="18" zoom-max="99"> <area src="file:/res/p_fell.svg" symbol-width="090" /> </rule>
 
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13" zoom-max="13"> <area src="file:/res/p_farmland.svg" symbol-width="050" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="14" zoom-max="14"> <area src="file:/res/p_farmland.svg" symbol-width="080" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="15" zoom-max="15"> <area src="file:/res/p_farmland.svg" symbol-width="110" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="16" zoom-max="16"> <area src="file:/res/p_farmland.svg" symbol-width="150" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="17" zoom-max="17"> <area src="file:/res/p_farmland.svg" symbol-width="190" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="18" zoom-max="99"> <area src="file:/res/p_farmland.svg" symbol-width="240" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13" zoom-max="13"> <area src="file:/res/p_farmland.svg" symbol-width="050" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="14" zoom-max="14"> <area src="file:/res/p_farmland.svg" symbol-width="080" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="15" zoom-max="15"> <area src="file:/res/p_farmland.svg" symbol-width="110" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="16" zoom-max="16"> <area src="file:/res/p_farmland.svg" symbol-width="150" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="17" zoom-max="17"> <area src="file:/res/p_farmland.svg" symbol-width="190" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="18" zoom-max="99"> <area src="file:/res/p_farmland.svg" symbol-width="240" /> </rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="marsh|wetland" zoom-min="13" zoom-max="13"> <area src="file:/res/p_marsh.svg" symbol-width="25" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="marsh|wetland" zoom-min="14" zoom-max="14"> <area src="file:/res/p_marsh.svg" symbol-width="35" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="marsh|wetland" zoom-min="15" zoom-max="15"> <area src="file:/res/p_marsh.svg" symbol-width="47" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="marsh|wetland" zoom-min="16" zoom-max="99"> <area src="file:/res/p_marsh.svg" symbol-width="60" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="marsh|wetland" zoom-min="13" zoom-max="13"> <area src="file:/res/p_marsh.svg" symbol-width="25" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="marsh|wetland" zoom-min="14" zoom-max="14"> <area src="file:/res/p_marsh.svg" symbol-width="35" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="marsh|wetland" zoom-min="15" zoom-max="15"> <area src="file:/res/p_marsh.svg" symbol-width="47" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="marsh|wetland" zoom-min="16" zoom-max="99"> <area src="file:/res/p_marsh.svg" symbol-width="60" /> </rule>
 
-	<rule cat="tms_land-detail" e="way" k="landuse" v="orchard" zoom-min="13" zoom-max="13"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="orchard" zoom-min="14" zoom-max="14"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="orchard" zoom-min="15" zoom-max="15"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="40" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="orchard" zoom-min="16" zoom-max="99"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="50" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="13" zoom-max="13"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="14" zoom-max="14"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="15" zoom-max="15"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="40" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="16" zoom-max="99"><area src="file:/res/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="50" /> </rule>
 
-	<rule cat="tms_land-detail" e="way" k="landuse" v="vineyard" zoom-min="13" zoom-max="13"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="vineyard" zoom-min="14" zoom-max="14"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="vineyard" zoom-min="15" zoom-max="15"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="40" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="landuse" v="vineyard" zoom-min="16" zoom-max="99"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="50" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="13" zoom-max="13"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="14" zoom-max="14"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="15" zoom-max="15"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="40" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="16" zoom-max="99"><area src="file:/res/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="50" /> </rule>
 	
-	<rule cat="tms_land-detail" e="way" k="landuse|natural" v="meadow|grass|grassland" zoom-min="13"> <area src="file:/res/p_grass.svg" symbol-width="100"  /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="meadow|grass|grassland" zoom-min="13"> <area src="file:/res/p_grass.svg" symbol-width="100"  /> </rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="glacier" zoom-min="12"> <area fill="#BBE0FFFF" stroke="#E0FFFF" stroke-width="0.8" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="glacier" zoom-min="12"> <area fill="#BBE0FFFF" stroke="#E0FFFF" stroke-width="0.8" /> </rule>
 
 <!-- Bare ground -->
-	<rule cat="tms_land-detail" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="13" zoom-max="13"> <area src="file:/res/p_rock.svg" symbol-width="060" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="14" zoom-max="14"> <area src="file:/res/p_rock.svg" symbol-width="090" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="15" zoom-max="15"> <area src="file:/res/p_rock.svg" symbol-width="130" /> </rule>
-	<rule cat="tms_land-detail" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="16" zoom-max="99"> <area src="file:/res/p_rock.svg" symbol-width="170" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="13" zoom-max="13"> <area src="file:/res/p_rock.svg" symbol-width="060" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="14" zoom-max="14"> <area src="file:/res/p_rock.svg" symbol-width="090" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="15" zoom-max="15"> <area src="file:/res/p_rock.svg" symbol-width="130" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="16" zoom-max="99"> <area src="file:/res/p_rock.svg" symbol-width="170" /> </rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="scree" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scree.svg" symbol-width="015" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scree" zoom-min="14" zoom-max="14"> <area src="file:/res/p_scree.svg" symbol-width="025" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scree" zoom-min="15" zoom-max="15"> <area src="file:/res/p_scree.svg" symbol-width="035" /> </rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="scree" zoom-min="16" zoom-max="99"> <area src="file:/res/p_scree.svg" symbol-width="050" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scree.svg" symbol-width="015" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="14" zoom-max="14"> <area src="file:/res/p_scree.svg" symbol-width="025" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="15" zoom-max="15"> <area src="file:/res/p_scree.svg" symbol-width="035" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="16" zoom-max="99"> <area src="file:/res/p_scree.svg" symbol-width="050" /> </rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse" v="landfill|quarry">
+	<rule cat="tms_terrain" e="way" k="landuse" v="landfill|quarry">
 		<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"> <area src="file:/res/p_quarry.svg" symbol-width="015" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"> <area src="file:/res/p_quarry.svg" symbol-width="025" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"> <area src="file:/res/p_quarry.svg" symbol-width="035" /> </rule>
@@ -433,39 +424,39 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<area stroke="#9EA199" stroke-width="0.2" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="beach|sand" zoom-min="11"> <area fill="#BBFAEBB9" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="beach|sand" zoom-min="11"> <area fill="#BBFAEBB9" /> </rule>
 
 <!-- Misc land use -->
-	<rule cat="tms_land-base" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13"> <area fill="#BBC9DDDD" /> </rule>
-	<rule cat="tms_land-base" e="way" k="leisure" v="park" zoom-min="13"> <area fill="#BBC7F1A3" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13"> <area fill="#BBC9DDDD" /> </rule>
+	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13"> <area fill="#BBC7F1A3" /> </rule>
 	
-	<rule cat="tms_land-base" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13"> <area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="allotments|village_green|recreation_ground|greenfield" zoom-min="13"> <area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13"> <area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="allotments|village_green|recreation_ground|greenfield" zoom-min="13"> <area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" /> </rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11"><area fill="#adc4b6" stroke="#333333" stroke-width="0.3" /></rule>
-	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15"><symbol src="file:/res/s_cemetery.svg" symbol-width="21" /></rule>
+	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11"><area fill="#adc4b6" stroke="#333333" stroke-width="0.3" /></rule>
+	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15"><symbol src="file:/res/s_cemetery.svg" symbol-width="21" /></rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse" v="military" zoom-min="11" zoom-max="11"> <area src="file:/res/p_military.svg" symbol-width="20" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="military" zoom-min="12" zoom-max="12"> <area src="file:/res/p_military.svg" symbol-width="30" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="military" zoom-min="13" zoom-max="13"> <area src="file:/res/p_military.svg" symbol-width="40" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="military" zoom-min="14" zoom-max="15"> <area src="file:/res/p_military.svg" symbol-width="55" /> </rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="military" zoom-min="16" zoom-max="99"> <area src="file:/res/p_military.svg" symbol-width="75" /> </rule>
-	<rule cat="tms_land-base" e="way" k="military" v="*" zoom-min="11" zoom-max="11"> <area src="file:/res/p_military.svg" symbol-width="20" /> </rule>
-	<rule cat="tms_land-base" e="way" k="military" v="*" zoom-min="12" zoom-max="12"> <area src="file:/res/p_military.svg" symbol-width="30" /> </rule>
-	<rule cat="tms_land-base" e="way" k="military" v="*" zoom-min="13" zoom-max="13"> <area src="file:/res/p_military.svg" symbol-width="40" /> </rule>
-	<rule cat="tms_land-base" e="way" k="military" v="*" zoom-min="14" zoom-max="15"> <area src="file:/res/p_military.svg" symbol-width="55" /> </rule>
-	<rule cat="tms_land-base" e="way" k="military" v="*" zoom-min="16" zoom-max="99"> <area src="file:/res/p_military.svg" symbol-width="75" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="11" zoom-max="11"> <area src="file:/res/p_military.svg" symbol-width="20" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="12" zoom-max="12"> <area src="file:/res/p_military.svg" symbol-width="30" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="13" zoom-max="13"> <area src="file:/res/p_military.svg" symbol-width="40" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="14" zoom-max="15"> <area src="file:/res/p_military.svg" symbol-width="55" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="16" zoom-max="99"> <area src="file:/res/p_military.svg" symbol-width="75" /> </rule>
+	<rule cat="tms_terrain" e="way" k="military" v="*" zoom-min="11" zoom-max="11"> <area src="file:/res/p_military.svg" symbol-width="20" /> </rule>
+	<rule cat="tms_terrain" e="way" k="military" v="*" zoom-min="12" zoom-max="12"> <area src="file:/res/p_military.svg" symbol-width="30" /> </rule>
+	<rule cat="tms_terrain" e="way" k="military" v="*" zoom-min="13" zoom-max="13"> <area src="file:/res/p_military.svg" symbol-width="40" /> </rule>
+	<rule cat="tms_terrain" e="way" k="military" v="*" zoom-min="14" zoom-max="15"> <area src="file:/res/p_military.svg" symbol-width="55" /> </rule>
+	<rule cat="tms_terrain" e="way" k="military" v="*" zoom-min="16" zoom-max="99"> <area src="file:/res/p_military.svg" symbol-width="75" /> </rule>
 
 	
 <!-- Area names -->
-	<rule cat="tms_land-detail" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|meadow|grassland|heath|marsh|wetland|scree|scrub|forest|wood|landfill|quarry|vineyard|field|farm|farmland" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|meadow|grassland|heath|marsh|wetland|scree|scrub|forest|wood|landfill|quarry|vineyard|field|farm|farmland" zoom-min="13">
 		<caption cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-	<rule cat="tms_land-detail" e="way" k="landuse|leisure" v="village_green|recreation_ground|grass|military|park|garden|common|green|dog_park" zoom-min="15">
+	<rule cat="tms_terrain" e="way" k="landuse|leisure" v="village_green|recreation_ground|grass|military|park|garden|common|green|dog_park" zoom-min="15">
 		<caption cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	
-	<rule cat="tms_land-base" e="way" k="natural" v="tree_row">
+	<rule cat="tms_terrain" e="way" k="natural" v="tree_row">
 		<line stroke="#90679632" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
 
@@ -676,7 +667,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- waterways -->
-	<rule cat="tms_land-base" e="way" k="tunnel" v="~|no">
+	<rule cat="tms_terrain" e="way" k="tunnel" v="~|no">
 		<rule e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="ditch">
 				<line stroke="#5887ff" stroke-width="0.6" />
@@ -699,24 +690,25 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- bodies of water -->
-	<rule cat="tms_land-base" e="way" k="landuse|natural" v="reservoir|basin|water">
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
 	<area fill="#85a7ff" />
 	</rule>
-	<rule cat="tms_land-base"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="14">
+	<rule cat="tms_terrain"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="14">
 		<caption priority="3" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_land-base" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="15">
+	<rule cat="tms_terrain" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="15">
 		<caption priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 <!-- waterway structures -->
-	<rule cat="tms_land-base" e="way" k="tunnel" v="~|no">
+	<rule cat="tms_terrain" e="way" k="tunnel" v="~|no">
 		<rule e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock"> <area fill="#90CCCCCC" /> <line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
-			<rule e="node" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
+			<rule e="any" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
+			<!-- <rule e="any" k="waterway" v="weir" ><symbol src="file:/res/s_weir.svg" symbol-height="17"/> </rule> -->
 			<rule e="way" k="man_made" v="pipeline">
 				  <rule e="way" k="tunnel" v="~|no">
 						<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
@@ -845,11 +837,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- Buildings -->
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-max="14">					<area fill="#555555" stroke="#000000" stroke-width="0.3" /> </rule>
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="15" zoom-max="15">	<area fill="#666666" stroke="#000000" stroke-width="0.2" /> </rule>
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="16" zoom-max="16">	<area fill="#777777" stroke="#000000" stroke-width="0.2" /> </rule>
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="17" zoom-max="17">	<area fill="#888888" stroke="#000000" stroke-width="0.2" /> </rule>
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="18">					<area fill="#999999" stroke="#000000" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">					<area fill="#555555" stroke="#000000" stroke-width="0.3" /> </rule>
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="15" zoom-max="15">	<area fill="#666666" stroke="#000000" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="16" zoom-max="16">	<area fill="#777777" stroke="#000000" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="17" zoom-max="17">	<area fill="#888888" stroke="#000000" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="18">					<area fill="#999999" stroke="#000000" stroke-width="0.2" /> </rule>
 
 <!-- aeroways -->
 	<!-- runways areas -->
@@ -2473,7 +2465,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="13">	<symbol priority="410" display="always" src="file:/res/s_railway-crossing.svg" symbol-width="29" /></rule>
 	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" zoom-min="16">	<symbol priority="405" display="always" src="file:/res/s_traffic_signal_tms.svg" symbol-height="21" /></rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
+	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
 		<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#80111111" stroke="#bbbbbb" stroke-width="0.4" />
 	</rule>
 	
