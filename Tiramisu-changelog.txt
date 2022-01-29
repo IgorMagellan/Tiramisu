@@ -34,5 +34,8 @@ Release version 4.0 beta
 переместил детские сады kindergarden в tms_schools
 в tms_schools из к=amenity|building убрал building
 Release version 4
-Переименование tms_land-base и tms_land-detail в tms_terrain, убрал в меню слой "Местность (detail)" (tms_land-detail)
+Переименование tms_land-base и tms_land-detail в tms_terrain, убрал в меню слой "Местность (detail)" 
 Корр.правила для s_weir - давало warning Cruiser
+Отключение всех заливок при откл. Terrain
+29/01/2022
+переделал mountain_pass|saddle с углами 0-45-90-135
