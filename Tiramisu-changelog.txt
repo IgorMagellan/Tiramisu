@@ -28,14 +28,18 @@ all sports, all emergency, all tourism, picnic_site, camp_site и др
 Изменил рисунок cliff|earth_bank
 27/01/2022
 Release version 4.0 beta
-
 28/01/2022
 создан tms_relief: в нём tree, cliff, ridge, valley
 переместил детские сады kindergarden в tms_schools
 в tms_schools из к=amenity|building убрал building
 Release version 4
+
 Переименование tms_land-base и tms_land-detail в tms_terrain, убрал в меню слой "Местность (detail)" 
 Корр.правила для s_weir - давало warning Cruiser
 Отключение всех заливок при откл. Terrain
 29/01/2022
 переделал mountain_pass|saddle с углами 0-45-90-135
+кресты - улучшил wayside_cross; добавил man_made=cross
+добавил мосты для пешеходных путей; ступеньки steps; камень nat_stone; просеки cutline
+добавил emergency_access_point (только для node, OAM)
+

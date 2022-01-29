@@ -1,0 +1,13 @@
+<svg width="64" height="64" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <g id="icon">
+   <path d="m445 117-23-23-21 81c27-7 53-15 80-22l-23-23 63-63-12-12c-22 21-43 41-64 62z"/>
+   <path d="m55 72c21 21 42 42 62 63l-23 23c27 7 54 14 81 21-7-27-15-53-22-80l-23 23c-22-20-42-41-63-62l-12 12z"/>
+   <path d="m234 234h-101v111h102v102h111v-101h102v-111h-101v-101l-113-2z"/>
+   <path d="m427 481 23-23 63 63 12-12-62-62 24-24c-27-7-54-14-81-22 7 26 14 53 21 80z"/>
+   <path d="m99 428 23 23-62 63 12 12 63-62 24 24 21-81z"/>
+  </g>
+ </defs>
+ <use transform="matrix(.12196 0 0 .12196 -3.3686 -3.4296)" width="100%" height="100%" opacity=".75" stroke="#ffffff" stroke-linejoin="round" stroke-width="40.997" xlink:href="#icon"/>
+ <use transform="matrix(.12196 0 0 .12196 -3.3686 -3.4296)" width="100%" height="100%" fill="#d20000" xlink:href="#icon"/>
+</svg>

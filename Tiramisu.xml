@@ -748,13 +748,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2"/>
 	</rule>
 
-	<!-- Хребты -->
 	<rule cat="tms_relief" e="way" k="natural" v="ridge|arete">
 		<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
 		<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 		<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
 	</rule>
 	
+	<rule cat="tms_relief" e="way" k="man_made" v="cutline" >
+		<line stroke="#99ddffdd" stroke-width="2.2" stroke-linecap="butt" />
+	</rule>	
 <!-- POI areas -->
 	<rule e="way" k="area" v="yes|true">
 		<rule e="way" k="highway" v="footway|pedestrian"> <area fill="#e4e4e4" stroke="#707070" stroke-width="0.15" /> </rule>
@@ -1060,7 +1062,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- bridge casings -->
 
 	<rule e="way" k="bridge" v="yes|true|viaduct">
-<!-- walls -->
+		
+		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">		
+ 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="2.26" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="2.04" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="1.80" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="1.56" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="1.36" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.10" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="0.84" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.60" stroke-linecap="butt" /></rule>
+		</rule>
+
  			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="3.88" stroke-linecap="butt" /></rule>
 			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="3.84" stroke-linecap="butt" /></rule>
 			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="3.29" stroke-linecap="butt" /></rule>
@@ -1116,6 +1129,17 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="1.20" stroke-linecap="butt" /></rule>
 
 <!-- gap -->
+		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">		
+ 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="1.80" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="1.60" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="1.34" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.16" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="0.96" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="0.70" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.50" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.30" stroke-linecap="butt" /></rule>
+		</rule>
+		
  			<rule e="way" k="highway" v="cycleway" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.68" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="cycleway" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="2.65" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="cycleway" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="2.27" stroke-linecap="butt" /></rule>
@@ -1455,7 +1479,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="area" v="~|no|false">
 
 <!-- paths and footways -->
-
+			<rule cat="tms_hk" e="way" k="highway" v="steps" zoom-min="13">
+				<line stroke="#5a5f54" stroke-width="0.9" stroke-linecap="butt"/>
+				<line stroke="#CACCC6" stroke-width="0.8" stroke-linecap="butt"/>
+				<line stroke="#444444" stroke-width="0.9" stroke-dasharray="0.24,0.38" stroke-linecap="butt" scale="all" />
+				<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16">
+					<pathText k="name" font-style="normal" font-size="10" stroke="#555555" stroke-width="2" />
+				</rule>
+			</rule>
+			
 		<rule e="way" k="highway" v="footway" zoom-min="13" zoom-max="13"><line stroke="#0000FF" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="14" zoom-max="14"><line stroke="#0000FF" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="15" zoom-max="15"><line stroke="#0000FF" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
@@ -1465,7 +1497,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="footway" zoom-min="19" zoom-max="19"><line stroke="#0000FF" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="20" zoom-max="99"><line stroke="#0000FF" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
 	
- 		<rule cat="tms_hk" e="way" k="highway" v="path|footpath|steps">
+ 		<rule cat="tms_hk" e="way" k="highway" v="path|footpath">
  			<rule e="way" k="sac_scale" v="~" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.67"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.58"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
@@ -2281,7 +2313,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- Places -->
 	<rule e="node" k="place" v="suburb" zoom-min="11">				<caption priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-	<rule e="node" k="place" v="locality" zoom-min="15">			<caption priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+	<rule e="any" k="place" v="locality" zoom-min="11">				<caption priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="isolated_dwelling" zoom-min="14">	<caption priority="510" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="hamlet" zoom-min="13">				<caption priority="515" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="village" zoom-min="11">				<caption priority="520" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
@@ -2389,6 +2421,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="425" id="tms_cave" display="always" src="file:/res/s_cave_entrance.svg" symbol-width="17" />
 		<caption cat="tms_landnames" priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_landnames" symbol-id="tms_cave" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+
+	<rule cat="tms_tour" e="node" k="natural" v="nat_stone" zoom-min="14">
+		<symbol id="s_stone" priority="64" display="always" src="file:/res/s_stone.svg" symbol-width="18" />
+		<caption cat="tms_landnames" k="name" symbol-id="s_stone" position="above" font-style="italic" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		<caption cat="tms_landnames" k="ele" symbol-id="s_stone" position="below" font-style="italic" font-size="8" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 	</rule>
 
 	<rule cat="tms_tour" e="any" k="man_made" v="adit" >
@@ -2642,6 +2680,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="400" id="s_doctors" src="file:/res/s_doctors.svg" display="always" symbol-width="17" />
 		<caption priority="200" symbol-id="s_doctors" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="9" fill="#D90000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
+	<rule cat="tms_emergency" e="any" k="highway" v="emergency_access_point" >
+		<symbol id="s_emergency_access_point" priority="405" display="always" src="file:/res/s_emergency_access_point2.svg" symbol-height="24" />
+		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="14">
+			<caption symbol-id="s_emergency_access_point" priority="400" k="name"  display="always" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+			<caption k="addr:housenumber" symbol-id="s_emergency_access_point" position="below" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="320" display="always" src="file:/res/s_telephone.svg" symbol-width="17" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">		
 		<symbol priority="400" id="s_police" src="file:/res/s_police.svg" display="always" symbol-width="19" />
@@ -2809,15 +2854,27 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- place of worship -->
-	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/res/s_wayside_cross.svg" symbol-height="15" /></rule>
-	<rule cat="tms_religion" e="any" k="building" v="church"><symbol src="file:/res/s_church.svg" symbol-width="21" /></rule>
-	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
+	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross">
+		<symbol display="always" id="s_wayside_cross" src="file:/res/s_wayside_cross.svg" symbol-height="15" />
+		<rule e="any" k="*" v="*" zoom-min="17">
+			<caption cat="tms_landnames" k="name" symbol-id="s_wayside_cross" position="above" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>	
+	</rule>
+	<rule cat="tms_religion" e="any" k="man_made" v="cross" zoom-min="14" >
+		<rule e="any" k="natural" v="~">
+			<symbol display="always" id="s_cross" priority="53" src="file:/res/s_wayside_cross.svg" symbol-height="16" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_cross" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
+<!-- 	<rule cat="tms_religion" e="any" k="building" v="church"><symbol id="tms_worship" src="file:/res/s_church.svg" symbol-width="21" /></rule>
+ -->	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
 		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/res/s_church.svg" symbol-width="21" /></rule>
 		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/res/s_synagogue.svg" symbol-width="21" /></rule>
 		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/res/s_mosque.svg" symbol-width="21" /></rule>
 		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/res/s_place_of_worship.svg" symbol-width="17" /></rule>
 	</rule>
-	<rule cat="tms_religion" e="node" k="amenity" v="place_of_worship"><caption cat="tms_landnames" symbol-id="tms_worship" k="name" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship"><caption cat="tms_landnames" symbol-id="tms_worship" k="name" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 <!-- bureaucracy -->
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">			
@@ -2827,7 +2884,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>	
 	</rule>
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">			
-		<symbol priority="230" id="s_bank" src="file:/res/s_bank.svg" display="always" symbol-height="19" />
+		<symbol priority="230" id="s_bank" src="file:/res/s_bank.svg" display="always" symbol-height="20" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="9" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
 		</rule>	
