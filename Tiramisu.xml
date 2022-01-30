@@ -702,31 +702,30 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- waterway structures -->
-	<rule cat="tms_terrain" e="way" k="tunnel" v="~|no">
-		<rule e="way" k="location" v="~|overground">
+	<rule e="way" k="tunnel" v="~|no">
+		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock"> <area fill="#90CCCCCC" /> <line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
 			<rule e="any" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
 			<!-- <rule e="any" k="waterway" v="weir" ><symbol src="file:/res/s_weir.svg" symbol-height="17"/> </rule> -->
-			<rule e="way" k="man_made" v="pipeline">
-				  <rule e="way" k="tunnel" v="~|no">
-						<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
-						<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="20,5" stroke-linecap="butt" />
-						<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-						<pathText k="name" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
-				  </rule>
-			</rule>
 		</rule>
+		
+		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+			<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
+			<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="20,5" stroke-linecap="butt" />
+			<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
+			<pathText k="name" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
+		</rule>		
 	</rule>
-	<rule e="way" k="waterway" v="dam">
+	<rule cat="tms_water-land" e="way" k="waterway" v="dam">
 		<line stroke="#333333" stroke-width="1" />
 		<line stroke="#CCCCCC" stroke-width="1" stroke-dasharray="10,1" stroke-linecap="butt" />
 		<rule e="any" k="*" v="*" closed="yes">
 			<area fill="#CCCCCC" />
 		</rule>
 	</rule>
-	<rule e="any" k="waterway" v="dam" zoom-min="15">
+	<rule cat="tms_water-land" e="any" k="waterway" v="dam" zoom-min="15">
 		<symbol src="file:/res/s_dam.svg" symbol-width="17"/>
 	</rule>
 	
@@ -832,9 +831,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="way" k="admin_level" v="2">
 		<rule e="any" k="*" v="*">
 			<line stroke="#80ffff88" stroke-width="3" stroke-linecap="butt" />
-			<line stroke="#30aa0000" stroke-width="3" stroke-linecap="butt" stroke-dasharray="0,10,10,0" />
+			<line stroke="#30aa0000" stroke-width="3" stroke-linecap="butt" stroke-dasharray="0,3,3,0" scale="all" />
 			<line stroke="#ffffff" stroke-width="0.5" />
-			<line stroke="#60003000" stroke-width="0.5" stroke-dasharray="10,10" />
+			<line stroke="#60003000" stroke-width="0.5" stroke-dasharray="3,3" scale="all" />
 		</rule>
 	</rule>
 
@@ -996,6 +995,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- mtb relations higlight #64ce1be1 -->
 
 	<rule cat="tms_mtbnw" e="way" k="network" v="mtb">
+
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64ce1be1" stroke-width="2.55" dy="-0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64ce1be1" stroke-width="2.52" dy="-0.84" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="15" zoom-max="15"><line stroke="#64ce1be1" stroke-width="2.16" dy="-0.72" stroke-linecap="butt" /></rule>
@@ -1328,7 +1328,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="19" zoom-max="19"><line stroke="#333333" stroke-width="0.25" /></rule>
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="20" zoom-max="99"><line stroke="#333333" stroke-width="0.19" /></rule>
 
-			<rule e="way" k="railway" v="funicular" zoom-min="14">
+			<rule cat="tms_aerial" e="way" k="railway" v="funicular" zoom-min="14">
 				<symbol src="file:/res/s_rail_funicular.svg" display="always" symbol-width="21" />
 			</rule>
 		</rule>
@@ -2658,7 +2658,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" scale="all" stroke-linecap="butt" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<symbol id="s_via_ferrata" display="always" src="file:/res/s_via_ferrata.svg" symbol-height="17" />
-			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="8" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="8" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
 		</rule>
 	</rule>
 	
@@ -2673,12 +2673,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption priority="400" symbol-id="s_hospital" cat="tms_landnames" k="name" position="above" display="always" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />		
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="pharmacy">		
-		<symbol priority="400" id="s_pharmacy" src="file:/res/s_pharmacy.svg" display="always" symbol-width="17" />
+		<symbol priority="325" id="s_pharmacy" src="file:/res/s_pharmacy.svg" display="always" symbol-width="17" />
 		<caption priority="300" symbol-id="s_pharmacy" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#336600" stroke="#FFFFFF" stroke-width="2" />	
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors">
-		<symbol priority="400" id="s_doctors" src="file:/res/s_doctors.svg" display="always" symbol-width="17" />
-		<caption priority="200" symbol-id="s_doctors" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="9" fill="#D90000" stroke="#FFFFFF" stroke-width="2" />
+		<symbol priority="350" id="s_doctors" src="file:/res/s_doctors.svg" display="always" symbol-width="17" />
+		<caption priority="200" symbol-id="s_doctors" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#D90000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_emergency" e="any" k="highway" v="emergency_access_point" >
 		<symbol id="s_emergency_access_point" priority="405" display="always" src="file:/res/s_emergency_access_point2.svg" symbol-height="24" />
@@ -2686,8 +2686,21 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption symbol-id="s_emergency_access_point" priority="400" k="name"  display="always" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
 			<caption k="addr:housenumber" symbol-id="s_emergency_access_point" position="below" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
 		</rule>
-	</rule>	
-	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="320" display="always" src="file:/res/s_telephone.svg" symbol-width="17" /></rule>
+	</rule>		
+	<rule cat="tms_emergency" e="any" k="emergency" v="phone" >
+		<symbol id="s_emergency_phone" priority="320" display="always" src="file:/res/s_emergency_phone.svg" symbol-height="20" />
+		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="17">
+			<caption k="name" symbol-id="s_emergency_phone" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	<rule cat="tms_emergency" e="any" k="emergency" v="defibrillator" >
+		<symbol id="s_defibrillator" priority="325" display="always" src="file:/res/s_defibrillator.svg" symbol-height="21" />
+		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="18">
+			<caption k="name" symbol-id="s_defibrillator" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="310" display="always" src="file:/res/s_telephone.svg" symbol-width="17" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">		
 		<symbol priority="400" id="s_police" src="file:/res/s_police.svg" display="always" symbol-width="19" />
 		<caption priority="300" cat="tms_landnames" symbol-id="s_police" k="name" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2" />	
@@ -2808,18 +2821,28 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
-		<symbol priority="205" display="always" id="tms_bus-station" src="file:/res/s_bus_station.svg" symbol-width="21" />
+		<symbol priority="205" display="always" id="tms_bus-station" src="file:/res/s_bus_station.svg" symbol-width="19" />
 		<caption cat="tms_landnames" priority="100" symbol-id="tms_bus-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
 		<symbol priority="205" display="always" id="tms_bus-stop" src="file:/res/s_bus.svg" symbol-width="19" />
 		<caption cat="tms_landnames" priority="100" symbol-id="tms_bus-stop" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_trans-pub" e="node" k="railway|building|light_rail" v="station|train_station">
-		<symbol priority="205" display="always" id="tms_train-station" src="file:/res/s_trainstation.svg" symbol-width="19" />
-		<caption cat="tms_landnames" priority="100" symbol-id="tms_train-station" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
-	</rule>
-	<rule cat="tms_trans-pub" e="node" k="railway" v="halt|tram_stop">
+	<rule cat="tms_trans-pub" e="any" k="station" v="light_rail">
+			<symbol priority="205" id="tms_train-station" display="always" src="file:/res/s_trainstation.svg" symbol-height="19" />
+			<caption cat="tms_landnames" priority="100" symbol-id="tms_train-station" k="name" position="below" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />			
+	</rule>	
+	<rule cat="tms_trans-pub" e="any" k="railway" v="station|halt">
+		<rule e="any" k="station" v="~">	
+			<symbol priority="205" id="tms_train-station" display="always" src="file:/res/s_trainstation.svg" symbol-height="19" />
+			<caption cat="tms_landnames" priority="100" symbol-id="tms_train-station" k="name" position="below" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />			
+		</rule>
+	</rule>		
+	<rule cat="tms_trans-pub" e="any" k="station" v="subway">
+			<symbol id="s_pt_subway" priority="405" display="always" src="file:/res/s_subway.svg" symbol-height="24" />
+			<caption cat="tms_landnames" priority="405" k="name" symbol-id="s_pt_subway" position="below" font-style="bold" font-size="9" fill="#ff0013" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>	
+	<rule cat="tms_trans-pub" e="node" k="railway" v="tram_stop">
 		<symbol priority="205" display="always" id="tms_tram-stop" src="file:/res/s_tram_stop.svg" symbol-width="19" />
 		<caption cat="tms_landnames" priority="100" symbol-id="tms_tram-stop"  k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
@@ -2896,7 +2919,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption cat="tms_landnames" priority="240" k="name" symbol-id="s_postoffice" position="above" font-style="bold" font-size="9" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="townhall" >   
+		<symbol priority="210" id="s_townhall" display="always" src="file:/res/s_townhall.svg" symbol-width="21" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="200" k="name" symbol-id="s_townhall" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
 <!-- man_made -->
 	<rule cat="tms_man-made" e="node" k="tower" v="communication" >
 		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_communication.svg" symbol-height="30" />

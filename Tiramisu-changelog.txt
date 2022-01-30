@@ -1,5 +1,5 @@
 ﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Tiramisu 4.0  for OpenAndroMap *
+* Tiramisu 4.1  for OpenAndroMap *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (mapsforge V4+)
 
@@ -42,4 +42,9 @@ Release version 4
 кресты - улучшил wayside_cross; добавил man_made=cross
 добавил мосты для пешеходных путей; ступеньки steps; камень nat_stone; просеки cutline
 добавил emergency_access_point (только для node, OAM)
-
+поправил admin_level=2 на scale=all (страны, государства)
+30/01/2022
+tms_water-land для weir, dam; переставил pipeline; tms_aerial для funicular
+добавил метро subway, администрации townhall; emergency phone, defibrillator
+переделал весь tms_trans-pub; 
+исправил подписи clinic|doctors
