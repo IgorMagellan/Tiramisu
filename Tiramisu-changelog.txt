@@ -48,3 +48,6 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 добавил метро subway, администрации townhall; emergency phone, defibrillator
 переделал весь tms_trans-pub; 
 исправил подписи clinic|doctors
+31/01/2022
+добавил броды ford
+оптимизация подписей alpine_hut, shelter, historical
