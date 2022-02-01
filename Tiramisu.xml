@@ -105,11 +105,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<cat id="tms_picnic"/>
 	</layer>
 	<layer id="tms_hknw" enabled="true">
-		<name lang="en" value="Hiking networks ^"/>
-		<name lang="ru" value="Пешеходные сети ^" />
-		<name lang="es" value="Redes de senderismo ^" />
-		<name lang="de" value="Wandernetzwerke ^"/>
-		<name lang="it" value="Reti escursionistiche ^"/>
+		<name lang="en" value="Hiking networks ⁿ"/>
+		<name lang="ru" value="Пешеходные сети ⁿ" />
+		<name lang="es" value="Redes de senderismo ⁿ" />
+		<name lang="de" value="Wandernetzwerke ⁿ"/>
+		<name lang="it" value="Reti escursionistiche ⁿ"/>
 		<cat id="tms_hknw"/>
 	</layer>
 	<layer id="tms_mtbnw" enabled="true">
@@ -921,10 +921,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64e52929" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref_hike" font-style="bold" font-size="8" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption cat="tms_landnames" k="ref_hike" font-style="bold" font-size="8" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
@@ -987,10 +987,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#641639cb" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref_cycle" font-style="bold" font-size="8" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption cat="tms_landnames" k="ref_cycle" font-style="bold" font-size="8" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
@@ -1057,10 +1057,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
       <pathText priority="10" k="ref_mtb" font-style="bold" font-size="9" fill="#ff0040" stroke="#ffffff" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300"/>
  -->	  	   
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref_mtb" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption cat="tms_landnames" k="ref_mtb" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
@@ -1756,6 +1756,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="mtb_scale" v="mtbs_3"   zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-linecap="round" /></rule>
 				<rule e="way" k="mtb_scale" v="mtbs_3"   zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-linecap="round" /></rule>
 				<rule e="way" k="mtb_scale" v="mtbs_3"   zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-linecap="round" /></rule>
+
  			</rule>
 			<rule e="way" k="mtb_scale_uphill" v="mtbu_2">
 				<rule e="way" k="mtb_scale" v="mtbs_0" zoom-min="13" zoom-max="13"><line stroke="#690E1A" stroke-width="0.85"  stroke-dasharray="05.00,03.00" stroke-linecap="round" /></rule>
@@ -1931,8 +1932,31 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="mtb_scale" v="*"   zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="butt" /></rule>
 				<rule e="way" k="mtb_scale" v="*"   zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="butt" /></rule>
 			</rule>
+			
+				<rule e="way" k="mtb_scale" v="mtbs_0" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_0.png" symbol-height="20" dy="-1" repeat="true" repeat-start="30" repeat-gap="100"/>
+				</rule>	
+				<rule e="way" k="mtb_scale" v="mtbs_1" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_1.png" symbol-height="20" dy="-1" repeat="true" repeat-start="28" repeat-gap="100"/>
+				</rule>	
+				<rule e="way" k="mtb_scale" v="mtbs_2" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_2.png" symbol-height="20" dy="-1" repeat="true" repeat-start="25" repeat-gap="75"/>
+				</rule>	
+				<rule e="way" k="mtb_scale" v="mtbs_3" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_3.png" symbol-height="20" dy="-1" repeat="true" repeat-start="20" repeat-gap="75"/>
+				</rule>	
+				<rule e="way" k="mtb_scale" v="mtbs_4|" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_4.png" symbol-height="20" dy="-1" repeat="true" repeat-start="15" repeat-gap="50"/>
+				</rule>		
+				<rule e="way" k="mtb_scale" v="mtbs_5" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_5.png" symbol-height="20" dy="-1" repeat="true" repeat-start="10" repeat-gap="50"/>
+				</rule>	
+				<rule e="way" k="mtb_scale" v="mtbs_6|" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_6.png" symbol-height="20" dy="-1" repeat="true" repeat-start="5" repeat-gap="30"/>
+				</rule>			
+			
 		</rule>
-		
+				
 <!-- tracks zoom 12 -->
 	<rule cat="tms_tracks" e="way" k="area" v="~|no|false" zoom-min="12" zoom-max="12">
 		<rule e="way" k="highway" v="track">
@@ -2098,6 +2122,26 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_5" zoom-min="18" zoom-max="18"><line stroke="#dd0000" stroke-width="0.37" stroke-dasharray="07.35,17.15" stroke-linecap="butt" /></rule>
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_5" zoom-min="19" zoom-max="19"><line stroke="#dd0000" stroke-width="0.28" stroke-dasharray="07.94,18.52" stroke-linecap="butt" /></rule>
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_5" zoom-min="20" zoom-max="99"><line stroke="#dd0000" stroke-width="0.21" stroke-dasharray="08.49,19.80" stroke-linecap="butt" /></rule>
+
+
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_0" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbu_0.png" symbol-height="20" dy="0" repeat="true" repeat-start="30" repeat-gap="150"/>
+				</rule>	
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_1" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbu_1.png" symbol-height="20" dy="0" repeat="true" repeat-start="25" repeat-gap="150"/>
+				</rule>	
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_2" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbu_2.png" symbol-height="20" dy="0" repeat="true" repeat-start="20" repeat-gap="150"/>
+				</rule>	
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_3" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbu_3.png" symbol-height="20" dy="0" repeat="true" repeat-start="15" repeat-gap="100"/>
+				</rule>	
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_4|" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbu_4.png" symbol-height="20" dy="0" repeat="true" repeat-start="10" repeat-gap="100"/>
+				</rule>		
+				<rule e="way" k="mtb_scale_uphill" v="mtbu_5" zoom-min="13">
+					<lineSymbol src="file:/mtblb/s_mtbs_5.png" symbol-height="20" dy="0" repeat="true" repeat-start="5" repeat-gap="50"/>
+				</rule>	
 
 				<rule e="way" k="mtb_scale_uphill" v="~" zoom-min="13" zoom-max="13"><line stroke="#CD7E1B" stroke-width="0.90" stroke-dasharray="0,05.50,0.50,05.50" stroke-linecap="round" /></rule>
 				<rule e="way" k="mtb_scale_uphill" v="~" zoom-min="14" zoom-max="14"><line stroke="#CD7E1B" stroke-width="0.89" stroke-dasharray="0,07.78,0.71,07.78" stroke-linecap="round" /></rule>
@@ -3002,16 +3046,17 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="any" k="generator:source" v="wind" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="solar" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="gas" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
-	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="coal" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear" zoom-min="13"><symbol display="always" id="s_generator" src="file:/res/s_power_nuclear.svg" symbol-width="21" /></rule>
-
-	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
+<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="13">	
+	<rule e="any" k="*" v="wind" >	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
+	<rule e="any" k="*" v="hydro|tidal|wave" ><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="solar" ><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="gas" >	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
+	<rule e="any" k="*" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" ><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="coal" >	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="nuclear" ><symbol display="always" id="s_generator" src="file:/res/s_power_nuclear.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="*" zoom-min="16">
         <caption cat="tms_landnames" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#BFffff00" stroke-width="2" />
     </rule>	
-	
+</rule>
+
 </rendertheme>

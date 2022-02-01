@@ -53,9 +53,9 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 оптимизация подписей alpine_hut, shelter, historical
 исправлено windmill
 01/02/2022
-оптимизация tms_aerial, tms_food, tms_shops
+оптимизация tms_aerial, tms_food, tms_shops, generator:source
 все generator:source на z13
 починил MTB network (imn|nmn|rmn|lmn|omn)
-починил велосипедные (icn|ncn|rcn|lcn|ocn|hcw) и пешие (iwn|nwn|rwn|lwn|own) сети (network)
+починил велосипедные (icn|ncn|rcn|lcn|ocn|hcw) и пешие (iwn|nwn|rwn|lwn|own) сети (network) - на подписи навесил tms_landnames
 
 
