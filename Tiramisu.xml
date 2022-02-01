@@ -994,7 +994,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- mtb relations higlight #64ce1be1 -->
 
-	<rule cat="tms_mtbnw" e="way" k="network" v="mtb">
+	<rule cat="tms_mtbnw" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn|umn">
 
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64ce1be1" stroke-width="2.55" dy="-0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64ce1be1" stroke-width="2.52" dy="-0.84" stroke-linecap="butt" /></rule>
@@ -2223,52 +2223,54 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- end highway cores block-->
 	
 <!-- aerial ways -->
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="1.50" stroke-dasharray="00.10,15.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="1.48" stroke-dasharray="00.14,21.21" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="1.27" stroke-dasharray="00.17,25.98" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.03" stroke-dasharray="00.20,30.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="0.81" stroke-dasharray="00.22,33.54" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.62" stroke-dasharray="00.24,36.74" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.47" stroke-dasharray="00.26,39.69" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="drag_lift" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.35" stroke-dasharray="00.28,42.43" stroke-linecap="round" /></rule>
+<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="13">
+	<rule e="way" k="*" v="drag_lift" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="1.50" stroke-dasharray="00.10,15.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="1.48" stroke-dasharray="00.14,21.21" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="1.27" stroke-dasharray="00.17,25.98" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.03" stroke-dasharray="00.20,30.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="0.81" stroke-dasharray="00.22,33.54" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.62" stroke-dasharray="00.24,36.74" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.47" stroke-dasharray="00.26,39.69" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="drag_lift" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.35" stroke-dasharray="00.28,42.43" stroke-linecap="round" /></rule>
 
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="2.20" stroke-dasharray="1.00,15.00" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="2.18" stroke-dasharray="1.41,21.21" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="1.87" stroke-dasharray="1.73,25.98" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.51" stroke-dasharray="2.00,30.00" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="1.18" stroke-dasharray="2.24,33.54" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.91" stroke-dasharray="2.45,36.74" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.68" stroke-dasharray="2.65,39.69" stroke-linecap="butt" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="chair_lift" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.51" stroke-dasharray="2.83,42.43" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="2.20" stroke-dasharray="1.00,15.00" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="2.18" stroke-dasharray="1.41,21.21" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="1.87" stroke-dasharray="1.73,25.98" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.51" stroke-dasharray="2.00,30.00" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="1.18" stroke-dasharray="2.24,33.54" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.91" stroke-dasharray="2.45,36.74" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.68" stroke-dasharray="2.65,39.69" stroke-linecap="butt" /></rule>
+	<rule e="way" k="*" v="chair_lift" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.51" stroke-dasharray="2.83,42.43" stroke-linecap="butt" /></rule>
 
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="2.60" stroke-dasharray="01.00,15.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="2.57" stroke-dasharray="01.41,21.21" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="2.21" stroke-dasharray="01.73,25.98" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.78" stroke-dasharray="02.00,30.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="1.40" stroke-dasharray="02.24,33.54" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="1.07" stroke-dasharray="02.45,36.74" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.81" stroke-dasharray="02.65,39.69" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.61" stroke-dasharray="02.83,42.43" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="13" zoom-max="13"><line stroke="#eeeeee" stroke-width="1.80" stroke-dasharray="01.00,15.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="14" zoom-max="14"><line stroke="#eeeeee" stroke-width="1.78" stroke-dasharray="01.41,21.21" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="15" zoom-max="15"><line stroke="#eeeeee" stroke-width="1.53" stroke-dasharray="01.73,25.98" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="16" zoom-max="16"><line stroke="#eeeeee" stroke-width="1.23" stroke-dasharray="02.00,30.00" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="17" zoom-max="17"><line stroke="#eeeeee" stroke-width="0.97" stroke-dasharray="02.24,33.54" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="18" zoom-max="18"><line stroke="#eeeeee" stroke-width="0.74" stroke-dasharray="02.45,36.74" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="19" zoom-max="19"><line stroke="#eeeeee" stroke-width="0.56" stroke-dasharray="02.65,39.69" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="gondola|cable_car" zoom-min="20" zoom-max="99"><line stroke="#eeeeee" stroke-width="0.42" stroke-dasharray="02.83,42.43" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="2.60" stroke-dasharray="01.00,15.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="2.57" stroke-dasharray="01.41,21.21" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="2.21" stroke-dasharray="01.73,25.98" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="1.78" stroke-dasharray="02.00,30.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="1.40" stroke-dasharray="02.24,33.54" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="1.07" stroke-dasharray="02.45,36.74" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.81" stroke-dasharray="02.65,39.69" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.61" stroke-dasharray="02.83,42.43" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="13" zoom-max="13"><line stroke="#eeeeee" stroke-width="1.80" stroke-dasharray="01.00,15.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="14" zoom-max="14"><line stroke="#eeeeee" stroke-width="1.78" stroke-dasharray="01.41,21.21" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="15" zoom-max="15"><line stroke="#eeeeee" stroke-width="1.53" stroke-dasharray="01.73,25.98" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="16" zoom-max="16"><line stroke="#eeeeee" stroke-width="1.23" stroke-dasharray="02.00,30.00" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="17" zoom-max="17"><line stroke="#eeeeee" stroke-width="0.97" stroke-dasharray="02.24,33.54" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="18" zoom-max="18"><line stroke="#eeeeee" stroke-width="0.74" stroke-dasharray="02.45,36.74" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="19" zoom-max="19"><line stroke="#eeeeee" stroke-width="0.56" stroke-dasharray="02.65,39.69" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="gondola|cable_car" zoom-min="20" zoom-max="99"><line stroke="#eeeeee" stroke-width="0.42" stroke-dasharray="02.83,42.43" stroke-linecap="round" /></rule>
 
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="0.40" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="0.40" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="0.34" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="0.27" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="0.21" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.16" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.12" stroke-linecap="round" /></rule>
-	<rule cat="tms_aerial" e="way" k="aerialway" v="*" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.09" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="0.40" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="0.40" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="0.34" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#000000" stroke-width="0.27" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#000000" stroke-width="0.21" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#000000" stroke-width="0.16" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.12" stroke-linecap="round" /></rule>
+	<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.09" stroke-linecap="round" /></rule>
 	
 	<rule e="way" k="aerialway" v="*"><pathText k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /></rule>
-	
+</rule>
+
 <!-- highway one-way markers -->
 	<rule e="way" k="tunnel" v="~|false|no">
 		<rule e="way" k="area" v="~|false|no">
@@ -2725,7 +2727,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption priority="300" cat="tms_landnames" symbol-id="s_police" k="name" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2" />	
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	
-		<symbol priority="400" id="s_fire_station" src="file:/res/s_firebrigade.svg" display="always" symbol-width="21" />
+		<symbol priority="400" id="s_fire_station" src="file:/res/s_firebrigade.svg" display="always" symbol-width="24" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption priority="400" cat="tms_landnames" symbol-id="s_fire_station" k="name" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2" />
 		</rule>	
@@ -2967,7 +2969,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="node" k="man_made" v="windmill">
+	<rule cat="tms_man-made" e="any" k="man_made|tower" v="windmill">
 		<symbol priority="200" display="always" id="s_windmill" src="file:/res/s_windmill.svg" symbol-width="25" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_windmill" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2988,13 +2990,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="any" k="generator:source" v="wind">	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave"><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="solar"><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="gas">	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
-	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="coal">	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear"><symbol display="always" id="s_generator" src="file:/res/s_power_nuclear.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="wind" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="63" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="solar" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="gas" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
+	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" zoom-min="13"><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="coal" zoom-min="13">	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear" zoom-min="13"><symbol display="always" id="s_generator" src="file:/res/s_power_nuclear.svg" symbol-width="21" /></rule>
 
 	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
         <caption cat="tms_landnames" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#BFffff00" stroke-width="2" />

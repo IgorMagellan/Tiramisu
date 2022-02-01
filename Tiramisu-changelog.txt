@@ -51,3 +51,4 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 31/01/2022
 добавил броды ford
 оптимизация подписей alpine_hut, shelter, historical
+исправлено windmill
