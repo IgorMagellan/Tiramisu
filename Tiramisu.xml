@@ -864,7 +864,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- hiking relations higlight #64e52929-->
 
-	<rule cat="tms_hknw" e="way" k="hknetwork" v="uwn|lwn|rwn|iwn|nwn">
+	<rule cat="tms_hknw" e="way" k="hknetwork" v="iwn|nwn|rwn|lwn|own">
+	
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64e52929" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64e52929" stroke-width="2.52" dy="0.84" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="15" zoom-max="15"><line stroke="#64e52929" stroke-width="2.16" dy="0.72" stroke-linecap="butt" /></rule>
@@ -920,16 +921,17 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64e52929" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref" font-style="bold" font-size="8" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption k="ref_hike" font-style="bold" font-size="8" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
 <!-- cycling relations higlight #641639cb -->
 
-	<rule cat="tms_cynw" e="way" k="network" v="lcn|ucn|rcn|icn|ncn">
+	<rule cat="tms_cynw" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
+
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#641639cb" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#641639cb" stroke-width="2.52" dy="0.84" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="15" zoom-max="15"><line stroke="#641639cb" stroke-width="2.16" dy="0.72" stroke-linecap="butt" /></rule>
@@ -985,10 +987,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#641639cb" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref" font-style="bold" font-size="8" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption k="ref_cycle" font-style="bold" font-size="8" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
@@ -1050,12 +1052,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#64ce1be1" stroke-width="1.61" dy="-0.71" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64ce1be1" stroke-width="1.20" dy="-0.53" stroke-linecap="butt" /></rule>
 
-
   <!--     <line dy="-0.9" stroke="#ff0040" stroke-width="0.7" stroke-dasharray="15,6" stroke-linecap="butt" scale="stroke"/> -->
  <!--      <lineSymbol src="file:/res/s_bicycle_mark_r.svg" symbol-percent="90" dy="-1" repeat="true" repeat-start="15" repeat-gap="200"/>
       <pathText priority="10" k="ref_mtb" font-style="bold" font-size="9" fill="#ff0040" stroke="#ffffff" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300"/>
- -->	  
-	   
+ -->	  	   
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
 			<caption k="ref_mtb" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
