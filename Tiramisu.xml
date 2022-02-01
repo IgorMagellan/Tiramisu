@@ -994,7 +994,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- mtb relations higlight #64ce1be1 -->
 
-	<rule cat="tms_mtbnw" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn|umn">
+	<rule cat="tms_mtbnw" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64ce1be1" stroke-width="2.55" dy="-0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64ce1be1" stroke-width="2.52" dy="-0.84" stroke-linecap="butt" /></rule>
@@ -1050,11 +1050,17 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#64ce1be1" stroke-width="1.61" dy="-0.71" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64ce1be1" stroke-width="1.20" dy="-0.53" stroke-linecap="butt" /></rule>
 
+
+  <!--     <line dy="-0.9" stroke="#ff0040" stroke-width="0.7" stroke-dasharray="15,6" stroke-linecap="butt" scale="stroke"/> -->
+ <!--      <lineSymbol src="file:/res/s_bicycle_mark_r.svg" symbol-percent="90" dy="-1" repeat="true" repeat-start="15" repeat-gap="200"/>
+      <pathText priority="10" k="ref_mtb" font-style="bold" font-size="9" fill="#ff0040" stroke="#ffffff" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300"/>
+ -->	  
+	   
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption k="ref" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
+			<caption k="ref_mtb" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
 
