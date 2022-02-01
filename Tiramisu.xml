@@ -2268,7 +2268,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.12" stroke-linecap="round" /></rule>
 	<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.09" stroke-linecap="round" /></rule>
 	
-	<rule e="way" k="aerialway" v="*"><pathText k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+	<rule e="way" k="*" v="*"><pathText k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 </rule>
 
 <!-- highway one-way markers -->
@@ -2599,38 +2599,44 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- food -->
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">		<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_butcher.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_supermarket.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_convenience.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="bakery">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_bakery.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="restaurant">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_restaurant.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="fast_food">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_fastfood.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="biergarten">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_biergarten.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="cafe">		<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_cafe.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="pub|bar|beverages"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_pub.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_marketplace.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">			<symbol priority="250" id="tms_shop" display="always" src="file:/res/s_mall3.svg" symbol-width="25" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="organic|shop_farm|greengrocer|cheese"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_organic.svg" symbol-width="23" /></rule>
-	<rule cat="tms_food" e="any"  zoom-min="15" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
+<rule cat="tms_food" e="any" k="*" v="*" zoom-min="15">		
+	<rule e="any" k="shop" v="butcher">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_butcher.svg" symbol-width="23" /></rule>
+	<rule e="any" k="shop" v="supermarket">		<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_supermarket.svg" symbol-width="23" /></rule>
+	<rule e="any" k="shop" v="convenience">		<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_convenience.svg" symbol-width="23" /></rule>
+	<rule e="any" k="shop" v="bakery">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_bakery.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="restaurant">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_restaurant.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="fast_food">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_fastfood.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="biergarten">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_biergarten.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="cafe">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_cafe.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="pub|bar|beverages"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_pub.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="marketplace">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_marketplace.svg" symbol-width="23" /></rule>
+	<rule e="any" k="shop" v="mall">			<symbol priority="250" id="tms_shop" display="always" src="file:/res/s_mall3.svg" symbol-width="25" /></rule>
+	<rule e="any" k="shop" v="organic|shop_farm|greengrocer|cheese"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_organic.svg" symbol-width="23" /></rule>
+	<rule e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
 		<caption cat="tms_landnames" priority="135" symbol-id="tms_shop" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-
+</rule>
 <!-- other shops -->
-	<rule cat="tms_shops" e="any" k="shop" v="bicycle">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_bicycle_shop.svg" symbol-width="24" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="doityourself|hardware"><symbol priority="215" id="tms_shop" display="always" src="file:/res/s_diy.svg" symbol-width="24" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="laundry|dry_cleaning"><symbol priority="215" id="tms_shop" display="always" src="file:/res/s_laundry.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="florist">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_florist.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="sports">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_shop-sports.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="hairdresser">			<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_hairdresser3.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="travel_agency">		<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_travel_agency.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="chemist">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_chemist.svg" symbol-width="23" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="books">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_books.svg" symbol-width="23" /></rule>
-	<rule cat="tms_trans-priv" e="any" k="shop" v="car">			<symbol priority="225" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" /></rule>
-	
-	<rule cat="tms_shops" e="any" zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books|car">
+<rule cat="tms_shops" e="any" k="shop" v="*" >	
+	<rule e="any" k="*" v="bicycle">			<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_bicycle_shop.svg" symbol-width="24" /></rule>
+	<rule e="any" k="*" v="doityourself|hardware"><symbol priority="215" id="tms_shop" display="always" src="file:/res/s_diy.svg" symbol-width="24" /></rule>
+	<rule e="any" k="*" v="laundry|dry_cleaning"><symbol priority="215" id="tms_shop" display="always" src="file:/res/s_laundry.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="florist">			<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_florist.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="sports">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_shop-sports.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="hairdresser">		<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_hairdresser3.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="travel_agency">		<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_travel_agency.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="chemist">			<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_chemist.svg" symbol-width="23" /></rule>
+	<rule e="any" k="*" v="books">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_books.svg" symbol-width="23" /></rule>
+
+	<rule e="any" zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books">
 		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+</rule>	
 
+	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
+		<symbol priority="225" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" />
+		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />		
+	</rule>
 
 <!-- tourist info -->
 

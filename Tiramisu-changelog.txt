@@ -53,5 +53,6 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 оптимизация подписей alpine_hut, shelter, historical
 исправлено windmill
 01/02/2022
-оптимизация tms_aerial
+оптимизация tms_aerial, tms_food, tms_shops
 все generator:source на z13
+
