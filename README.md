@@ -8,8 +8,11 @@
 </div>
 
 Legend:
-[Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf (In English))
-[Tiramisu_3_Legend_ru.pdf](Tiramisu_3_Legend_ru.pdf (Translation into Russian using))
+
+[Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf) 
+
+[Tiramisu_3_Legend_ru.pdf](Tiramisu_3_Legend_ru.pdf) (Translation into Russian using [onlinedoctranslator](https://www.onlinedoctranslator.com/))
+
 
 [Changelog (in Russian)](Tiramisu-changelog.txt)  
 
