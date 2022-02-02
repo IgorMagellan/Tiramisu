@@ -1065,16 +1065,40 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- 	<rule e="way" k="mtb_scale_imba" v="mtba_0|mtba_1|mtba_2|mtba_3|mtba_4">
 		<line dy="-0.9" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>	
 		<line dy="-0.9" stroke="#8Cd900a3" stroke-width="0.76" stroke-dasharray="3,0.4" stroke-linecap="butt" scale="all"/>
+	</rule>
  -->	
 	<rule e="way" k="mtb_scale_imba" v="*" zoom-min="13">
-		<line dy="-0.9" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>
-		<rule e="way" k="*" v="mtba_0"><line dy="-1.0" stroke="#CCd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.4" stroke-linecap="butt" scale="all"/></rule>
+		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>
+		<rule e="way" k="*" v="mtba_0"><line dy="-1.0" stroke="#CCd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.3" stroke-linecap="butt" scale="all"/></rule>
 		<rule e="way" k="*" v="mtba_1"><line dy="-1.0" stroke="#BFd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.5" stroke-linecap="butt" scale="all"/></rule>
-		<rule e="way" k="*" v="mtba_2"><line dy="-1.0" stroke="#B3d900a3" stroke-width="0.76" stroke-dasharray="2.0,0.5" stroke-linecap="butt" scale="all"/></rule>
+		<rule e="way" k="*" v="mtba_2"><line dy="-1.0" stroke="#B3d900a3" stroke-width="0.76" stroke-dasharray="2.0,0.6" stroke-linecap="butt" scale="all"/></rule>
 		<rule e="way" k="*" v="mtba_3"><line dy="-1.0" stroke="#A6d900a3" stroke-width="0.76" stroke-dasharray="1.4,0.8" stroke-linecap="butt" scale="all"/></rule>
 		<rule e="way" k="*" v="mtba_4"><line dy="-1.0" stroke="#99d900a3" stroke-width="0.76" stroke-dasharray="1.2,1.0" stroke-linecap="butt" scale="all"/></rule>
-
 	</rule>
+	
+<!-- 	<rule e="way" k="mtb_scale_imba" v="*" zoom-min="13">
+
+		<rule e="way" k="*" v="mtba_0">
+		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>		
+		<line dy="-1.0" stroke="#CCd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.3" stroke-linecap="butt" scale="all"/>
+		</rule>
+		<rule e="way" k="*" v="mtba_1">
+		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>				
+		<line dy="-1.0" stroke="#BFd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.5" stroke-linecap="butt" scale="all"/>
+		</rule>
+		<rule e="way" k="*" v="mtba_2">
+		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>		
+		<line dy="-1.0" stroke="#B3d900a3" stroke-width="0.76" stroke-dasharray="2.0,0.5" stroke-linecap="butt" scale="all"/>
+		</rule>
+		<rule e="way" k="*" v="mtba_3">
+		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>			
+		<line dy="-1.0" stroke="#A6d900a3" stroke-width="0.76" stroke-dasharray="1.4,0.8" stroke-linecap="butt" scale="all"/>
+		</rule>
+		<rule e="way" k="*" v="mtba_4">
+		<line dy="-1.0" stroke="#b38600" stroke-width="0.24" stroke-linecap="butt"/>		
+		<line dy="-1.0" stroke="#99d900a3" stroke-width="0.76" stroke-dasharray="1.2,1.0" stroke-linecap="butt" scale="all"/>
+		</rule>
+	</rule>	 -->
 
 <!-- bridge casings -->
 
