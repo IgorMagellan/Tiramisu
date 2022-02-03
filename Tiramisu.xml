@@ -701,6 +701,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
+
 <!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
 		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
@@ -756,12 +757,20 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_relief" e="way" k="man_made" v="cutline" >
 		<line stroke="#99ddffdd" stroke-width="2.2" stroke-linecap="butt" />
 	</rule>	
+	
 <!-- POI areas -->
 	<rule e="way" k="area" v="yes|true">
 		<rule e="way" k="highway" v="footway|pedestrian"> <area fill="#e4e4e4" stroke="#707070" stroke-width="0.15" /> </rule>
 		<rule e="way" k="highway" v="path"> <area fill="#9C6800" stroke="#707070" stroke-width="0.15" /> 		</rule>
 		<rule e="way" k="highway" v="service|unclassified|residential|road|living_street"> <area fill="#FFFFFF" stroke="#707070" stroke-width="0.15" /> </rule>
 	</rule>
+	
+		<rule cat="tms_terrain" e="way" k="historic" v="ruins|castle|memorial|monument|archaeological_site">
+			<rule e="way" k="building" v="~">
+				<line stroke="#BBBBBB" stroke-width="0.2" />
+				<line stroke="#743a00" stroke-width="0.2" stroke-dasharray="4,4" stroke-linecap="butt" />
+			</rule>
+		</rule>	
 	
 	<rule cat="tms_terrain" e="way" k="tourism" v="attraction" closed="yes">
 		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
@@ -2556,7 +2565,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- pic-nic -->
-	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="235" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
+	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="205" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="21" /> </rule>
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism|leisure" v="picnic_site|picnic_table">	
 		<symbol priority="235" id="s_picnic_site" src="file:/res/s_picnic_site.svg" symbol-width="21" /> 
@@ -2660,25 +2669,25 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- water sources -->
 	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-max="15">
-		<symbol display="always" priority="305" src="file:/res/s_water.svg" symbol-width="10"/>
+		<symbol display="always" priority="505" src="file:/res/s_water.svg" symbol-width="10"/>
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
-		<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
+		<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
 		<caption cat="tms_landnames" symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water" e="node" k="natural" v="spring" zoom-min="16">
-		<rule e="node" k="drinking_water" v="~">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring.svg" symbol-height="17" /> </rule>
-		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_nd.svg" symbol-height="17" /> </rule>
-		<rule e="node" k="drinking_water" v="yes">	<symbol display="always" priority="305" id="tms_drop" src="file:/res/s_spring_d.svg" symbol-height="17" /> </rule>
+		<rule e="node" k="drinking_water" v="~">	<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_spring.svg" symbol-height="17" /> </rule>
+		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="405" id="tms_drop" src="file:/res/s_spring_nd.svg" symbol-height="17" /> </rule>
+		<rule e="node" k="drinking_water" v="yes">	<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_spring_d.svg" symbol-height="17" /> </rule>
 		<caption cat="tms_landnames" symbol-id="tms_drop" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain.svg" symbol-width="25" />
+			<symbol display="always" priority="405" id="tms_fountain" src="file:/res/s_fountain.svg" symbol-width="25" />
 			<caption cat="tms_landnames" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#743a00" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 		<rule e="node" k="drinking_water" v="yes">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/res/s_fountain_d.svg" symbol-width="25" />
+			<symbol display="always" priority="405" id="tms_fountain" src="file:/res/s_fountain_d.svg" symbol-width="25" />
 			<caption cat="tms_landnames" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 	</rule>
@@ -2987,7 +2996,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption cat="tms_landnames" k="name" symbol-id="s_artwork" position="below" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-
+	<rule cat="tms_attraction" e="any" k="historic" v="archaeological_site">
+		<symbol id="s_archaeological" priority="225" src="file:/res/s_archaeological_site.svg" display="always" symbol-height="24" />
+		<caption symbol-id="s_archaeological" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="10" fill="#743a00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>	
+	
 <!-- place of worship -->
 	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross">
 		<symbol display="always" id="s_wayside_cross" src="file:/res/s_wayside_cross.svg" symbol-height="15" />
