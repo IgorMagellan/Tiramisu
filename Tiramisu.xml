@@ -460,6 +460,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<line stroke="#90679632" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
 
+	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
+		<line stroke="#A5CBA5" stroke-width="0.42" stroke-linecap="round" />
+		<line stroke="#CBE1CB" stroke-width="0.36" stroke-dasharray="2,5"  stroke-linecap="butt" />
+	</rule>	
+
 <!-- Contour lines -->
 	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_minor" zoom-min="01" zoom-max="12"><line stroke="#80766C" stroke-width="0.12" /></rule>
 	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="13" zoom-max="13"><line stroke="#80766C" stroke-width="0.12" /></rule>
@@ -701,7 +706,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
-
 <!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
 		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
@@ -709,7 +713,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
 			<rule e="any" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
-			<!-- <rule e="any" k="waterway" v="weir" ><symbol src="file:/res/s_weir.svg" symbol-height="17"/> </rule> -->
 		</rule>
 		
 		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
@@ -2544,7 +2547,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_peak" e="node" k="man_made" v="survey_point">
-		<symbol id="s_survey_point" display="always" priority="101" src="file:/res/s_survey_point.svg" symbol-height="20" />
+		<symbol id="s_survey_point" display="always" priority="101" src="file:/res/s_survey_point.svg" symbol-height="21" />
 		<caption cat="tms_landnames" display="always" k="ele" priority="105" symbol-id="s_survey_point" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" priority="100" symbol-id="s_survey_point" position="above" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2731,6 +2734,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="225" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" />
 		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />		
 	</rule>
+	<rule cat="tms_trans-priv" e="any" k="shop" v="motorcycle">
+		<symbol priority="235" id="tms_motshop" display="always" src="file:/res/s_shop_motorcycle.svg" symbol-width="23" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_landnames" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>		
 
 <!-- tourist info -->
 
@@ -2997,7 +3006,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 	<rule cat="tms_attraction" e="any" k="historic" v="archaeological_site">
-		<symbol id="s_archaeological" priority="225" src="file:/res/s_archaeological_site.svg" display="always" symbol-height="24" />
+		<symbol id="s_archaeological" priority="225" src="file:/res/s_archaeological_site.svg" display="always" symbol-height="22" />
 		<caption symbol-id="s_archaeological" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="10" fill="#743a00" stroke="#E5FFFFFF" stroke-width="2" />
 	</rule>	
 	

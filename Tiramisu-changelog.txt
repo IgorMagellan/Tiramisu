@@ -63,3 +63,5 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 Релиз 4.1 beta для форума 4PDA
 03/02/2022
 добавил archaeological site
+04/02/2022
+добавил shop motorcycle, barrier=hedge
