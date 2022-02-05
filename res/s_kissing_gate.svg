@@ -1,0 +1,8 @@
+<svg width="32" height="29" version="1.1" viewBox="0 0 8.4667 7.6729" xmlns="http://www.w3.org/2000/svg">
+ <path d="m4.2371 0.79 3.4314 6.0854h-6.871z" fill="#ff0000" stroke="#ffff00" stroke-dashoffset=".18" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5875"/>
+ <path d="m4.2371 0.79 3.4314 6.0854h-6.871z" fill="#ff0000" stroke="#ff0000" stroke-dashoffset=".18" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0583"/>
+ <g transform="translate(.28923 -5.592)" fill="#ffff00" fill-rule="evenodd">
+  <path d="m2.2288 10.201c-0.34622 0-0.62688 0.28066-0.62688 0.62688 0 0.34622 0.28066 0.62688 0.62688 0.62688 0.15942 0 0.30484-0.05961 0.41546-0.15762h2.4336v-0.9385h-2.4336c-0.11062-0.098009-0.25604-0.15762-0.41546-0.15762z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  <path d="m4.4229 9.1354c1.003 0 1.8654 0.56536 1.8633 1.6926-0.00208 1.1272-0.86034 1.6926-1.8633 1.6926-0.18806 0-0.34088-0.12538-0.27724-0.25075l0.27724-0.62688c0.56419 0.06269 1.003-0.37613 1.003-0.81494 0-0.43882-0.43882-0.87763-1.003-0.81494l-0.27885-0.62688c-0.056563-0.12538 0.090789-0.25075 0.27885-0.25075z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+ </g>
+</svg>

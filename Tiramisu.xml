@@ -494,7 +494,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- natural reserve -->
 	<rule e="way" k="leisure|boundary" v="nature_reserve|national_park|protected_area" zoom-max="12">
 		<area fill="#50f7ff6f" />
-		<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 
@@ -689,8 +689,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="waterway" v="stream" zoom-min="15"> <line stroke="#5887ff" stroke-width="0.4" /> </rule>
 			<rule e="way" k="waterway" v="river"> <line stroke="#5887ff" stroke-width="1.1" /> </rule>
 			<rule e="way" k="waterway" v="riverbank"> <area fill="#85a7ff" /> </rule>
-			<rule e="way" k="waterway" v="river"> <pathText priority="3" k="name" font-style="bold" font-size="11" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="way" k="waterway" v="stream|canal"> <pathText priority="3" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="way" k="waterway" v="river"> <pathText cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="11" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="way" k="waterway" v="stream|canal"> <pathText cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		</rule>
 	</rule>
 
@@ -699,11 +699,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<area fill="#85a7ff" />
 	</rule>
 	<rule cat="tms_terrain"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="14">
-		<caption priority="3" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption priority="3" cat="tms_landnames" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_terrain" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="15">
-		<caption priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
-		<caption k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 <!-- waterway structures -->
@@ -719,7 +719,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
 			<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="20,5" stroke-linecap="butt" />
 			<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-			<pathText k="name" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
+			<pathText cat="tms_landnames" k="name" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>		
 	</rule>
 	<rule cat="tms_water-land" e="way" k="waterway" v="dam">
@@ -735,15 +735,19 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 <!-- natural ways -->
 	<rule cat="tms_relief" e="way" k="natural" v="valley|gorge" zoom-min="13">
-		<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 	<rule cat="tms_relief" e="way" k="natural" v="cliff|earth_bank" closed="no" zoom-min="13" >
-		<line stroke="#70606060" stroke-width="0.8" stroke-linecap="butt"/>
+		<line stroke="#70606060" stroke-width="0.8" stroke-linecap="butt"/>		
 		<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2"/>
-		<rule e="way" k="natural" v="*" zoom-min="13">
-			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="44"/>
+		
+		<rule e="way" k="natural" v="*" zoom-min="13" zoom-max="14" >
+			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" dy="1.2" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="33"/>
 		</rule>
+		<rule e="way" k="natural" v="*" zoom-min="15">
+			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="44"/>
+		</rule>		
 	</rule>
 	
 	<rule cat="tms_relief" e="way" k="natural" v="cliff|earth_bank" closed="yes" zoom-min="13" >
@@ -1537,7 +1541,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<line stroke="#CACCC6" stroke-width="0.8" stroke-linecap="butt"/>
 				<line stroke="#444444" stroke-width="0.9" stroke-dasharray="0.24,0.38" stroke-linecap="butt" scale="all" />
 				<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16">
-					<pathText k="name" font-style="normal" font-size="10" stroke="#555555" stroke-width="2" />
+					<pathText cat="tms_landnames" k="name" font-style="normal" font-size="10" stroke="#555555" stroke-width="2" />
 				</rule>
 			</rule>
 			
@@ -2411,9 +2415,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- Places -->
-	<rule e="node" k="place" v="suburb" zoom-min="11">				<caption priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-	<rule e="any" k="place" v="locality" zoom-min="11">				<caption priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-	<rule e="node" k="place" v="isolated_dwelling" zoom-min="14">	<caption priority="510" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+	<rule e="node" k="place" v="suburb" zoom-min="11">				<caption cat="tms_landnames" priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+	<rule e="any" k="place" v="locality" zoom-min="11">				<caption cat="tms_landnames" priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+	<rule e="node" k="place" v="isolated_dwelling" zoom-min="14">	<caption cat="tms_landnames" priority="510" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="hamlet" zoom-min="13">				<caption priority="515" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="village" zoom-min="11">				<caption priority="520" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="town" zoom-min="7">					<caption priority="525" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
@@ -2426,7 +2430,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="node" k="place" v="country" zoom-min="3" zoom-max="3">	<caption priority="535" k="name" font-style="bold" font-size="11" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="country" zoom-min="4" zoom-max="4">	<caption priority="535" k="name" font-style="bold" font-size="11" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="node" k="place" v="country" zoom-min="5" zoom-max="5">	<caption priority="535" k="name" font-style="bold" font-size="13" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-	<rule e="node" k="place" v="island" zoom-min="7">				<caption priority="540" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="0.1" /> </rule>
+	<rule e="node" k="place" v="island" zoom-min="7">				<caption cat="tms_landnames" priority="540" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="0.1" /> </rule>
 
 <!-- natural -->
 
@@ -2434,12 +2438,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="node" k="summit:cross" v="~">
 			<rule e="node" k="*" v="*" zoom-min="10" zoom-max="12">
 				<symbol display="ifspace" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_peak.svg" symbol-percent="200" />
-				<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+				<caption cat="tms_landnames" priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 			</rule>			
 			<rule e="node" k="*" v="*" zoom-min="13">
 				<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_peak.svg" symbol-percent="200" />
-				<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
-				<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="9"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+				<caption cat="tms_landnames" priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+				<caption cat="tms_landnames" symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="9"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 			</rule>
 		</rule>
 		<rule e="node" k="summit:cross|man_made" v="yes|cross"  zoom-min="10" >
@@ -2453,16 +2457,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="10" zoom-max="12">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
-		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="13" zoom-max="13">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="2" src="file:/res/s_volcano.svg" symbol-percent="350" />
-		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="14">
 		<symbol display="always" priority="430" id="tms_peak" symbol-width="3" src="file:/res/s_volcano.svg" symbol-percent="350" />
-		<caption priority="315" symbol-id="tms_peak" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
-		<caption symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" symbol-id="tms_peak" priority="315" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" symbol-id="tms_peak" position="below" k="ele"  font-style="bold" font-size="8"  fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 
@@ -2652,11 +2656,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="barrier" v="gate">				<symbol priority="415" display="always" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="turnstile">		<symbol priority="415" display="always" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="barrier" v="log">				<symbol priority="415" display="always" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>		
+		<rule e="any" k="barrier" v="kissing_gate">		<symbol priority="415" display="always" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>			
 	</rule>
-	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="15">
-		<symbol id="s_ford" priority="300" src="file:/res/s_ford-5.svg" display="always" symbol-height="21" />
-		<line stroke="#AAB3DDFF" stroke-width="0.65" />
-		<rule e="any" k="*" v="*" zoom-min="15">
+	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="14">
+		<symbol id="s_ford" priority="300" src="file:/res/s_ford_6w.svg" display="always" symbol-height="21" />
+		<line stroke="#99B3DDFF" stroke-width="0.65" />
+		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="9" fill="#ff2626" stroke="#e0ffff00" stroke-width="2" />
 		</rule>
 	</rule>
@@ -2684,6 +2689,22 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="node" k="drinking_water" v="yes">	<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_spring_d.svg" symbol-height="17" /> </rule>
 		<caption cat="tms_landnames" symbol-id="tms_drop" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+	
+	<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="16">
+		<rule e="any" k="drinking_water" v="yes|~">
+			<symbol id="s_ww_drink" display="always" src="file:/res/s_spring_d.svg" symbol-height="18" />
+			<rule e="any" k="*" v="*" zoom-min="16">
+				<caption cat="tms_landnames" k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="8" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule e="any" k="drinking_water" v="no">
+			<symbol id="s_ww_nodrink" display="always" src="file:/res/s_spring_nd.svg" symbol-height="18" />
+			<rule e="any" k="*" v="*" zoom-min="16">
+				<caption cat="tms_landnames" k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="8" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+	</rule>
+
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
 			<symbol display="always" priority="405" id="tms_fountain" src="file:/res/s_fountain.svg" symbol-width="25" />
@@ -2737,7 +2758,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_trans-priv" e="any" k="shop" v="motorcycle">
 		<symbol priority="235" id="tms_motshop" display="always" src="file:/res/s_shop_motorcycle.svg" symbol-width="23" />
 		<rule e="any" k="*" v="*">
-			<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_landnames" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="tms_motshop" priority="135" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>		
 	</rule>		
 
@@ -2774,10 +2795,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_info" e="node" k="information" v="guidepost">
-		<symbol id="s_guidepost" priority="240" src="file:/res/s_guidepost.svg" display="always" symbol-height="21" />
+		<symbol priority="240" id="s_guidepost" src="file:/res/s_guidepost.svg" display="always" symbol-height="21" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_guidepost" k="name" position="above" font-family="sans_serif" font-style="bold_italic" font-size="9" fill="#734A08" stroke="#FFFFFF" stroke-width="2.5" />
 			<caption cat="tms_landnames" symbol-id="s_guidepost" k="addr:housenumber" position="below" display="always" font-family="sans_serif" font-style="bold_italic" font-size="8" fill="#734A08" stroke="#FFFFFF" stroke-width="2.5" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_info" e="any" k="man_made" v="cairn">
+		<symbol priority="210" id="s_cairn" src="file:/res/s_cairn_tms.svg" display="always" symbol-height="22" />
+		<rule cat="tms_landnames" e="any" k="*" v="*">
+			<caption k="name" symbol-id="s_cairn" position="above" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption k="ele" priority="-5" symbol-id="s_cairn" position="below" font-size="9" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	
@@ -2902,8 +2931,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="225" src="file:/res/s_swimming_outdoor.svg" symbol-height="23" />
 		</rule>
-		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
-			<caption symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>	
 	</rule>
 	<rule cat="tms_sport" e="any" k="sport" v="*" zoom-min="14">
@@ -2911,14 +2940,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="sport" v="tennis"><symbol priority="225" id="s_sport" src="file:/res/s_tennis.svg" symbol-width="23" /></rule>
 		<rule e="any" k="sport|leisure" v="golf|golf_course"><symbol priority="225" id="s_sport" src="file:/res/s_golf.svg" symbol-width="23" /></rule>
 		<rule e="any" k="sport" v="shooting"><symbol priority="225" id="s_sport" src="file:/res/s_shooting.svg" symbol-width="23" /></rule>
-		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
-			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>		
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
 		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" symbol-width="28"/>
-		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
-			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>		
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
