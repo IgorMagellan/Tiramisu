@@ -492,11 +492,31 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="99"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="9" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" /></rule>
 
 <!-- natural reserve -->
-	<rule e="way" k="leisure|boundary" v="nature_reserve|national_park|protected_area" zoom-max="12">
-		<area fill="#50f7ff6f" />
-		<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
-	</rule>
 
+
+	<!-- protected, aboriginal areas -->
+	<rule cat="tms_terrain" e="way" k="*" v="*">
+<!-- 		<rule e="way" k="boundary" v="aboriginal_lands" zoom-min="8" cat="tms_oopt" >
+			<area fill="#0CFF8000" />
+			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="13">
+				<line stroke="#FFAF0B" stroke-width="2" stroke-linecap="butt" />
+			</rule>
+			<rule e="way" k="*" v="*" zoom-min="14">
+				<line stroke="#99A5C085" stroke-width="2" dy="-2" stroke-linecap="butt" />
+				<line stroke="#99C7D2AC" stroke-width="2" stroke-linecap="butt" />
+			</rule>
+		</rule>
+ -->
+		<rule e="way" k="leisure|boundary" v="nature_reserve|protected_area|national_park" >
+			<rule e="any" k="*" v="*" zoom-max="12">
+				<area fill="#50f7ff6f" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
+				<area fill="#20f7ff6f" />
+			</rule>
+		</rule>
+	</rule>
+	
 
 <!-- tunnels -->
 	<!-- zoom 12- -->
@@ -696,14 +716,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- bodies of water -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
-	<area fill="#85a7ff" />
-	</rule>
-	<rule cat="tms_terrain"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="14">
-		<caption priority="3" cat="tms_landnames" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
-	</rule>
-	<rule cat="tms_terrain" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="15">
-		<caption cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
-		<caption cat="tms_landnames" k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<area fill="#85a7ff" />
 	</rule>
 
 <!-- waterway structures -->
@@ -2414,6 +2427,66 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption k="addr:housenumber" font-style="normal" font-size="8" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
+
+<!-- 	<rule cat="tms_terrain"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="14">
+		<caption priority="3" cat="tms_landnames" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+	<rule cat="tms_terrain" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="15">
+		<caption cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule> -->
+
+	<rule cat="tms_terrain" e="node" k="landuse|natural" v="reservoir|basin|water">
+		<rule e="any" k="amenity" v="~" cat="tms_landnames">
+			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
+				<caption k="name" priority="103" font-style="bold" font-size="11" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="xlarge">
+				<caption k="name" priority="103" font-style="bold" font-size="11" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="large">
+				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="mid">
+				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="small|~" zoom-min="13">
+				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="xsmall" zoom-min="14">
+				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="tiny" zoom-min="15">
+				<caption k="name" font-style="bold" font-size="10" fill="#2020ff" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		
+		<caption cat="tms_landnames" k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />		
+	</rule>
+	
+
+	<rule e="node" k="boundary|leisure" v="protected_area|national_park|nature_reserve" cat="tms_landnames">
+		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-max="8">
+			<caption  k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="9" zoom-max="10">
+			<caption  k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="11">
+			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="12" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="large" zoom-min="9">
+			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="mid|~" zoom-min="10">
+			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="10" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="small|xsmall|tiny" zoom-min="11">
+			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
+	
 <!-- Places -->
 	<rule e="node" k="place" v="suburb" zoom-min="11">				<caption cat="tms_landnames" priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	<rule e="any" k="place" v="locality" zoom-min="11">				<caption cat="tms_landnames" priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
