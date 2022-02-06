@@ -2437,7 +2437,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule> -->
 
 	<rule cat="tms_terrain" e="node" k="landuse|natural" v="reservoir|basin|water">
-		<rule e="any" k="amenity" v="~" cat="tms_landnames">
+		<rule cat="tms_landnames" e="any" k="amenity" v="~" >
 			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
 				<caption k="name" priority="103" font-style="bold" font-size="11" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
@@ -2457,32 +2457,33 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="tiny" zoom-min="15">
-				<caption k="name" font-style="bold" font-size="10" fill="#2020ff" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
-		</rule>
-		
-		<caption cat="tms_landnames" k="ele" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />		
+			<rule e="any" k="*" v="*" zoom-min="13">
+				<caption k="ele" priority="-5" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>			
+		</rule>	
 	</rule>
 	
 
 	<rule e="node" k="boundary|leisure" v="protected_area|national_park|nature_reserve" cat="tms_landnames">
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-max="8">
-			<caption  k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="9" zoom-max="10">
-			<caption  k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="11">
-			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="12" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" font-family="serif" font-size="12" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="large" zoom-min="9">
-			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="mid|~" zoom-min="10">
-			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="10" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" font-family="serif" font-size="10" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="small|xsmall|tiny" zoom-min="11">
-			<caption  k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	
