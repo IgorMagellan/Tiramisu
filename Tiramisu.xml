@@ -24,6 +24,10 @@ https://www.mapbox.com/maki/	- Licensed under the BSD license https://github.com
 (BTW,my nickname has nothing to do with the mapbox one)
 
 Contact me through: http://tartamillo.wordpress.com
+******************************
+
+Fixed and changed by IgorMagellan (see Tiramisu-changelog.txt)
+Contact: igor.magellan@yandex.ru
 -->
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
@@ -756,7 +760,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2"/>
 		
 		<rule e="way" k="natural" v="*" zoom-min="13" zoom-max="14" >
-			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" dy="1.2" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="33"/>
+			<lineSymbol dy="1.2" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="33"/>
 		</rule>
 		<rule e="way" k="natural" v="*" zoom-min="15">
 			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="44"/>
