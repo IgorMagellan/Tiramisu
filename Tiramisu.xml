@@ -521,7 +521,21 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 	
+	<!-- natural ways -->
 
+	<rule cat="tms_relief" e="way" k="natural" v="gorge" closed="no" zoom-min="12">
+		<rule e="way" k="*" v="*" zoom-max="13" >
+			<line stroke="#80606060" stroke-width="0.2"/>
+		</rule>
+		<rule e="way" k="*" v="*" zoom-min="14">  
+			<line src="file:/res/p_rock.svg" stroke-width="1.9"/>
+			<line stroke="#AA606060" stroke-width="1.6" scale="all" stroke-dasharray="0.1,0.3" stroke-linecap="butt"/>
+			<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16"> 
+				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#666666" stroke="#FFFFFF" stroke-width="3" dy="-1.1"/>
+			</rule>
+		</rule>
+	</rule>
+	
 <!-- tunnels -->
 	<!-- zoom 12- -->
 	<rule e="way" k="tunnel" v="true|yes">
@@ -722,12 +736,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
 		<rule e="way" k="waterway" v="stream|drain|ditch">
 			<line stroke="#665887ff" stroke-width="0.52" />
-			<line stroke="#990059b3" scale="all" stroke-width="0.44" stroke-dasharray="0.4,0.4" stroke-linecap="butt" />
+			<line stroke="#990059b3" scale="all" stroke-width="0.44" stroke-dasharray="0.6,0.6" stroke-linecap="butt" />
+			<rule e="way" k="*" v="*"> <pathText cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>			
+			
 		</rule>
 		<rule e="way" k="waterway" v="river|canal">
 			<line stroke="#405887ff" stroke-width="1" />
-			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="1.5,2.5" stroke-linecap="butt" />
+			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="3,4.5" stroke-linecap="butt" />
+			<rule e="way" k="*" v="*"> <pathText cat="tms_landnames" priority="3" k="name" font-style="bold" font-size="9" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> </rule>			
 		</rule>
+	
 	</rule>
 
 	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
@@ -769,7 +787,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- natural ways -->
-	<rule cat="tms_relief" e="way" k="natural" v="valley|gorge" zoom-min="13">
+	<rule cat="tms_relief" e="way" k="natural" v="valley" zoom-min="13">
 		<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
