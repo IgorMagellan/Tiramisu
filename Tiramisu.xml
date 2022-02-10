@@ -718,6 +718,24 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<!-- underground waterways -->
+	<rule cat="tms_terrain" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
+		<rule e="way" k="waterway" v="stream|drain|ditch">
+			<line stroke="#665887ff" stroke-width="0.52" />
+			<line stroke="#990059b3" scale="all" stroke-width="0.44" stroke-dasharray="0.4,0.4" stroke-linecap="butt" />
+		</rule>
+		<rule e="way" k="waterway" v="river|canal">
+			<line stroke="#405887ff" stroke-width="1" />
+			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="1.5,2.5" stroke-linecap="butt" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
+		<rule e="way" k="man_made" v="pipeline">
+			<line stroke="#995887ff" stroke-width="1.0" />
+		</rule>
+	</rule>
+	
 <!-- bodies of water -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
 		<area fill="#85a7ff" />
@@ -2806,9 +2824,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="any" k="amenity" v="cafe">			<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_cafe.svg" symbol-width="23" /></rule>
 	<rule e="any" k="amenity" v="pub|bar|beverages"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_pub.svg" symbol-width="23" /></rule>
 	<rule e="any" k="amenity" v="marketplace">	<symbol priority="245" id="tms_shop" display="always" src="file:/res/s_marketplace.svg" symbol-width="23" /></rule>
+	<rule e="any" k="amenity" v="ice_cream">	<symbol priority="164" id="tms_shop" display="always" src="file:/res/s_ice_cream.svg" symbol-height="23" /></rule>	
 	<rule e="any" k="shop" v="mall">			<symbol priority="250" id="tms_shop" display="always" src="file:/res/s_mall3.svg" symbol-width="25" /></rule>
 	<rule e="any" k="shop" v="organic|shop_farm|greengrocer|cheese"><symbol priority="245" id="tms_shop" display="always" src="file:/res/s_organic.svg" symbol-width="23" /></rule>
-	<rule e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
+	<rule e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese|ice_cream">
 		<caption cat="tms_landnames" priority="135" symbol-id="tms_shop" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 </rule>
@@ -2978,7 +2997,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/res/s_rapids.svg" symbol-width="21" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-
+	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+		<symbol id="s_hot_spring" priority="263" src="file:/res/s_hot_spring.svg" symbol-height="21" />
+		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" font-style="bold" font-size="8" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>	
+	
 <!-- cultural stuff -->
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity" v="library"><symbol id="tms_school" src="file:/res/s_library.svg" symbol-width="23" /></rule>
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity" v="kindergarten"><symbol id="tms_school" src="file:/res/s_kindergarten.svg" symbol-width="23" /></rule>
