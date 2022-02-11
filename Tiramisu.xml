@@ -2038,25 +2038,25 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 			
 				<rule e="way" k="mtb_scale" v="mtbs_0" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_0.png" symbol-height="30" dy="-1" repeat="true" repeat-start="30" repeat-gap="100"/>
+					<lineSymbol src="file:/res/s_mtbs_0.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="30" repeat-gap="100"/>
 				</rule>	
 				<rule e="way" k="mtb_scale" v="mtbs_1" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_1.png" symbol-height="30" dy="-1" repeat="true" repeat-start="28" repeat-gap="100"/>
+					<lineSymbol src="file:/res/s_mtbs_1.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="28" repeat-gap="80"/>
 				</rule>	
 				<rule e="way" k="mtb_scale" v="mtbs_2" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_2.png" symbol-height="30" dy="-1" repeat="true" repeat-start="25" repeat-gap="75"/>
+					<lineSymbol src="file:/res/s_mtbs_2.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="25" repeat-gap="75"/>
 				</rule>	
 				<rule e="way" k="mtb_scale" v="mtbs_3" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_3.png" symbol-height="30" dy="-1" repeat="true" repeat-start="20" repeat-gap="75"/>
+					<lineSymbol src="file:/res/s_mtbs_3.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="20" repeat-gap="70"/>
 				</rule>	
 				<rule e="way" k="mtb_scale" v="mtbs_4|" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_4.png" symbol-height="30" dy="-1" repeat="true" repeat-start="15" repeat-gap="50"/>
+					<lineSymbol src="file:/res/s_mtbs_4.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="15" repeat-gap="50"/>
 				</rule>		
 				<rule e="way" k="mtb_scale" v="mtbs_5" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_5.png" symbol-height="30" dy="-1" repeat="true" repeat-start="10" repeat-gap="50"/>
+					<lineSymbol src="file:/res/s_mtbs_5.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="10" repeat-gap="40"/>
 				</rule>	
 				<rule e="way" k="mtb_scale" v="mtbs_6|" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_6.png" symbol-height="30" dy="-1" repeat="true" repeat-start="5" repeat-gap="30"/>
+					<lineSymbol src="file:/res/s_mtbs_6.svg" symbol-height="30" dy="-1" repeat="true" repeat-start="5" repeat-gap="30"/>
 				</rule>			
 			
 		</rule>
@@ -2229,22 +2229,22 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_0" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbu_0.png" symbol-height="30" dy="0" repeat="true" repeat-start="30" repeat-gap="150"/>
+					<lineSymbol src="file:/res/s_mtbu_0.svg" symbol-height="30" dy="0" repeat="true" repeat-start="30" repeat-gap="120"/>
 				</rule>	
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_1" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbu_1.png" symbol-height="30" dy="0" repeat="true" repeat-start="25" repeat-gap="150"/>
+					<lineSymbol src="file:/res/s_mtbu_1.svg" symbol-height="30" dy="0" repeat="true" repeat-start="25" repeat-gap="110"/>
 				</rule>	
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_2" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbu_2.png" symbol-height="30" dy="0" repeat="true" repeat-start="20" repeat-gap="150"/>
+					<lineSymbol src="file:/res/s_mtbu_2.svg" symbol-height="30" dy="0" repeat="true" repeat-start="20" repeat-gap="100"/>
 				</rule>	
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_3" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbu_3.png" symbol-height="30" dy="0" repeat="true" repeat-start="15" repeat-gap="100"/>
+					<lineSymbol src="file:/res/s_mtbu_3.svg" symbol-height="30" dy="0" repeat="true" repeat-start="15" repeat-gap="80"/>
 				</rule>	
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_4|" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbu_4.png" symbol-height="30" dy="0" repeat="true" repeat-start="10" repeat-gap="100"/>
+					<lineSymbol src="file:/res/s_mtbu_4.svg" symbol-height="30" dy="0" repeat="true" repeat-start="10" repeat-gap="70"/>
 				</rule>		
 				<rule e="way" k="mtb_scale_uphill" v="mtbu_5" zoom-min="13">
-					<lineSymbol src="file:/mtblb/s_mtbs_5.png" symbol-height="30" dy="0" repeat="true" repeat-start="5" repeat-gap="50"/>
+					<lineSymbol src="file:/res/s_mtbs_5.svg" symbol-height="30" dy="0" repeat="true" repeat-start="5" repeat-gap="50"/>
 				</rule>	
 
 				<rule e="way" k="mtb_scale_uphill" v="~" zoom-min="13" zoom-max="13"><line stroke="#CD7E1B" stroke-width="0.90" stroke-dasharray="0,05.50,0.50,05.50" stroke-linecap="round" /></rule>

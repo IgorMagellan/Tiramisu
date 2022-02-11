@@ -72,3 +72,5 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 10/02/2022
 улучшены правила cliff|earth_bank (доб.z13-14)
 добавил tunnel=culvert и др.underground waterways, мороженое ice cream, hot spring, ущелья gorge
+11/02/2022
+переделал png для s_mtbs и s_mtbu в SVG
