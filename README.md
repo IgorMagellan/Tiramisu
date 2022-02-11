@@ -1,6 +1,6 @@
 # Tiramisu
 
- Rendertheme for OpenAndroMaps and Locus, Orux, Cruiser and other mapsforge-compatible programms.
+Rendertheme for OpenAndroMaps and Locus, Orux, Cruiser and other mapsforge-compatible programms.
 <div align="center">
 
 ![Tiramisu.png](Tiramisu.png)
@@ -43,3 +43,10 @@ Links:
 - [OpenAndroMaps (OAM)](https://www.openandromaps.org/en/home_en)
 - [Elevate theme family by Tobias Kuehn](https://www.openandromaps.org/en/legend/elevate-mountain-hike-theme)
 
+Screenshots:
+
+<div align="center">
+ 
+![cr_scr01r](https://user-images.githubusercontent.com/35865856/153633952-5176df8d-66cf-4a3a-b5b7-796d0a12c982.png)
+ 
+</div>
