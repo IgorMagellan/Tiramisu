@@ -1,30 +1,37 @@
 # Tiramisu
 
- rendertheme OpenAndroMaps for Locus, Orux and other mapsforge-compatible programms
+ Rendertheme for OpenAndroMaps and Locus, Orux, Cruiser and other mapsforge-compatible programms.
 <div align="center">
 
 ![Tiramisu.png](Tiramisu.png)
 
 </div>
 
-Tiramisù is a MapsForge theme built to style the maps from OpenAndroMaps in Oruxmaps and compatible apps. (LocusMap, Cruiser, etc)
+Maki wrote about his render theme:
+> _Tiramisù is a MapsForge theme built to style the maps from OpenAndroMaps in Oruxmaps and compatible apps._
+>
+> _The theme, just like the maps, has a strong focus on hiking and general outdoor use, showing not only paths and tracks, but land use, water and food sources, and accommodation as well._
+>
+> _Taking advantage of the latest MapsForge features Tiramisù has **three built-in styles, for hiking, mountain biking and road cycling** that can be fine tuned to suit individual needs._
 
-The theme, just like the maps, has a strong focus on hiking and general outdoor use, showing not only paths and tracks, but land use, water and food sources, and accommodation as well.
+The theme has now been fixed with the latest changes in routes (hiking, MTB, cycling) in OAM until January 2022, improved and continues to evolve.
 
-Taking advantage of the latest MapsForge features Tiramisù has three built-in styles, for hiking, mountain biking and road cycling that can be fine tuned to suit individual needs.
-
-
+Added new POIs, IMBA bike park tracks and lots of little things.
 
 Legend:
 
-[Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf) 
+[Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf)
 
 [Tiramisu_3_Legend_ru.pdf](Tiramisu_3_Legend_ru.pdf) (Translation into Russian using [onlinedoctranslator](https://www.onlinedoctranslator.com/))
 
+Changelog:
 
-[Changelog (in Russian)](Tiramisu-changelog.txt)  
+[Tiramisu-changelog.txt](Tiramisu-changelog.txt)  (in Russian)
 
 Links:
 
-- [Tiramisu main post](https://tartamillo.wordpress.com/tiramisu/)
 - [Tiramisu EOL](https://tartamillo.wordpress.com/2022/01/03/tiramisu-eol/)
+- [Tiramisu main post](https://tartamillo.wordpress.com/tiramisu/)
+- [OpenAndroMaps (OAM)](https://www.openandromaps.org/en/home_en)
+- [Elevate theme family by Tobias Kuehn](https://www.openandromaps.org/en/legend/elevate-mountain-hike-theme)
+
