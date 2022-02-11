@@ -14,7 +14,7 @@ Maki [wrote](https://tartamillo.wordpress.com/tiramisu/) about his render theme:
 >
 > _Taking advantage of the latest MapsForge features Tiramisù has **three built-in styles, for hiking, mountain biking and road cycling** that can be fine tuned to suit individual needs._
 
-The theme has now been fixed with the latest changes in routes (hiking, MTB, cycling) in OAM until January 2022, improved and continues to evolve.
+The theme has now been fixed with the latest changes in routes (hiking, MTB, cycling) in OAM since January 2022, improved and continues to evolve.
 
 Added new POIs, Bike-Park scale IMBA tracks, trails and lots of little things.
 
