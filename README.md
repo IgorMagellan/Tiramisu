@@ -22,6 +22,9 @@ Because the theme is designed for a distant outdoor, all icons are always displa
 
 From Tobias Kuen's Elevate family of themes, this theme is the closest to the `Elements` theme.
 
+**Important!**
+The theme works most correctly with OAM V5 maps with the update date - January 2022
+
 Legend:
 
 [Tiramisu_3_Legend.pdf](Tiramisu_3_Legend.pdf)
