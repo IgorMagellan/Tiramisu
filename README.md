@@ -20,7 +20,7 @@ Added new POIs, IMBA bike park tracks and lots of little things.
 
 Because the theme is designed for a distant outdoor, all icons are always displayed as soon as they appear in the map data and in urban conditions can lead to oversaturation of the map and mutual overlap of icons. Therefore, use layers in the theme menu more actively and turn off unnecessary ones. Still, a topic for areas where POIs are scattered more widely.
 
-From Tobias Kuen's Elevate family of themes, this theme is the closest to the Elements theme.
+From Tobias Kuen's Elevate family of themes, this theme is the closest to the `Elements` theme.
 
 Legend:
 
