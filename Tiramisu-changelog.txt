@@ -74,3 +74,4 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 добавил tunnel=culvert и др.underground waterways, мороженое ice cream, hot spring, ущелья gorge
 11/02/2022
 переделал png для s_mtbs и s_mtbu в SVG
+добавил sport climbing, climbing_adventure
