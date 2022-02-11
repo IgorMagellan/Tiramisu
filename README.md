@@ -47,9 +47,9 @@ Screenshots:
 
 <div align="center">
  
-![cr_scr01r](https://user-images.githubusercontent.com/35865856/153633952-5176df8d-66cf-4a3a-b5b7-796d0a12c982.png)
-
-![locus01](https://user-images.githubusercontent.com/35865856/153635003-8a231a6e-911e-480f-a225-a4ac7189c698.jpg) ![locus02](https://user-images.githubusercontent.com/35865856/153635000-46f7b05a-3352-4b74-9519-6384250f494f.jpg) ![oruxmaps1](https://user-images.githubusercontent.com/35865856/153635007-a72bc619-89e9-40c7-98b5-a7523b1ba4b8.jpg) ![oruxmaps2](https://user-images.githubusercontent.com/35865856/153634988-7940a77f-87cf-4552-b0b0-daf80730d183.jpg)
+ ![locus01](https://user-images.githubusercontent.com/35865856/153635003-8a231a6e-911e-480f-a225-a4ac7189c698.jpg) ![locus02](https://user-images.githubusercontent.com/35865856/153635000-46f7b05a-3352-4b74-9519-6384250f494f.jpg) ![oruxmaps1](https://user-images.githubusercontent.com/35865856/153635007-a72bc619-89e9-40c7-98b5-a7523b1ba4b8.jpg) 
+ 
+![cr_scr01r](https://user-images.githubusercontent.com/35865856/153633952-5176df8d-66cf-4a3a-b5b7-796d0a12c982.png) ![oruxmaps2](https://user-images.githubusercontent.com/35865856/153634988-7940a77f-87cf-4552-b0b0-daf80730d183.jpg)
  
 </div>
 
