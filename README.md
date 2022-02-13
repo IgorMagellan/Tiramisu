@@ -7,6 +7,8 @@ Rendertheme for OpenAndroMaps and Locus, Orux, Cruiser and other mapsforge-compa
 
 </div>
 
+My thanks to Maki, the creator of this beautiful theme!
+
 Maki [wrote](https://tartamillo.wordpress.com/tiramisu/) about his render theme:
 > _Tiramisù is a MapsForge theme built to style the maps from OpenAndroMaps in Oruxmaps and compatible apps._
 >

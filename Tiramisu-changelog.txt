@@ -75,3 +75,5 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 11/02/2022
 переделал png для s_mtbs и s_mtbu в SVG
 добавил sport climbing, climbing_adventure
+Release version 4.1 
+
