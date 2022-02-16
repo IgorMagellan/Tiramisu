@@ -77,3 +77,10 @@ tms_water-land для weir, dam; переставил pipeline; tms_aerial дл�
 добавил sport climbing, climbing_adventure
 Release version 4.1 
 
+14-16/02/2022
+добавил колодцы water_well (ведро); sport cliff_diving, free_flying, skateboard, roller_skating, miniature_golf; 
+жд заброшки railway disused|abandoned; автодромы raceway, highway construction; пристань ferry_terminal
+горячие источники с питьевой водой hot spring drinking_water
+в меню темы добавлен французский язык
+изменен дисплей cliff, earth_bank
+переименование mountain_pass

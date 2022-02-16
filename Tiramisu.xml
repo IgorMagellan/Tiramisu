@@ -44,6 +44,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Líneas de contorno" />
 		<name lang="de" value="Höhenlinien"/>
 		<name lang="it" value="Linee di contorno"/>
+		<name lang="fr" value="Lignes de contour"/>
 		<cat id="tms_contours"/>
 	</layer>
 	<layer id="tms_contours-lz" enabled="false">
@@ -52,6 +53,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Líneas de contorno (zoom bajo)" />
 		<name lang="de" value="Höhenlinien (geringer Zoom)"/>
 		<name lang="it" value="Linee di contorno (zoom basso)"/>
+		<name lang="fr" value="Lignes de contour (faible zoom)"/>
 		<cat id="tms_contours-lz"/>
 	</layer>
 	<layer id="tms_terrain" enabled="true">
@@ -59,7 +61,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="ru" value="Местность ª"/>
 		<name lang="es" value="Terreno ª" />
 		<name lang="de" value="Gelände ª"/>
-		<name lang="it" value="Terrain ª"/>		
+		<name lang="it" value="Terrain ª"/>
+		<name lang="fr" value="Terrain ª"/>
 		<cat id="tms_terrain"/>
 	</layer>
 	<layer id="tms_land-ele" enabled="true">
@@ -68,6 +71,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Elementos del paisaje" />
 		<name lang="de" value="Landschaftselemente"/>
 		<name lang="it" value="Elementi del paesaggio"/>
+		<name lang="fr" value="Éléments paysagers"/>		
 		<cat id="tms_water-land"/>
 		<cat id="tms_man-made"/>
 		<cat id="tms_aerial"/>
@@ -81,6 +85,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Puntos de agua" />
 		<name lang="de" value="Wasserstellen"/>
 		<name lang="it" value="Punti d'acqua"/>
+		<name lang="fr" value="Points d'eau"/>		
 		<cat id="tms_water"/>
 	</layer>
 	<layer id="tms_huts" enabled="true">
@@ -89,6 +94,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Cabañas y refugios" />
 		<name lang="de" value="Hütten und Schutzhütten"/>
 		<name lang="it" value="Capanne e rifugi"/>
+		<name lang="fr" value="Cabanes et abris"/>		
 		<cat id="tms_huts"/>
 	</layer>
 	<layer id="tms_acco" enabled="false">
@@ -97,6 +103,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Alojamiento" />
 		<name lang="de" value="Unterkunft"/>
 		<name lang="it" value="Alloggio"/>
+		<name lang="fr" value="Hébergement"/>		
 		<cat id="tms_acco"/>
 	</layer>
 	<layer id="tms_picnic" enabled="true">
@@ -105,6 +112,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Camping y picnic" />
 		<name lang="de" value="Camping &amp; Picknick"/>
 		<name lang="it" value="Campeggio e Picnic"/>
+		<name lang="fr" value="Camping &amp; Pique-nique"/>		
 		<cat id="tms_camp"/>
 		<cat id="tms_picnic"/>
 	</layer>
@@ -114,6 +122,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Redes de senderismo ⁿ" />
 		<name lang="de" value="Wandernetzwerke ⁿ"/>
 		<name lang="it" value="Reti escursionistiche ⁿ"/>
+		<name lang="fr" value="Réseaux de randonnée ⁿ"/>		
 		<cat id="tms_hknw"/>
 	</layer>
 	<layer id="tms_mtbnw" enabled="true">
@@ -122,6 +131,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Redes MTB ^" />
 		<name lang="de" value="MTB-Netzwerke ^"/>
 		<name lang="it" value="reti MTB ^"/>
+		<name lang="fr" value="Réseaux VTT ^"/>		
 		<cat id="tms_mtbnw"/>
 	</layer>
 	<layer id="tms_hknw-mtb" enabled="false">
@@ -130,6 +140,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Redes de senderismo ^" />
 		<name lang="de" value="Wandernetzwerke ^"/>
 		<name lang="it" value="Reti escursionistiche ^"/>
+		<name lang="fr" value="Réseaux de randonnée ^"/>		
 		<cat id="tms_hknw"/>
 	</layer>
 	<layer id="tms_cynw-mtb" enabled="false">
@@ -138,6 +149,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Redes ciclistas ^" />
 		<name lang="de" value="Fahrradnetzwerke ^"/>
 		<name lang="it" value="Reti ciclistiche ^"/>
+		<name lang="fr" value="Réseaux cyclables ^"/>		
 		<cat id="tms_cynw"/>
 	</layer>
 	<layer id="tms_cynw" enabled="true">
@@ -146,6 +158,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Redes ciclistas ^" />
 		<name lang="de" value="Fahrradnetzwerke ^"/>
 		<name lang="it" value="Reti ciclistiche ^"/>
+		<name lang="fr" value="Réseaux cyclables ^"/>		
 		<cat id="tms_cynw"/>
 	</layer>
 	<layer id="tms_barriers-cy" enabled="true">
@@ -154,6 +167,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Barreras" />
 		<name lang="de" value="Barrieren"/>
 		<name lang="it" value="Barriere"/>
+		<name lang="fr" value="Barrières"/>		
 		<cat id="tms_barriers"/>
 	</layer>
 	<layer id="tms_barriers-hk" enabled="false">
@@ -162,6 +176,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Barreras" />
 		<name lang="de" value="Barrieren"/>
 		<name lang="it" value="Barriere"/>
+		<name lang="fr" value="Barrières"/>
 		<cat id="tms_barriers"/>
 	</layer>
 	<layer id="tms_tracks-cycle" enabled="false">
@@ -170,6 +185,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Easy Tracks" />
 		<name lang="de" value="Easy Tracks"/>		
 		<name lang="it" value="Easy Tracks"/>
+		<name lang="fr" value="Easy Tracks"/>		
 		<cat id="tms_tracks-cycle"/>
 	</layer>
 	<layer id="tms_trans-priv" enabled="false">
@@ -178,6 +194,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Transporte (privado)" />
 		<name lang="de" value="Transport (privat)"/>
 		<name lang="it" value="Trasporti (privati)"/>
+		<name lang="fr" value="Transport (privé)"/>		
 		<cat id="tms_trans-priv"/>
 	</layer>
 	<layer id="tms_trans-pub" enabled="false">
@@ -186,6 +203,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Transporte (público)" />
 		<name lang="de" value="Transport (öffentlich)"/>
 		<name lang="it" value="Trasporti (pubblici)"/>
+		<name lang="fr" value="Transport (public)"/>		
 		<cat id="tms_trans-pub"/>
 	</layer>
 	<layer id="tms_tourism" enabled="true">
@@ -194,6 +212,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Turismo" />
 		<name lang="de" value="Tourismus"/>
 		<name lang="it" value="Turismo"/>
+		<name lang="fr" value="Tourisme"/>		
 		<cat id="tms_tour"/>
 		<cat id="tms_info"/>
 		<cat id="tms_attraction"/>
@@ -204,6 +223,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Cosas culturales" />
 		<name lang="de" value="Kulturelles"/>
 		<name lang="it" value="Cose culturali"/>
+		<name lang="fr" value="Trucs culturels"/>		
 		<cat id="tms_culture"/>
 		<cat id="tms_schools"/>
 	</layer>
@@ -213,6 +233,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Tiempo libre" />
 		<name lang="de" value="Freizeit"/>
 		<name lang="it" value="Tempo libero"/>
+		<name lang="fr" value="Temps libre"/>		
 		<cat id="tms_sport"/>
 		<cat id="tms_leisure"/>
 	</layer>
@@ -222,6 +243,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Comida" />
 		<name lang="de" value="Essen"/>
 		<name lang="it" value="Cibo"/>
+		<name lang="fr" value="Nourriture"/>		
 		<cat id="tms_food"/>
 	</layer>
 	<layer id="tms_shops" enabled="false">
@@ -230,6 +252,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Compras" />
 		<name lang="de" value="Einkaufen"/>
 		<name lang="it" value="Shopping"/>
+		<name lang="fr" value="Shopping"/>		
 		<cat id="tms_shops"/>
 		<cat id="tms_bureaucracy"/>
 	</layer>
@@ -239,6 +262,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Religión" />
 		<name lang="de" value="Religion"/>
 		<name lang="it" value="Religione"/>
+		<name lang="fr" value="Religion"/>		
 		<cat id="tms_religion"/>
 	</layer>
 	<layer id="tms_emergency" enabled="false">
@@ -247,6 +271,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Emergencia" />
 		<name lang="de" value="Notfall"/>
 		<name lang="it" value="Emergenza"/>
+		<name lang="fr" value="Urgence"/>		
 		<cat id="tms_emergency"/>
 	</layer>
 	<layer id="tms_landnames" enabled="true">
@@ -254,7 +279,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="ru" value="Названия мест, POI"/>
 		<name lang="es" value="Nombres de lugares, puntos de interés" />
 		<name lang="de" value="Ortsnamen, POIs"/>
-		<name lang="it" value="Nomi di luoghi, POI"/>		
+		<name lang="it" value="Nomi di luoghi, POI"/>
+		<name lang="fr" value="Noms de lieux, POI"/>
 		<cat id="tms_landnames"/>
 	</layer>
 
@@ -787,26 +813,26 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- natural ways -->
-	<rule cat="tms_relief" e="way" k="natural" v="valley" zoom-min="13">
-		<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
-	</rule>
 
-	<rule cat="tms_relief" e="way" k="natural" v="cliff|earth_bank" closed="no" zoom-min="13" >
-		<line stroke="#70606060" stroke-width="0.8" stroke-linecap="butt"/>		
-		<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2"/>
-		
-		<rule e="way" k="natural" v="*" zoom-min="13" zoom-max="14" >
-			<lineSymbol dy="1.2" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="33"/>
+	<rule cat="tms_relief" e="way" k="natural" v="*" zoom-min="13">
+		<rule e="way" k="*" v="valley" >
+			<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
-		<rule e="way" k="natural" v="*" zoom-min="15">
-			<lineSymbol dy="0.5" src="file:/res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" align-center="true" symbol-percent="44"/>
-		</rule>		
+
+		<!-- Обрывы -->
+		<rule e="way" k="*" v="cliff" >
+			<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
+			<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		</rule>
+
+		<rule e="way" k="*" v="earth_bank" >
+			<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
+			<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		</rule>	
 	</rule>
 	
-	<rule cat="tms_relief" e="way" k="natural" v="cliff|earth_bank" closed="yes" zoom-min="13" >
-		<line stroke="#70606060" stroke-width="1.0" stroke-linecap="butt"/>
-		<caption cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2"/>
-	</rule>
 
 	<rule cat="tms_relief" e="way" k="natural" v="ridge|arete">
 		<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
@@ -1202,14 +1228,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="highway" v="cycleway" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="1.21" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="cycleway" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.90" stroke-linecap="butt" /></rule>
 
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="4.08" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="4.04" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="3.46" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="2.80" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="2.19" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.68" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="1.27" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.95" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="4.08" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="4.04" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="3.46" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="2.80" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="2.19" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.68" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="1.27" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.95" stroke-linecap="butt" /></rule>
 
 			<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="4.30" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="4.25" stroke-linecap="butt" /></rule>
@@ -1268,14 +1294,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.83" stroke-linecap="butt" /></rule>
 			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.62" stroke-linecap="butt" /></rule>
 
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.88" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="2.85" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="2.44" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.97" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="1.55" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="1.18" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.90" stroke-linecap="butt" /></rule>
-			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.67" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.88" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="2.85" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="2.44" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.97" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="1.55" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="1.18" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.90" stroke-linecap="butt" /></rule>
+			<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.67" stroke-linecap="butt" /></rule>
 
 			<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="3.10" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="3.06" stroke-linecap="butt" /></rule>
@@ -1352,6 +1378,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.68" stroke-linecap="butt" /></rule>
 				<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.51" stroke-linecap="butt" /></rule>
 
+				<rule e="way" k="highway" v="construction" zoom-min="13">
+					<line stroke="#B3000000" stroke-width="0.92" stroke-dasharray="3,0.92,0.25,0.92" scale="all" stroke-linecap="butt" />					
+				</rule>				
+
 				<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="2.40" stroke-linecap="butt" /></rule>
 				<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="2.37" stroke-linecap="butt" /></rule>
 				<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="2.03" stroke-linecap="butt" /></rule>
@@ -1402,22 +1432,22 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="tunnel" v="~|false|no">
 <!-- railway bridge casings -->
 			<rule e="way" k="bridge" v="yes|true">
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="2.80" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="2.77" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="2.38" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="1.92" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="1.50" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.15" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="0.87" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.65" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.00" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="1.98" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="1.70" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.37" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="1.07" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="0.82" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.62" stroke-linecap="butt" /></rule>
-				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.47" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="2.80" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="2.77" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="2.38" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="1.92" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="1.50" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.15" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="0.87" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.65" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.00" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="1.98" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="1.70" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.37" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="1.07" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="0.82" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.62" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular|disused|abandoned" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.47" stroke-linecap="butt" /></rule>
 			</rule>
 
 <!-- railway casings and cores -->
@@ -1437,6 +1467,23 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="18" zoom-max="18"><line stroke="#333333" stroke-width="0.33" /></rule>
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="19" zoom-max="19"><line stroke="#333333" stroke-width="0.25" /></rule>
 				<rule e="way" k="railway" v="rail|narrow_gauge|preserved|funicular" zoom-min="20" zoom-max="99"><line stroke="#333333" stroke-width="0.19" /></rule>
+
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="13" zoom-max="13"><line stroke="#888888" stroke-width="1.25" stroke-dasharray="01.00,03.00" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="14" zoom-max="14"><line stroke="#888888" stroke-width="1.24" stroke-dasharray="01.41,04.24" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="15" zoom-max="15"><line stroke="#888888" stroke-width="1.06" stroke-dasharray="01.73,05.20" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="16" zoom-max="16"><line stroke="#888888" stroke-width="0.86" stroke-dasharray="02.00,06.00" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="17" zoom-max="17"><line stroke="#888888" stroke-width="0.67" stroke-dasharray="02.24,06.71" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="18" zoom-max="18"><line stroke="#888888" stroke-width="0.51" stroke-dasharray="02.45,07.35" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="19" zoom-max="19"><line stroke="#888888" stroke-width="0.39" stroke-dasharray="02.65,07.94" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="20" zoom-max="99"><line stroke="#888888" stroke-width="0.29" stroke-dasharray="02.83,08.49" stroke-linecap="butt" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="13" zoom-max="13"><line stroke="#999999" stroke-width="0.80" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="14" zoom-max="14"><line stroke="#999999" stroke-width="0.79" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="15" zoom-max="15"><line stroke="#999999" stroke-width="0.68" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="16" zoom-max="16"><line stroke="#999999" stroke-width="0.55" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="17" zoom-max="17"><line stroke="#999999" stroke-width="0.43" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="18" zoom-max="18"><line stroke="#999999" stroke-width="0.33" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="19" zoom-max="19"><line stroke="#999999" stroke-width="0.25" /></rule>
+				<rule e="way" k="railway" v="disused|abandoned" zoom-min="20" zoom-max="99"><line stroke="#999999" stroke-width="0.19" /></rule>
 
 			<rule cat="tms_aerial" e="way" k="railway" v="funicular" zoom-min="14">
 				<symbol src="file:/res/s_rail_funicular.svg" display="always" symbol-width="21" />
@@ -1554,6 +1601,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="highway" v="trunk|motorway" zoom-min="18" zoom-max="18"><line stroke="#FF0000" stroke-width="1.35" stroke-linecap="butt" /></rule>
 				<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#FF0000" stroke-width="1.02" stroke-linecap="butt" /></rule>
 				<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#FF0000" stroke-width="0.76" stroke-linecap="butt" /></rule>
+
+				<rule e="way" k="highway" v="construction" zoom-min="13">
+					<line stroke="#B3000000" stroke-width="0.92" stroke-dasharray="3,0.92,0.25,0.92" scale="all" stroke-linecap="butt" />
+				</rule>				
 			</rule>
 		</rule>
 	</rule>
@@ -2349,9 +2400,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<rule e="way" k="highway" v="motorway" zoom-min="20" zoom-max="99"><line stroke="#FFFF00" stroke-width="0.23" /></rule>
 			</rule>
 
+			<rule e="way" k="highway" v="raceway" zoom-min="14">
+				<line stroke="#ff7373" stroke-width="1.5" stroke-linecap="butt" />
+				<line stroke="#ffcfbf" stroke-width="0.8" stroke-linecap="butt" />
+			</rule>
 <!-- highway captions -->
 			<rule e="way" k="highway" v="footway|path|track|bridleway|steps|byway" zoom-min="13"> <pathText k="name" font-style="bold" font-size="8" fill="#606060" stroke="#FFFFFF" stroke-width="2" /> </rule>
-			<rule e="way" k="highway" v="cycleway|service|construction|road|pedestrian|unclassified|residential|living_street|tertiary|tertiary_link" zoom-min="15"> <pathText k="name" font-style="bold" font-size="9" fill="#606060" stroke="#FFFFFF" stroke-width="2" /> </rule>
+			<rule e="way" k="highway" v="cycleway|service|construction|road|pedestrian|unclassified|residential|living_street|tertiary|tertiary_link|raceway" zoom-min="15"> <pathText k="name" font-style="bold" font-size="9" fill="#606060" stroke="#FFFFFF" stroke-width="2" /> </rule>
 			<rule e="way" k="highway" v="secondary_link|primary_link|trunk_link|motorway_link|secondary|primary" zoom-min="14"> <pathText k="name" font-style="bold" font-size="10" fill="#606060" stroke="#FFFFFF" stroke-width="2" /> </rule>
 			<rule e="any" k="highway" v="primary|secondary|tertiary" zoom-min="11">
 				<rule e="way" k="hknetwork|name" v="~"> <pathText k="ref" font-style="bold" font-size="10" stroke="#FFFFFF" fill="#606060" stroke-width="2" /> </rule>
@@ -2586,16 +2641,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 		<rule cat="tms_peak" e="any" k="natural" v="saddle">
 			<rule e="any" k="dir_saddle" v="ds_0">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_0.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_0.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_45|~">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_45.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_45.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_90">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_90.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_90.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_135">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_135.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_135.svg" symbol-height="15" />
 			</rule>
 <!-- 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="12">
 				<caption priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2611,16 +2666,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 		<rule cat="tms_peak" e="any" k="mountain_pass" v="yes">
 			<rule e="any" k="dir_saddle" v="ds_0">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_0.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_0.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_45|~">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_45.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_45.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_90">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_90.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_90.svg" symbol-height="15" />
 			</rule>
 			<rule e="any" k="dir_saddle" v="ds_135">
-				<symbol id="s_saddle" display="always" src="file:/res/mountain_pass_135.svg" symbol-height="15" />
+				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_135.svg" symbol-height="15" />
 			</rule>
 <!-- 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="12">
 				<caption priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2693,7 +2748,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption cat="tms_landnames" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="8" fill="#66001a" stroke="#ffffff" stroke-width="2" />			
 	</rule>
 
-	<rule cat="tms_picnic" e="any" k="amenity" v="recycling">
+	<rule cat="tms_picnic" e="any" k="amenity" v="recycling" zoom-min="14" >
 		<symbol id="s_recycling" display="always" src="file:/res/s_recycling.svg" symbol-width="17" />
 		<rule e="any" k="*" v="*">
 			<caption cat="tms_landnames" k="name" symbol-id="s_recycling" font-style="bold" font-size="8" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2793,10 +2848,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-max="15">
 		<symbol display="always" priority="505" src="file:/res/s_water.svg" symbol-width="10"/>
 	</rule>
-	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
-		<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
-		<caption cat="tms_landnames" symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
-	</rule>
+
 	<rule cat="tms_water" e="node" k="natural" v="spring" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~">	<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_spring.svg" symbol-height="17" /> </rule>
 		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="405" id="tms_drop" src="file:/res/s_spring_nd.svg" symbol-height="17" /> </rule>
@@ -2806,18 +2858,36 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 	<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="16">
 		<rule e="any" k="drinking_water" v="yes|~">
-			<symbol id="s_ww_drink" display="always" src="file:/res/s_spring_d.svg" symbol-height="18" />
+			<symbol id="s_ww_drink" display="always" src="file:/res/s_water_well_drink_tms.svg" symbol-height="22" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_landnames" k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="8" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="drinking_water" v="no">
-			<symbol id="s_ww_nodrink" display="always" src="file:/res/s_spring_nd.svg" symbol-height="18" />
+			<symbol id="s_ww_nodrink" display="always" src="file:/res/s_water_well_nodrink_tms.svg" symbol-height="22" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_landnames" k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="8" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 	</rule>
+<!-- 
+	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
+		<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
+		<caption cat="tms_landnames" symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+
+ -->	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
+		<rule e="any" k="drinking_water" v="yes|~">
+			<rule e="any" k="natural" v="~">
+				<rule e="any" k="man_made" v="~">	<!-- ??? -->
+					<symbol id="s_drinking_water" display="always" src="file:/res/s_drinking_water.svg" symbol-height="17" />
+					<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="16">
+						<caption k="name" symbol-id="s_drinking_water" font-style="italic" font-size="8" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+					</rule>
+				</rule>
+			</rule>
+		</rule>
+	</rule>	
 
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
@@ -3015,10 +3085,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/res/s_rapids.svg" symbol-width="21" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+<!-- 	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
 		<symbol id="s_hot_spring" priority="263" src="file:/res/s_hot_spring.svg" symbol-height="21" />
 		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" font-style="bold" font-size="8" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>	
+	</rule>	 -->
+
+	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+		<rule e="any" k="drinking_water|amenity" v="yes|drinking_water"><symbol id="s_hot_spring" priority="253" display="always" src="file:/res/s_hot_spring-drinking.svg" symbol-height="21" /></rule>
+		<rule e="any" k="drinking_water" v="~|no"><symbol id="s_hot_spring" priority="263" display="always" src="file:/res/s_hot_spring.svg" symbol-height="21" /></rule>
+		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" position="above" font-style="bold" font-size="8" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
 	
 <!-- cultural stuff -->
 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity" v="library"><symbol id="tms_school" src="file:/res/s_library.svg" symbol-width="23" /></rule>
@@ -3054,11 +3130,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption cat="tms_landnames" symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>	
 	</rule>
-	<rule cat="tms_sport" e="any" k="sport" v="*" zoom-min="14">
+	<rule cat="tms_sport" e="any" k="sport|leisure" v="*" zoom-min="14">
 		<rule e="any" k="sport" v="soccer"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_soccer.svg" symbol-width="23" /></rule>
 		<rule e="any" k="sport" v="tennis"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_tennis.svg" symbol-width="23" /></rule>
 		<rule e="any" k="sport|leisure" v="golf|golf_course"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_golf.svg" symbol-width="23" /></rule>
 		<rule e="any" k="sport" v="shooting"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_shooting.svg" symbol-width="23" /></rule>
+
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>		
@@ -3076,7 +3153,39 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>	
-		
+	
+		<rule cat="tms_sport" e="any" k="sport" v="free_flying" zoom-min="13">
+			<symbol priority="225" id="s_free_flying" src="file:/res/s_sport_free_flying.svg" display="always" symbol-height="23" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" k="name" symbol-id="s_free_flying" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule cat="tms_sport" e="any" k="sport" v="cliff_diving" zoom-min="13">
+			<symbol priority="225" id="s_cliff_diving" src="file:/res/s_sport_cliff_diving.svg" display="always" symbol-height="23" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" k="name" symbol-id="s_cliff_diving" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+
+		<rule cat="tms_sport" e="any" k="sport" v="skateboard" zoom-min="13">
+			<symbol priority="225" id="s_skateboard" src="file:/res/s_sport_skateboard.svg" display="always" symbol-height="23" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" k="name" symbol-id="s_skateboard" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule cat="tms_sport" e="any" k="sport" v="roller_skating" zoom-min="13">
+			<symbol priority="225" id="s_roller_skating" src="file:/res/s_sport_roller_skating.svg" display="always" symbol-height="23" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" k="name" symbol-id="s_roller_skating" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+
+		<rule cat="tms_sport" e="any" k="sport" v="miniature_golf">
+			<symbol priority="225" id="s_miniature_golf" src="file:/res/s_sport_minigolf.svg" display="always" symbol-height="23" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" k="name" symbol-id="s_miniature_golf" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
 		
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
 		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" display="always"  symbol-width="28"/>
@@ -3134,10 +3243,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_trans-pub" e="any" k="station" v="subway">
 			<symbol id="s_pt_subway" priority="405" display="always" src="file:/res/s_subway.svg" symbol-height="24" />
 			<caption cat="tms_landnames" priority="405" k="name" symbol-id="s_pt_subway" position="below" font-style="bold" font-size="9" fill="#ff0013" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>	
-	<rule cat="tms_trans-pub" e="node" k="railway" v="tram_stop">
+	</rule>
+	<rule cat="tms_trans-pub" e="any" k="railway" v="tram_stop">
 		<symbol priority="205" display="always" id="tms_tram-stop" src="file:/res/s_tram_stop.svg" symbol-width="19" />
-		<caption cat="tms_landnames" priority="100" symbol-id="tms_tram-stop"  k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_tram-stop" k="name" position="below" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+	<rule cat="tms_trans-pub" e="any" k="amenity" v="ferry_terminal">
+		<symbol  priority="205" display="always" id="tms_ferry" src="file:/res/s_ferry_terminal.svg" symbol-height="19"/>
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_ferry" position="below" k="name" font-style="bold" font-size="8" fill="#005acf" stroke="#FFFFFF" stroke-width="2"/>
 	</rule>
 
 <!-- leisure time -->
@@ -3259,7 +3372,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="any" k="man_made" v="water_tower" zoom-min="13">
+	<rule cat="tms_man-made" e="any" k="man_made" v="water_tower" zoom-min="14">
 		<symbol display="always" id="s_water_tower" src="file:/res/s_water_tower_tms.svg" symbol-height="21"/>
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_water_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
