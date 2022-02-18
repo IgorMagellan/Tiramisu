@@ -79,8 +79,12 @@ Release version 4.1
 
 14-16/02/2022
 добавил колодцы water_well (ведро); sport cliff_diving, free_flying, skateboard, roller_skating, miniature_golf; 
-жд заброшки railway disused|abandoned; автодромы raceway, highway construction; пристань ferry_terminal
+жд заброшки railway disused|abandoned, tram; автодромы raceway, highway construction; пристань ferry_terminal
 горячие источники с питьевой водой hot spring drinking_water
 в меню темы добавлен французский язык
 изменен дисплей cliff, earth_bank
 переименование mountain_pass
+добавлен разводной мост bridge movable
+расширение bridge yes|true|viaduct на yes|true|aqueduct|viaduct|movable
+17/02/2022
+добавил charging_station
