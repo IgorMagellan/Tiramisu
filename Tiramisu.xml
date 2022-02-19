@@ -359,7 +359,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
-
+	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>
+	
 <!-- vegetation -->
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
@@ -823,13 +824,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="*" v="cliff" >
 			<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 			<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>
 
 		<rule e="way" k="*" v="earth_bank" >
 			<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 			<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>	
 	</rule>
 	
