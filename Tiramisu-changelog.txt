@@ -90,3 +90,5 @@ Release version 4.1
 добавил charging_station
 19/02/2022
 заливка территории hospital розовым
+
+добавил подписи для всех barriers

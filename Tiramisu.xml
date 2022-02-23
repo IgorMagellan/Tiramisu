@@ -2843,31 +2843,36 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 <!-- barriers -->
 	<rule cat="tms_barriers" e="any" k="barrier" v="*" zoom-min="15">
-		<rule e="any" k="barrier" v="bollard">			<symbol priority="415" display="always" src="file:/res/s_bollard.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="block">			<symbol priority="415" display="always" src="file:/res/s_block.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="lift_gate|chain">	<symbol priority="415" display="always" src="file:/res/s_lift_gate.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="stile">			<symbol priority="415" display="always" src="file:/res/s_stile.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="cycle_barrier">	<symbol priority="415" display="always" src="file:/res/s_cycle_barrier.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="gate">				<symbol priority="415" display="always" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="turnstile">		<symbol priority="415" display="always" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="barrier" v="log">				<symbol priority="415" display="always" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>		
-		<rule e="any" k="barrier" v="kissing_gate">		<symbol priority="415" display="always" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>			
+		<rule e="any" k="*" v="bollard">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_bollard.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="block">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_block.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="lift_gate|chain"><symbol priority="415" display="always" id="s_barrier" src="file:/res/s_lift_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="stile">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_stile.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="cycle_barrier">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_cycle_barrier.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="gate">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
+
 	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="14">
 		<symbol id="s_ford" priority="300" src="file:/res/s_ford_6w.svg" display="always" symbol-height="21" />
 		<line stroke="#99B3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="9" fill="#ff2626" stroke="#e0ffff00" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="8" fill="#ff2626" stroke="#e0ffff00" stroke-width="2" />
 		</rule>
 	</rule>
 	<rule cat="tms_barriers" e="any" k="bridge" v="movable" zoom-min="14">
-		<symbol id="s_bridge_movable" priority="310" display="always" src="file:/res/s_bridge_movable.svg" symbol-width="23" />
+		<symbol id="s_bridge_movable" priority="420" display="always" src="file:/res/s_bridge_movable.svg" symbol-width="23" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule e="way" k="barrier" v="fence" zoom-min="14"> <line stroke="#000000" stroke-width="0.1" stroke-dasharray="2,2" stroke-linecap="butt" /> </rule>
+
 	<rule e="way" k="barrier|building" v="wall|city_wall" zoom-min="14">
 		<line stroke="#CCCCCC" stroke-width="0.3" stroke-linecap="butt" />
 		<line stroke="#6A5A8E" stroke-width="0.3" stroke-dasharray="5,1" stroke-linecap="butt" />
@@ -3118,11 +3123,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/res/s_rapids.svg" symbol-width="21" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-<!-- 	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
-		<symbol id="s_hot_spring" priority="263" src="file:/res/s_hot_spring.svg" symbol-height="21" />
-		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" font-style="bold" font-size="8" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>	 -->
-
 	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
 		<rule e="any" k="drinking_water|amenity" v="yes|drinking_water"><symbol id="s_hot_spring" priority="253" display="always" src="file:/res/s_hot_spring-drinking.svg" symbol-height="21" /></rule>
 		<rule e="any" k="drinking_water" v="~|no"><symbol id="s_hot_spring" priority="263" display="always" src="file:/res/s_hot_spring.svg" symbol-height="21" /></rule>
