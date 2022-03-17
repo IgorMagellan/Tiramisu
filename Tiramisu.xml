@@ -437,10 +437,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="natural" v="glacier" zoom-min="12"> <area fill="#BBE0FFFF" stroke="#E0FFFF" stroke-width="0.8" /> </rule>
 
 <!-- Bare ground -->
-	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="13" zoom-max="13"> <area src="file:/res/p_rock.svg" symbol-width="060" /> </rule>
-	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="14" zoom-max="14"> <area src="file:/res/p_rock.svg" symbol-width="090" /> </rule>
-	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="15" zoom-max="15"> <area src="file:/res/p_rock.svg" symbol-width="130" /> </rule>
-	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="16" zoom-max="99"> <area src="file:/res/p_rock.svg" symbol-width="170" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="13" zoom-max="13"> <area src="file:/res/p_rock2.svg" symbol-width="060" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="14" zoom-max="14"> <area src="file:/res/p_rock2.svg" symbol-width="090" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="15" zoom-max="15"> <area src="file:/res/p_rock2.svg" symbol-width="130" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="16" zoom-max="99"> <area src="file:/res/p_rock2.svg" symbol-width="170" /> </rule>
 
 	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scree.svg" symbol-width="015" /> </rule>
 	<rule cat="tms_terrain" e="way" k="natural" v="scree" zoom-min="14" zoom-max="14"> <area src="file:/res/p_scree.svg" symbol-width="025" /> </rule>
@@ -492,8 +492,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
-		<line stroke="#A5CBA5" stroke-width="0.42" stroke-linecap="round" />
-		<line stroke="#CBE1CB" stroke-width="0.36" stroke-dasharray="2,5"  stroke-linecap="butt" />
+		<line stroke="#A5CBA5" stroke-width="0.52" stroke-linecap="round" />
+		<line stroke="#CBE1CB" stroke-width="0.46" scale="all" stroke-dasharray="0.2,0.5"  stroke-linecap="butt" />
 	</rule>	
 
 <!-- Contour lines -->
@@ -523,7 +523,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="99"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="9" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" /></rule>
 
 <!-- natural reserve -->
-
 
 	<!-- protected, aboriginal areas -->
 	<rule cat="tms_terrain" e="way" k="*" v="*">
@@ -555,7 +554,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<line stroke="#80606060" stroke-width="0.2"/>
 		</rule>
 		<rule e="way" k="*" v="*" zoom-min="14">  
-			<line src="file:/res/p_rock.svg" stroke-width="1.9"/>
+			<line src="file:/res/p_rock2.svg" stroke-width="1.9"/>
 			<line stroke="#AA606060" stroke-width="1.6" scale="all" stroke-dasharray="0.1,0.3" stroke-linecap="butt"/>
 			<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16"> 
 				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#666666" stroke="#FFFFFF" stroke-width="3" dy="-1.1"/>
@@ -2852,6 +2851,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="border_control">	<symbol priority="420" display="always" id="s_barrier" src="file:/res/s_border_control.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>

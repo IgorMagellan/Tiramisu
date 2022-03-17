@@ -1,5 +1,5 @@
 ﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Tiramisu 4.1  for OpenAndroMap *
+* Tiramisu 4.2  for OpenAndroMap *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (mapsforge V4+)
 
@@ -90,5 +90,11 @@ Release version 4.1
 добавил charging_station
 19/02/2022
 заливка территории hospital розовым
-
+20/02/2022
 добавил подписи для всех barriers
+12/03/2022
+переделал hedge на scale="all"
+17/03/2022
+добавил пограничный пункт контроля barrier=border_control
+поднял контраст для bare_rock
+Release version 4.2
