@@ -2851,7 +2851,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="*" v="border_control">	<symbol priority="420" display="always" id="s_barrier" src="file:/res/s_border_control.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
@@ -2864,10 +2863,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="8" fill="#ff2626" stroke="#e0ffff00" stroke-width="2" />
 		</rule>
 	</rule>
+
 	<rule cat="tms_barriers" e="any" k="bridge" v="movable" zoom-min="14">
 		<symbol id="s_bridge_movable" priority="420" display="always" src="file:/res/s_bridge_movable.svg" symbol-width="23" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_barriers" e="any" k="barrier|amenity" v="border_control" zoom-min="14">
+		<symbol id="s_border_control" priority="420" display="always" src="file:/res/s_border_control.svg" symbol-width="23" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_border_control" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
