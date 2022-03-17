@@ -1,5 +1,5 @@
 ﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Tiramisu 4.2  for OpenAndroMap *
+* Tiramisu 4.3  for OpenAndroMap *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (mapsforge V4+)
 
@@ -98,3 +98,6 @@ Release version 4.1
 добавил пограничный пункт контроля barrier=border_control
 поднял контраст для bare_rock
 Release version 4.2
+
+17/03/2022
+Поправлен французский перевод меню.

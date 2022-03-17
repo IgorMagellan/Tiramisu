@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Tiramisù 4.2 for Oruxmaps and MapsForge compatible applications
+Tiramisù 4.3 for Oruxmaps and MapsForge compatible applications
 
 by Maki
 
@@ -35,7 +35,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
 
-<stylemenu id="tiramisu_4_2" defaultvalue="tms_hiking" defaultlang="en">
+<stylemenu id="tiramisu_4_3" defaultvalue="tms_hiking" defaultlang="en">
 
 <!-- Layers -->
 	<layer id="tms_contours" enabled="true">
@@ -44,7 +44,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Líneas de contorno" />
 		<name lang="de" value="Höhenlinien"/>
 		<name lang="it" value="Linee di contorno"/>
-		<name lang="fr" value="Lignes de contour"/>
+		<name lang="fr" value="Courbes de niveau"/>
 		<cat id="tms_contours"/>
 	</layer>
 	<layer id="tms_contours-lz" enabled="false">
@@ -53,7 +53,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Líneas de contorno (zoom bajo)" />
 		<name lang="de" value="Höhenlinien (geringer Zoom)"/>
 		<name lang="it" value="Linee di contorno (zoom basso)"/>
-		<name lang="fr" value="Lignes de contour (faible zoom)"/>
+		<name lang="fr" value="Courbes de niveau (faible zoom)"/>
 		<cat id="tms_contours-lz"/>
 	</layer>
 	<layer id="tms_terrain" enabled="true">
@@ -103,7 +103,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Alojamiento" />
 		<name lang="de" value="Unterkunft"/>
 		<name lang="it" value="Alloggio"/>
-		<name lang="fr" value="Hébergement"/>		
+		<name lang="fr" value="Hébergement"/>
 		<cat id="tms_acco"/>
 	</layer>
 	<layer id="tms_picnic" enabled="true">
@@ -112,7 +112,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Camping y picnic" />
 		<name lang="de" value="Camping &amp; Picknick"/>
 		<name lang="it" value="Campeggio e Picnic"/>
-		<name lang="fr" value="Camping &amp; Pique-nique"/>		
+		<name lang="fr" value="Camping &amp; Pique-nique"/>
 		<cat id="tms_camp"/>
 		<cat id="tms_picnic"/>
 	</layer>
@@ -223,7 +223,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Cosas culturales" />
 		<name lang="de" value="Kulturelles"/>
 		<name lang="it" value="Cose culturali"/>
-		<name lang="fr" value="Trucs culturels"/>		
+		<name lang="fr" value="Eléments culturels"/>
 		<cat id="tms_culture"/>
 		<cat id="tms_schools"/>
 	</layer>
