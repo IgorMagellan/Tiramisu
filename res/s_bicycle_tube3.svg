@@ -1,0 +1,19 @@
+<svg width="36" height="36" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <title>mall</title>
+ <path d="m8.428 4.3705-0.0098 24.528c0 2.3587 0 4.7175 1.0646 4.7175h17.034c1.0646 0 1.0646-2.3588 1.0646-4.7175v-24.726c-0.012427-2.4378-19.192-2.3928-19.154 0.19845z" fill="#ffc400" fill-rule="evenodd" stop-color="#000000" stroke="#f2b800" stroke-width=".49742" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+ <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke="#ffc400" stroke-width="3.5071">
+   <circle cx="27.528" cy="21.061" r="4.5151"/>
+   <circle cx="8.4717" cy="21.061" r="4.5151"/>
+   <path d="m8.3063 21.084 4.465-10.66"/>
+   <path d="m11.87 14.286 7.0157 7.3639 8.8566-0.29857-6.7171-6.9659z"/>
+  </g>
+  <g stroke="#5d0000" stroke-width="1.7233">
+   <circle cx="27.528" cy="21.061" r="4.5151"/>
+   <circle cx="8.4717" cy="21.061" r="4.5151"/>
+   <path d="m8.3063 21.084 4.465-10.66"/>
+   <path d="m11.87 14.286 7.0157 7.3639 8.8566-0.29857-6.7171-6.9659z"/>
+   <path d="m18.985 21.7c0-1.5922 3.5327-10.2 3.5327-10.2"/>
+  </g>
+ </g>
+</svg>

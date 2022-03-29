@@ -364,9 +364,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- vegetation -->
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
-<!-- 		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" ><area fill="#40125f16" /></rule> 
-		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#409fdd0d" /></rule> -->
-		<!-- <rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="13" ><area fill="#40709110" /></rule>	 -->
 		
 		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" zoom-max="13">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="060" /> </rule>
 		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="14" zoom-max="14">	<area src="file:/res/p_wood-coniferous.svg"  symbol-width="080" /> </rule>
@@ -957,7 +954,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="way" k="route" v="ferry" zoom-min="10"> <line stroke="#707070" stroke-width="0.5" stroke-dasharray="7,5" stroke-linecap="butt" /> </rule>
 
 
-<!-- hiking relations higlight #64e52929-->
+<!-- hiking relations -->
 
 	<rule cat="tms_hknw" e="way" k="hknetwork" v="iwn|nwn|rwn|lwn|own">
 	
@@ -2677,9 +2674,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="any" k="dir_saddle" v="ds_135">
 				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_135.svg" symbol-height="15" />
 			</rule>
-<!-- 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="12">
-				<caption priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
-			</rule>	 -->		
+		
 			<rule e="any" k="*" v="*" zoom-max="13">
 				<caption cat="tms_landnames" k="name" priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#8c0023" stroke="#FFFFFF" stroke-width="2.0" />
 			</rule>						
@@ -2702,9 +2697,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="any" k="dir_saddle" v="ds_135">
 				<symbol id="s_saddle" display="always" src="file:/res/s_mountain_pass_135.svg" symbol-height="15" />
 			</rule>
-<!-- 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="12">
-				<caption priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
-			</rule>		 -->	
+
 			<rule e="any" k="*" v="*" zoom-max="13">
 				<caption cat="tms_landnames" priority="305" symbol-id="s_saddle" position="above" k="name" font-style="bold" font-size="8" fill="#8c0023" stroke="#FFFFFF" stroke-width="2.0" />
 			</rule>						
@@ -2915,13 +2908,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 	</rule>
-<!-- 
-	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
-		<symbol display="always" priority="505" id="tms_drop" src="file:/res/s_drinking_water.svg" symbol-height="17" />
-		<caption cat="tms_landnames" symbol-id="tms_drop"  k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
-	</rule>
 
- -->	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
+	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="16">
 		<rule e="any" k="drinking_water" v="yes|~">
 			<rule e="any" k="natural" v="~">
 				<rule e="any" k="man_made" v="~">	<!-- ??? -->
@@ -2979,18 +2967,25 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="any" zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books">
 		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-</rule>	
+</rule>
+
+<rule cat="tms_shops" e="any" k="vending" v="bicycle|bicycle_tube">
+	<symbol priority="210" id="s_bicycle_vend" display="always" src="file:/res/s_bicycle_tube3.svg" symbol-height="21" />
+	<rule e="any" k="*" v="*">
+		<caption k="name" symbol-id="s_bicycle_vend" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
 
 	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
-		<symbol priority="225" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" />
-		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />		
+		<symbol priority="220" id="tms_shop" display="always" src="file:/res/s_car-shop.svg" symbol-width="23" />
+		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="shop" v="motorcycle">
-		<symbol priority="235" id="tms_motshop" display="always" src="file:/res/s_shop_motorcycle.svg" symbol-width="23" />
+		<symbol priority="230" id="tms_motshop" display="always" src="file:/res/s_shop_motorcycle.svg" symbol-width="23" />
 		<rule e="any" k="*" v="*">
 			<caption cat="tms_landnames" k="name" symbol-id="tms_motshop" priority="135" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
-		</rule>		
-	</rule>		
+		</rule>
+	</rule>
 
 <!-- tourist info -->
 
