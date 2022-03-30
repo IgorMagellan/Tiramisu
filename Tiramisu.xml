@@ -3156,72 +3156,40 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- sport -->
-	<rule cat="tms_sport" e="any" k="leisure" v="slipway"><symbol priority="225" src="file:/res/s_slipway.svg" display="always" symbol-width="21" /></rule>
+
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="14">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="225" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>	
+		</rule>
 	</rule>
-	<rule cat="tms_sport" e="any" k="sport|leisure" v="*" zoom-min="14">
-		<rule e="any" k="sport" v="soccer"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_soccer.svg" symbol-width="23" /></rule>
-		<rule e="any" k="sport" v="tennis"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_tennis.svg" symbol-width="23" /></rule>
-		<rule e="any" k="sport|leisure" v="golf|golf_course"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_golf.svg" symbol-width="23" /></rule>
-		<rule e="any" k="sport" v="shooting"><symbol priority="225" id="s_sport" display="always" src="file:/res/s_shooting.svg" symbol-width="23" /></rule>
 
+	<rule cat="tms_sport" e="any" k="sport|leisure" v="*" zoom-min="13">
+		<rule e="any" k="*" v="slipway">			<symbol priority="225" id="s_sport" display="always" src="file:/res/s_slipway.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="soccer">				<symbol priority="225" id="s_sport" display="always" src="file:/res/s_soccer.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="tennis">				<symbol priority="225" id="s_sport" display="always" src="file:/res/s_tennis.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="golf|golf_course">	<symbol priority="225" id="s_sport" display="always" src="file:/res/s_golf.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="shooting">			<symbol priority="225" id="s_sport" display="always" src="file:/res/s_shooting.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="free_flying">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_free_flying.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="cliff_diving">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_cliff_diving.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="skateboard">			<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_skateboard.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="roller_skating">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_roller_skating.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="miniature_golf">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_minigolf.svg" symbol-width="23" /></rule>
+		<rule e="any" k="*" v="climbing_adventure">	<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_climbing_adventure.svg" symbol-width="23" /></rule>
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+		</rule>
 	</rule>
 
-		<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
-			<symbol  priority="225" id="s_climbing" src="file:/res/s_sport_climbing.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>	
-		<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure" zoom-min="13">
-			<symbol  priority="225" id="s_climbing_adventure" src="file:/res/s_sport_climbing_adventure.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>	
-	
-		<rule cat="tms_sport" e="any" k="sport" v="free_flying" zoom-min="13">
-			<symbol priority="225" id="s_free_flying" src="file:/res/s_sport_free_flying.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" k="name" symbol-id="s_free_flying" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
+	<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
+		<symbol priority="225" id="s_climbing" src="file:/res/s_sport_climbing.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*">
+			<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
-		<rule cat="tms_sport" e="any" k="sport" v="cliff_diving" zoom-min="13">
-			<symbol priority="225" id="s_cliff_diving" src="file:/res/s_sport_cliff_diving.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" k="name" symbol-id="s_cliff_diving" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>
+	</rule>
 
-		<rule cat="tms_sport" e="any" k="sport" v="skateboard" zoom-min="13">
-			<symbol priority="225" id="s_skateboard" src="file:/res/s_sport_skateboard.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" k="name" symbol-id="s_skateboard" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>
-		<rule cat="tms_sport" e="any" k="sport" v="roller_skating" zoom-min="13">
-			<symbol priority="225" id="s_roller_skating" src="file:/res/s_sport_roller_skating.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" k="name" symbol-id="s_roller_skating" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>
-
-		<rule cat="tms_sport" e="any" k="sport" v="miniature_golf">
-			<symbol priority="225" id="s_miniature_golf" src="file:/res/s_sport_minigolf.svg" display="always" symbol-height="23" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" k="name" symbol-id="s_miniature_golf" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>
-		
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
 		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" display="always"  symbol-width="28"/>
 		<rule e="any" k="*" v="*" zoom-min="15">

@@ -103,3 +103,4 @@ Release version 4.2
 Поправлен французский перевод меню.
 29/03/2022
 Добавил vending=bicycle_tube
+оптимизация tms_sport
