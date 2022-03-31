@@ -101,6 +101,7 @@ Release version 4.2
 
 17/03/2022
 Поправлен французский перевод меню.
-29/03/2022
-Добавил vending=bicycle_tube
+29-31/03/2022
+Добавил vending=bicycle_tube, amenity=bicycle_repair_station (в картах после 23/03/2022); s_bicycle_shop.svg->s_bicycle_repair_station.svg;
+  barrier=checkpoint; названия районов и кварталов города neighbourhood|quarter
 оптимизация tms_sport
