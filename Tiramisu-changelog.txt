@@ -105,3 +105,5 @@ Release version 4.2
 Добавил vending=bicycle_tube, amenity=bicycle_repair_station (в картах после 23/03/2022); s_bicycle_shop.svg->s_bicycle_repair_station.svg;
   barrier=checkpoint; названия районов и кварталов города neighbourhood|quarter
 оптимизация tms_sport
+01/04/2022
+Добавил barrier|natural=ditch|gully

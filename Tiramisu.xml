@@ -829,6 +829,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>	
 	</rule>
 	
+	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" >
+		<line stroke="#b343464b" dy="0.40" stroke-width="0.54" stroke-dasharray="0.12, 0.8" scale="all" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="-0.40" stroke-width="0.54" stroke-dasharray="0, 0.4, 0.12, 0.4" scale="all" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="0.6" stroke-width="0.16" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="-0.6" stroke-width="0.16" stroke-linecap="butt" />
+		<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+	</rule>
 
 	<rule cat="tms_relief" e="way" k="natural" v="ridge|arete">
 		<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
@@ -2797,7 +2804,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="any" k="*" v="*" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	</rule>
 	<rule cat="tms_huts" e="any" k="amenity" v="shelter" zoom-min="14">
-		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">								<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14"><symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">
 			<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_basic_hut.svg" symbol-width="21" />
 			
