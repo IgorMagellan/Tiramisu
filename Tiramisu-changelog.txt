@@ -107,3 +107,5 @@ Release version 4.2
 оптимизация tms_sport
 01/04/2022
 Добавил barrier|natural=ditch|gully
+
+оптимизация tms_relief
