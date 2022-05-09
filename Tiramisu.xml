@@ -41,7 +41,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_contours" enabled="true">
 		<name lang="en" value="Contour lines" />
 		<name lang="ru" value="Контурные линии высот" />
-		<name lang="es" value="Líneas de contorno" />
+		<name lang="es" value="Curvas de nivel" />
 		<name lang="de" value="Höhenlinien" />
 		<name lang="it" value="Linee di contorno" />
 		<name lang="fr" value="Courbes de niveau" />
@@ -50,7 +50,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_contours-lz" enabled="false">
 		<name lang="en" value="Contour lines (low zoom)" />
 		<name lang="ru" value="Контурные линии высот (малые масштабы, ≤ z13)" />
-		<name lang="es" value="Líneas de contorno (zoom bajo)" />
+		<name lang="es" value="Curvas de nivel (zoom bajo)" />
 		<name lang="de" value="Höhenlinien (geringer Zoom)" />
 		<name lang="it" value="Linee di contorno (zoom basso)" />
 		<name lang="fr" value="Courbes de niveau (faible zoom)" />
@@ -59,7 +59,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_terrain" enabled="true">
 		<name lang="en" value="Terrain ª" />
 		<name lang="ru" value="Местность ª" />
-		<name lang="es" value="Terreno ª" />
+		<name lang="es" value="Terreno" />
 		<name lang="de" value="Gelände ª" />
 		<name lang="it" value="Terrain ª" />
 		<name lang="fr" value="Terrain ª" />
@@ -119,7 +119,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_hknw" enabled="true">
 		<name lang="en" value="Hiking networks ⁿ" />
 		<name lang="ru" value="Пешеходные сети ⁿ" />
-		<name lang="es" value="Redes de senderismo ⁿ" />
+		<name lang="es" value="Rutas de senderismo, PR, GR" />
 		<name lang="de" value="Wandernetzwerke ⁿ" />
 		<name lang="it" value="Reti escursionistiche ⁿ" />
 		<name lang="fr" value="Réseaux de randonnée ⁿ" />
@@ -128,7 +128,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_mtbnw" enabled="true">
 		<name lang="en" value="MTB networks ^" />
 		<name lang="ru" value="MTB-сети ^" />
-		<name lang="es" value="Redes MTB ^" />
+		<name lang="es" value="Rutas BTT" />
 		<name lang="de" value="MTB-Netzwerke ^" />
 		<name lang="it" value="reti MTB ^" />
 		<name lang="fr" value="Réseaux VTT ^" />
@@ -137,7 +137,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_hknw-mtb" enabled="false">
 		<name lang="en" value="Hiking networks ^" />
 		<name lang="ru" value="Пешеходные сети ^" />
-		<name lang="es" value="Redes de senderismo ^" />
+		<name lang="es" value="Rutas de senderismo, PR, GR" />
 		<name lang="de" value="Wandernetzwerke ^" />
 		<name lang="it" value="Reti escursionistiche ^" />
 		<name lang="fr" value="Réseaux de randonnée ^" />
@@ -146,7 +146,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_cynw-mtb" enabled="false">
 		<name lang="en" value="Cycling networks ^" />
 		<name lang="ru" value="Велосипедные сети ^" />
-		<name lang="es" value="Redes ciclistas ^" />
+		<name lang="es" value="Redes ciclistas" />
 		<name lang="de" value="Fahrradnetzwerke ^" />
 		<name lang="it" value="Reti ciclistiche ^" />
 		<name lang="fr" value="Réseaux cyclables ^" />
@@ -155,7 +155,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_cynw" enabled="true">
 		<name lang="en" value="Cycling networks ^" />
 		<name lang="ru" value="Велосипедные сети ^" />
-		<name lang="es" value="Redes ciclistas ^" />
+		<name lang="es" value="Redes ciclistas" />
 		<name lang="de" value="Fahrradnetzwerke ^" />
 		<name lang="it" value="Reti ciclistiche ^" />
 		<name lang="fr" value="Réseaux cyclables ^" />
@@ -182,7 +182,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_tracks-cycle" enabled="false">
 		<name lang="en" value="Easy Tracks ^" />
 		<name lang="ru" value="Легкие треки ^" />
-		<name lang="es" value="Easy Tracks ^" />
+		<name lang="es" value="Pistas ciclables" />
 		<name lang="de" value="Easy Tracks ^" />
 		<name lang="it" value="Easy Tracks ^" />
 		<name lang="fr" value="Easy Tracks ^" />
@@ -220,7 +220,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_culture" enabled="false">
 		<name lang="en" value="Cultural stuff" />
 		<name lang="ru" value="Культура: Музеи, памятники, монументы, зáмки.." />
-		<name lang="es" value="Cosas culturales" />
+		<name lang="es" value="Elementos culturales" />
 		<name lang="de" value="Kulturelles" />
 		<name lang="it" value="Cose culturali" />
 		<name lang="fr" value="Eléments culturels" />
@@ -230,7 +230,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_freetime" enabled="false">
 		<name lang="en" value="Free time" />
 		<name lang="ru" value="Развлечения: Спорт, кино, театры, игр.площадки" />
-		<name lang="es" value="Tiempo libre" />
+		<name lang="es" value="Ocio" />
 		<name lang="de" value="Freizeit" />
 		<name lang="it" value="Tempo libero" />
 		<name lang="fr" value="Temps libre" />
@@ -277,7 +277,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_landnames" enabled="true">
 		<name lang="en" value="Names of places, POIs" />
 		<name lang="ru" value="Названия мест, POI" />
-		<name lang="es" value="Nombres de lugares, puntos de interés" />
+		<name lang="es" value="Toponimia, puntos de interés" />
 		<name lang="de" value="Ortsnamen, POIs" />
 		<name lang="it" value="Nomi di luoghi, POI" />
 		<name lang="fr" value="Noms de lieux, POI" />
@@ -340,7 +340,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<layer id="tms_velo" parent="tms_base" visible="true">
 		<name lang="en" value="Velo"/>
 		<name lang="ru" value="Велосипед" />
-		<name lang="es" value="Velo" />
+		<name lang="es" value="Bicicleta" />
 		<name lang="de" value="Velo"/>
 		<name lang="it" value="Velo"/>
 		<cat id="tms_crossings"/>
