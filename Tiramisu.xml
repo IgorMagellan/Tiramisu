@@ -72,7 +72,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="de" value="Landschaftselemente" />
 		<name lang="it" value="Elementi del paesaggio" />
 		<name lang="fr" value="Éléments paysagers" />
-		<cat id="tms_water-land" />
+		<cat id="tms_water_land" />
 		<cat id="tms_man-made" />
 		<cat id="tms_aerial" />
 		<cat id="tms_power" />
@@ -770,11 +770,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 	</rule>
 
-	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
-		<rule e="way" k="man_made" v="pipeline">
-			<line stroke="#995887ff" stroke-width="1.0" />
-		</rule>
-	</rule>
 	
 <!-- bodies of water -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
@@ -783,7 +778,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
-		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
+		<rule cat="tms_water_land" e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock"> <area fill="#90CCCCCC" /> <line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
@@ -792,19 +787,26 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		
 		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
 			<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
-			<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="20,5" stroke-linecap="butt" />
+			<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="2.2,0.7" scale="all" stroke-linecap="butt" />
 			<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
 			<pathText cat="tms_landnames" k="name" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 	</rule>
-	<rule cat="tms_water-land" e="way" k="waterway" v="dam">
+
+	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
+		<rule e="way" k="man_made" v="pipeline">
+			<line stroke="#809CA6BA" stroke-width="1.1" stroke-dasharray="1.1,0.35" scale="all" stroke-linecap="butt" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_water_land" e="way" k="waterway" v="dam">
 		<line stroke="#333333" stroke-width="1" />
 		<line stroke="#CCCCCC" stroke-width="1" stroke-dasharray="10,1" stroke-linecap="butt" />
 		<rule e="any" k="*" v="*" closed="yes">
 			<area fill="#CCCCCC" />
 		</rule>
 	</rule>
-	<rule cat="tms_water-land" e="any" k="waterway" v="dam" zoom-min="15">
+	<rule cat="tms_water_land" e="any" k="waterway" v="dam" zoom-min="15">
 		<symbol src="file:/res/s_dam.svg" symbol-width="17" />
 	</rule>
 	
@@ -1161,14 +1163,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 	
-<!--     IMBA trial -->
+<!--     MTB IMBA  -->
 
-<!-- 	<rule e="way" k="mtb_scale_imba" v="mtba_0|mtba_1|mtba_2|mtba_3|mtba_4">
-		<line dy="-0.9" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>	
-		<line dy="-0.9" stroke="#8Cd900a3" stroke-width="0.76" stroke-dasharray="3,0.4" stroke-linecap="butt" scale="all"/>
-	</rule>
- -->	
-	<rule e="way" k="mtb_scale_imba" v="*" zoom-min="13">
+	<rule cat="tms_mtbnw" e="way" k="mtb_scale_imba" v="*" zoom-min="13">
 		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>
 		<rule e="way" k="*" v="mtba_0"><line dy="-1.0" stroke="#CCd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.3" stroke-linecap="butt" scale="all"/></rule>
 		<rule e="way" k="*" v="mtba_1"><line dy="-1.0" stroke="#BFd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.5" stroke-linecap="butt" scale="all"/></rule>
@@ -1177,30 +1174,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="*" v="mtba_4"><line dy="-1.0" stroke="#99d900a3" stroke-width="0.76" stroke-dasharray="1.2,1.0" stroke-linecap="butt" scale="all"/></rule>
 	</rule>
 	
-<!-- 	<rule e="way" k="mtb_scale_imba" v="*" zoom-min="13">
-
-		<rule e="way" k="*" v="mtba_0">
-		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>		
-		<line dy="-1.0" stroke="#CCd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.3" stroke-linecap="butt" scale="all"/>
-		</rule>
-		<rule e="way" k="*" v="mtba_1">
-		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>				
-		<line dy="-1.0" stroke="#BFd900a3" stroke-width="0.76" stroke-dasharray="3.0,0.5" stroke-linecap="butt" scale="all"/>
-		</rule>
-		<rule e="way" k="*" v="mtba_2">
-		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>		
-		<line dy="-1.0" stroke="#B3d900a3" stroke-width="0.76" stroke-dasharray="2.0,0.5" stroke-linecap="butt" scale="all"/>
-		</rule>
-		<rule e="way" k="*" v="mtba_3">
-		<line dy="-1.0" stroke="#ffff00" stroke-width="0.24" stroke-linecap="butt"/>			
-		<line dy="-1.0" stroke="#A6d900a3" stroke-width="0.76" stroke-dasharray="1.4,0.8" stroke-linecap="butt" scale="all"/>
-		</rule>
-		<rule e="way" k="*" v="mtba_4">
-		<line dy="-1.0" stroke="#b38600" stroke-width="0.24" stroke-linecap="butt"/>		
-		<line dy="-1.0" stroke="#99d900a3" stroke-width="0.76" stroke-dasharray="1.2,1.0" stroke-linecap="butt" scale="all"/>
-		</rule>
-	</rule>	 -->
-
 <!-- bridge casings -->
 
 	<rule e="way" k="bridge" v="yes|true|aqueduct|viaduct|movable">
@@ -3110,26 +3083,27 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="any" k="aeroway" v="*" zoom-min="16"><caption cat="tms_landnames" symbol-id="tms_air" k="name" font-style="bold" font-size="8" fill="#005DD5" stroke="#FFFFFF" stroke-width="2.0" /></rule>
 
 <!-- water -->
-	<rule cat="tms_water-land" e="node" k="natural" v="geyser" zoom-min="13">
+	<rule cat="tms_water_land" e="node" k="natural" v="geyser" zoom-min="13">
 		<symbol priority="260" id="tms_geyser" display="always" src="file:/res/s_geyser.svg" symbol-height="27" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_geyser" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
+	<rule cat="tms_water_land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
 		<symbol priority="260" id="tms_waterfall" display="always" src="file:/res/s_waterfall.svg" symbol-width="17" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_waterfall" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_water-land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
-		<rule  e="way" k="*" v="*" closed="yes">
+	
+	<rule cat="tms_water_land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
+		<rule cat="tms_terrain" e="way" k="*" v="*" closed="yes">
 			<area fill="#80bfefff" stroke="#a3dde8" stroke-width="0.1" />
-			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
 		</rule>
-		<rule  e="way" k="*" v="*" closed="no">
+		<rule e="way" k="*" v="*">
 			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
 		</rule>		
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/res/s_rapids.svg" symbol-width="21" />
 		<caption cat="tms_landnames" priority="140" symbol-id="tms_rapids" k="name" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+	
+	<rule cat="tms_water_land" e="any" k="natural" v="hot_spring">
 		<rule e="any" k="drinking_water|amenity" v="yes|drinking_water"><symbol id="s_hot_spring" priority="253" display="always" src="file:/res/s_hot_spring-drinking.svg" symbol-height="21" /></rule>
 		<rule e="any" k="drinking_water" v="~|no"><symbol id="s_hot_spring" priority="263" display="always" src="file:/res/s_hot_spring.svg" symbol-height="21" /></rule>
 		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" position="above" font-style="bold" font-size="8" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />

@@ -107,5 +107,9 @@ Release version 4.2
 оптимизация tms_sport
 01/04/2022
 Добавил barrier|natural=ditch|gully
-
+28/04/2022
 оптимизация tms_relief
+10/05/2022
+поправлен испанский перевод меню.
+pipeline scale=all, улучшены подземные трубопроводы, rapids
+MTB IMBA в категорию tms_mtbnw
