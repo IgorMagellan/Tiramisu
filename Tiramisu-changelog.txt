@@ -113,3 +113,5 @@ Release version 4.2
 поправлен испанский перевод меню.
 pipeline scale=all, улучшены подземные трубопроводы, rapids
 MTB IMBA в категорию tms_mtbnw
+25/07/2022
+в слой Velo добавлено отображение path с bicycle=bic_designated|bic_yes|bic_permissive, сходное со слоем MTB

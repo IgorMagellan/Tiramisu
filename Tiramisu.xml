@@ -179,7 +179,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="fr" value="Barrières" />
 		<cat id="tms_barriers" />
 	</layer>
-	<layer id="tms_tracks-cycle" enabled="false">
+	<layer id="tms_tracks-cycle" enabled="true">
 		<name lang="en" value="Easy Tracks ^" />
 		<name lang="ru" value="Легкие треки ^" />
 		<name lang="es" value="Pistas ciclables" />
@@ -2107,7 +2107,35 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				</rule>			
 			
 		</rule>
-				
+
+ 		<rule cat="tms_cynw" e="way" k="highway" v="path|footpath|steps">
+ 			<rule e="way" k="bicycle" v="bic_designated|bic_yes|bic_permissive">
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="13" zoom-max="13"><line stroke="#444444" stroke-width="0.68"  stroke-dasharray="03.80,04.20" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="14" zoom-max="14"><line stroke="#444444" stroke-width="0.67"  stroke-dasharray="05.37,05.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="15" zoom-max="15"><line stroke="#444444" stroke-width="0.58"  stroke-dasharray="06.58,07.27" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="16" zoom-max="16"><line stroke="#444444" stroke-width="0.47"  stroke-dasharray="07.60,08.40" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="17" zoom-max="17"><line stroke="#444444" stroke-width="0.37"  stroke-dasharray="08.50,09.39" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="18" zoom-max="18"><line stroke="#444444" stroke-width="0.28"  stroke-dasharray="09.31,10.29" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="19" zoom-max="19"><line stroke="#444444" stroke-width="0.21"  stroke-dasharray="10.05,11.11" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="20" zoom-max="99"><line stroke="#444444" stroke-width="0.16"  stroke-dasharray="10.75,11.88" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="13" zoom-max="13"><line stroke="#0000d9" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="14" zoom-max="14"><line stroke="#0000d9" stroke-width="0.67"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="15" zoom-max="15"><line stroke="#0000d9" stroke-width="0.58"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="16" zoom-max="16"><line stroke="#0000d9" stroke-width="0.47"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="17" zoom-max="17"><line stroke="#0000d9" stroke-width="0.37"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="18" zoom-max="18"><line stroke="#0000d9" stroke-width="0.28"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="19" zoom-max="19"><line stroke="#0000d9" stroke-width="0.21"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="~|T1|T2|T3"     zoom-min="20" zoom-max="99"><line stroke="#0000d9" stroke-width="0.16"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="13" zoom-max="13"><line stroke="#ff0000" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="14" zoom-max="14"><line stroke="#ff0000" stroke-width="0.67"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="15" zoom-max="15"><line stroke="#ff0000" stroke-width="0.58"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="16" zoom-max="16"><line stroke="#ff0000" stroke-width="0.47"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="17" zoom-max="17"><line stroke="#ff0000" stroke-width="0.37"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="18" zoom-max="18"><line stroke="#ff0000" stroke-width="0.28"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="19" zoom-max="19"><line stroke="#ff0000" stroke-width="0.21"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T4|T5|T6"       zoom-min="20" zoom-max="99"><line stroke="#ff0000" stroke-width="0.16"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
+			</rule>
+		</rule>		
 <!-- tracks zoom 12 -->
 	<rule cat="tms_tracks" e="way" k="area" v="~|no|false" zoom-min="12" zoom-max="12">
 		<rule e="way" k="highway" v="track">
