@@ -343,6 +343,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="es" value="Bicicleta" />
 		<name lang="de" value="Velo"/>
 		<name lang="it" value="Velo"/>
+		<cat id="tms_velo"/>
 		<cat id="tms_crossings"/>
 		<overlay id="tms_tracks-cycle"/>
 		<overlay id="tms_cynw"/>
@@ -770,7 +771,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 	</rule>
 
-	
 <!-- bodies of water -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
 		<area fill="#85a7ff" />
@@ -809,48 +809,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_water_land" e="any" k="waterway" v="dam" zoom-min="15">
 		<symbol src="file:/res/s_dam.svg" symbol-width="17" />
 	</rule>
-	
-<!-- natural ways -->
-
-	<rule cat="tms_relief" e="way" k="natural" v="*" zoom-min="13">
-		<rule e="way" k="*" v="valley" >
-			<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
-		</rule>
-
-		<!-- Обрывы -->
-		<rule e="way" k="*" v="cliff" >
-			<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
-			<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
-		</rule>
-
-		<rule e="way" k="*" v="earth_bank" >
-			<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
-			<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
-		</rule>	
-		
-		<!-- Хребты -->
-		<rule e="way" k="*" v="ridge|arete">
-			<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
-			<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
-			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
-		</rule>
-	
-	</rule>
-	
-	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" >
-		<line stroke="#b343464b" dy="0.40" stroke-width="0.54" stroke-dasharray="0.12, 0.8" scale="all" stroke-linecap="butt" />
-		<line stroke="#b343464b" dy="-0.40" stroke-width="0.54" stroke-dasharray="0, 0.4, 0.12, 0.4" scale="all" stroke-linecap="butt" />
-		<line stroke="#b343464b" dy="0.6" stroke-width="0.16" stroke-linecap="butt" />
-		<line stroke="#b343464b" dy="-0.6" stroke-width="0.16" stroke-linecap="butt" />
-		<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
-	</rule>
-
-		<!-- Просеки -->	
-	<rule cat="tms_man-made" e="way" k="man_made" v="cutline" >
-		<line stroke="#99ddffdd" stroke-width="2.2" stroke-linecap="butt" />
-	</rule>	
 	
 <!-- POI areas -->
 	<rule e="way" k="area" v="yes|true">
@@ -920,7 +878,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 	</rule>
-	<rule cat="tms_terrain" e="way" k="man_made" v="pier">
+	<rule cat="tms_terrain" e="way" k="man_made" v="pier|groyne">
 		<rule e="any" k="*" v="*" closed="no">
 			<line stroke="#BAA468" stroke-width="0.8" stroke-linecap="butt" />
 			<line stroke="#997B29" stroke-width="0.8" stroke-dasharray="1,4" stroke-linecap="butt" />
@@ -930,6 +888,47 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+<!-- natural ways -->
+
+	<rule cat="tms_relief" e="way" k="natural" v="*" zoom-min="13">
+		<rule e="way" k="*" v="valley">
+			<pathText cat="tms_landnames" k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+
+		<!-- Обрывы -->
+		<rule e="way" k="*" v="cliff">
+			<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
+			<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		</rule>
+
+		<rule e="way" k="*" v="earth_bank">
+			<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
+			<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		</rule>
+
+		<!-- Хребты -->
+		<rule e="way" k="*" v="ridge|arete">
+			<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
+			<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
+			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" >
+		<line stroke="#b343464b" dy="0.40" stroke-width="0.54" stroke-dasharray="0.12, 0.8" scale="all" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="-0.40" stroke-width="0.54" stroke-dasharray="0, 0.4, 0.12, 0.4" scale="all" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="0.6" stroke-width="0.16" stroke-linecap="butt" />
+		<line stroke="#b343464b" dy="-0.6" stroke-width="0.16" stroke-linecap="butt" />
+		<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="8" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+	</rule>
+
+		<!-- Просеки -->	
+	<rule cat="tms_man-made" e="way" k="man_made" v="cutline" >
+		<line stroke="#99ddffdd" stroke-width="2.2" stroke-linecap="butt" />
+	</rule>	
+	
 <!-- Administrative borders -->
 	<rule e="way" k="admin_level" v="2">
 		<rule e="any" k="*" v="*">
@@ -1654,7 +1653,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="footway" zoom-min="19" zoom-max="19"><line stroke="#0000FF" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="20" zoom-max="99"><line stroke="#0000FF" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
 	
- 		<rule cat="tms_hk" e="way" k="highway" v="path|footpath">
+ 		<rule cat="tms_hk" e="way" k="highway" v="path">
  			<rule e="way" k="sac_scale" v="~" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.67"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.58"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
@@ -1847,7 +1846,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 
- 		<rule cat="tms_mtb" e="way" k="highway" v="path|footpath|steps">
+ 		<rule cat="tms_mtb" e="way" k="highway" v="path|steps">
  			<rule e="way" k="mtb_scale" v="~">
 				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="0.68"  stroke-dasharray="03.80,04.20" stroke-linecap="round" /></rule>
 				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="0.67"  stroke-dasharray="05.37,05.94" stroke-linecap="round" /></rule>
@@ -2108,7 +2107,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			
 		</rule>
 
- 		<rule cat="tms_cynw" e="way" k="highway" v="path|footpath|steps">
+ 		<rule cat="tms_velo" e="way" k="highway" v="path|steps">
  			<rule e="way" k="bicycle" v="bic_designated|bic_yes|bic_permissive">
 				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="13" zoom-max="13"><line stroke="#444444" stroke-width="0.68"  stroke-dasharray="03.80,04.20" stroke-linecap="round" /></rule>
 				<rule e="way" k="sac_scale" v="~|T1|T2|T3|T4"  zoom-min="14" zoom-max="14"><line stroke="#444444" stroke-width="0.67"  stroke-dasharray="05.37,05.94" stroke-linecap="round" /></rule>

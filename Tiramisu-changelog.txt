@@ -115,3 +115,8 @@ pipeline scale=all, улучшены подземные трубопроводы
 MTB IMBA в категорию tms_mtbnw
 25/07/2022
 в слой Velo добавлено отображение path с bicycle=bic_designated|bic_yes|bic_permissive, сходное со слоем MTB
+28/07/2022
+убрал все footpath из path|footpath|steps
+ввел cat id="tms_velo" - была ошибка неотображения path, когда в меню выключен "Cycling networks ^"
+переставил natural ways ниже leisure areas
+добавил groyne
