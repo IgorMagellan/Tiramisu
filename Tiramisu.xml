@@ -915,7 +915,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
 		</rule>
 	</rule>
-	
+
+	<rule cat="tms_relief" e="node" k="natural" v="sinkhole" >
+		<rule e="any" k="*" v="*" zoom-max="15" ><symbol id="sinkhole" src="file:/res/s_sinkhole.svg" display="always" symbol-percent="60" /> </rule>
+		<rule e="any" k="*" v="*" zoom-min="16" ><symbol id="sinkhole" src="file:/res/s_sinkhole.svg" display="always" symbol-percent="80" /> </rule>
+		<caption cat="tms_landnames" k="name" symbol-id="sinkhole" position="below" font-style="bold_italic" font-family="serif" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2.00" />
+	</rule>
+
 	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" >
 		<line stroke="#b343464b" dy="0.40" stroke-width="0.54" stroke-dasharray="0.12, 0.8" scale="all" stroke-linecap="butt" />
 		<line stroke="#b343464b" dy="-0.40" stroke-width="0.54" stroke-dasharray="0, 0.4, 0.12, 0.4" scale="all" stroke-linecap="butt" />
@@ -1030,8 +1036,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-<!-- cycling relations higlight #641639cb -->
-
 	<rule cat="tms_cynw" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
 
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#641639cb" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
@@ -1095,8 +1099,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<pathText cat="tms_landnames" k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
 		</rule>
 	</rule>
-
-<!-- mtb relations higlight #64ce1be1 -->
 
 	<rule cat="tms_mtbnw" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 

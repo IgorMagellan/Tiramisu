@@ -120,3 +120,5 @@ MTB IMBA в категорию tms_mtbnw
 ввел cat id="tms_velo" - была ошибка неотображения path, когда в меню выключен "Cycling networks ^"
 переставил natural ways ниже leisure areas
 добавил groyne
+09/09/2022
+добавил natural=sinkhole
