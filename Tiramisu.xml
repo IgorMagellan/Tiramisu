@@ -914,6 +914,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
 		</rule>
+
 	</rule>
 
 	<rule cat="tms_relief" e="node" k="natural" v="sinkhole" >
@@ -2547,7 +2548,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 	<rule cat="tms_terrain" e="node" k="landuse|natural" v="reservoir|basin|water">
-		<rule cat="tms_landnames" e="any" k="amenity" v="~" >
+		<rule cat="tms_landnames" e="any" k="amenity" v="~">
 			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
 				<caption k="name" priority="103" font-style="bold" font-size="11" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
@@ -2561,27 +2562,26 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="small|~" zoom-min="13">
-				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="xsmall" zoom-min="14">
-				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="tiny" zoom-min="15">
-				<caption k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption k="name" priority="103" font-style="bold" font-size="10" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="13">
 				<caption k="ele" priority="-5" dy="13" font-style="bold" font-size="8" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>			
-		</rule>	
+			</rule>
+		</rule>
 	</rule>
-	
 
 	<rule e="node" k="boundary|leisure" v="protected_area|national_park|nature_reserve" cat="tms_landnames">
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-max="8">
-			<caption  k="name" font-style="bold_italic" dy="15" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" dy="15" font-family="serif" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="9" zoom-max="10">
-			<caption  k="name" font-style="bold_italic" dy="15" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+			<caption  k="name" priority="110" font-style="bold_italic" dy="15" font-family="serif" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="11">
 			<caption  k="name" priority="110" font-style="bold_italic" dy="15" font-family="serif" font-size="12" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
@@ -2596,7 +2596,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption  k="name" priority="110" font-style="bold_italic" dy="15" font-family="serif" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	
 	
 <!-- Places -->
 <rule e="any" k="place" v="suburb|neighbourhood|quarter" zoom-min="11" zoom-max="13">	<caption cat="tms_landnames" priority="505" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#80000000" stroke="#B3FFFFFF" stroke-width="3" /> </rule>
@@ -2836,6 +2835,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="toll_booth">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_toll_booth.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
@@ -3217,12 +3217,21 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- car stuff -->
-	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking">
-		<rule e="any" k="access" v="private">	<symbol priority="210" id="s_parking" src="file:/res/s_parking_private.svg" symbol-width="16" /></rule>
-		<rule e="any" k="*" v="*">				<symbol priority="210" id="s_parking" src="file:/res/s_parking.svg" symbol-width="16" /></rule>
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking" zoom-min="15">
+		<rule e="any" k="access" v="private|destination|acc_no|forestry|discouraged">
+			<symbol priority="210" id="s_parking" src="file:/res/s_parking_private.svg" symbol-width="16" />
+		</rule>
+		<rule e="any" k="access" v="permit|~">
+			<rule e="any" k="fee" v="~">
+				<symbol id="s_parking" priority="210" src="file:/res/s_parking.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="fee" v="fee_yes">
+				<symbol id="s_parking" priority="210" src="file:/res/s_parking_fee2.svg" symbol-height="16" />
+			</rule>
+		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_parking" font-size="10" font-style="bold" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+			<caption cat="tms_landnames" k="name" symbol-id="s_parking" position="above" font-size="10" font-style="bold" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" >
@@ -3230,8 +3239,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption priority="310" cat="tms_landnames" symbol-id="s_trans-priv" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="charging_station" zoom-min="14">
-		<symbol priority="310" id="s_charging_stat" display="always" src="file:/res/s_charging_station2.svg" symbol-height="19" />
-		<caption priority="310" symbol-id="s_charging_stat" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+		<rule e="any" k="bicycle" v="bic_yes">
+			<symbol priority="310" id="s_charging_stat" display="always" src="file:/res/s_charging_station2.svg" symbol-height="19" />
+			<caption priority="310" symbol-id="s_charging_stat" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 
 <!-- public transportation -->

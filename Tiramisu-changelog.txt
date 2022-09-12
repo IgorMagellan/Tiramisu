@@ -122,3 +122,9 @@ MTB IMBA в категорию tms_mtbnw
 добавил groyne
 09/09/2022
 добавил natural=sinkhole
+10/09/2022
+заменил s_florist.svg; s_lift_gate.svg; s_swimming_outdoor.svg (убрал группировку, отцентрировал)
+11/09/2022
+добавил barrier=toll_booth, parking_fee
+12/09/2022
+улучшено name ООПТ, aboriginal
