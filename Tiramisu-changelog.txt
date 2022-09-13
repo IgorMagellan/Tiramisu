@@ -127,4 +127,6 @@ MTB IMBA в категорию tms_mtbnw
 11/09/2022
 добавил barrier=toll_booth, parking_fee
 12/09/2022
-улучшено name ООПТ, aboriginal
+улучшено name ООПТ
+13/09/2022
+добавлено aboriginal_lands
