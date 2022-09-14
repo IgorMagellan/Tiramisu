@@ -130,3 +130,6 @@ MTB IMBA в категорию tms_mtbnw
 улучшено name ООПТ
 13/09/2022
 добавлено aboriginal_lands
+14/09/2022
+переставил некоторые leisure areas повыше, до леса
+

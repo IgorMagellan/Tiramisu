@@ -361,6 +361,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>
+	<!-- leisure areas -->
+	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting"> <area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="leisure" v="stadium"> <area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" /> </rule>
+
+	<!-- end leisure areas -->
 	
 <!-- vegetation -->
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood"  zoom-min="12" zoom-max="12"> <area fill="#bee0b1" /> </rule>
@@ -845,26 +850,26 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- leisure areas -->
-	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting"> <area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="stadium"> <area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="playground|pitch|dog_park"> <area fill="#C7F1A3" stroke="#6FC18E" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="track">
+<rule cat="tms_terrain" e="way" k="leisure" v="playground|pitch|dog_park"> <area fill="#C7F1A3" stroke="#6FC18E" stroke-width="0.2" /> </rule>
+<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
+	<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
+	<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
+</rule>
+<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
+	<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
+</rule>
+<rule cat="tms_terrain" e="way" k="sport" v="tennis">
+	<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
+</rule>
+
+<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
 		<rule e="way" k="area" v="yes|true"> <area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" /> </rule>
 		<rule e="way" k="area" v="~|no|false">
 			<line stroke="#6FC18E" stroke-width="0.8" />
 			<line stroke="#BDE3CB" stroke-width="0.7" />
 		</rule>
 	</rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
-		<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
-		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
-	</rule>
-	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
-		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
-	</rule>
-	<rule cat="tms_terrain" e="way" k="sport" v="tennis">
-		<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
-	</rule>
+
 	<rule cat="tms_terrain" e="way" k="power" v="station">
 		<area fill="#C4C4C4" stroke="#e4e4e4" stroke-width="0.2" />
 	</rule>
