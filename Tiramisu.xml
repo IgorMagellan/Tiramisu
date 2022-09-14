@@ -1034,11 +1034,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#64e52929" stroke-width="1.61" dy="0.71" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64e52929" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
-		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption cat="tms_landnames" k="ref_hike" font-style="bold" font-size="8" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00" />
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText cat="tms_landnames" display="always" k="ref_hike"  font-style="bold" font-size="8" dy="1.80" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00"  repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText cat="tms_landnames" k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" display="always" k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>
 	</rule>
 
@@ -1098,11 +1098,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#641639cb" stroke-width="1.61" dy="0.71" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#641639cb" stroke-width="1.20" dy="0.53" stroke-linecap="butt" /></rule>
 
-		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption cat="tms_landnames" k="ref_cycle" font-style="bold" font-size="8" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" />
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText cat="tms_landnames" display="always" k="ref_cycle" font-style="bold" font-size="8" dy="1.80" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText cat="tms_landnames" k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" display="always" k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#0000ff" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>
 	</rule>
 
@@ -1162,14 +1162,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="19" zoom-max="19"><line stroke="#64ce1be1" stroke-width="1.61" dy="-0.71" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#64ce1be1" stroke-width="1.20" dy="-0.53" stroke-linecap="butt" /></rule>
 	   
-		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="15">
-			<caption cat="tms_landnames" k="ref_mtb" font-style="bold" font-size="8" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" />
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText cat="tms_landnames" display="always" k="ref_mtb" font-style="bold" font-size="8" dy="-1.80" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText cat="tms_landnames" k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" />
+			<pathText cat="tms_landnames" display="always" k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#ff00ff" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>
 	</rule>
-	
+
+
 <!--     MTB IMBA  -->
 
 	<rule cat="tms_mtbnw" e="way" k="mtb_scale_imba" v="*" zoom-min="13">

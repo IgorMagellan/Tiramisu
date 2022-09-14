@@ -132,4 +132,6 @@ MTB IMBA в категорию tms_mtbnw
 добавлено aboriginal_lands
 14/09/2022
 переставил некоторые leisure areas повыше, до леса
+15/09/2022
+изменил caption в ref_cycle, ref_hike, ref_mtb на pathtext c repeat-start и repeat-gap
 
