@@ -2989,9 +2989,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="any" k="*" v="travel_agency">		<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_travel_agency.svg" symbol-width="23" /></rule>
 	<rule e="any" k="*" v="chemist">			<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_chemist.svg" symbol-width="23" /></rule>
 	<rule e="any" k="*" v="books">				<symbol priority="215" id="tms_shop" display="always" src="file:/res/s_books.svg" symbol-width="23" /></rule>
-
 	<rule e="any" zoom-min="14" k="shop" v="doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books">
 		<caption cat="tms_landnames" priority="110" symbol-id="tms_shop" k="name" position="above" font-size="8" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+</rule>
+
+<rule cat="tms_shops" e="any" k="amenity" v="public_bookcase">
+	<symbol priority="215" id="s_public_bookcase" display="always" src="file:/res/s_public_bookcase.svg" symbol-width="24"/>
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_public_bookcase" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 </rule>
 
