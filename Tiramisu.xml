@@ -1187,15 +1187,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<rule e="way" k="bridge" v="yes|true|aqueduct|viaduct|movable">
 		
-		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">		
- 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="2.26" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="2.04" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="1.80" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="1.56" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="1.36" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.10" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="0.84" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.60" stroke-linecap="butt" /></rule>
+		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">
+ 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="2.75" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#666666" stroke-width="2.72" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#666666" stroke-width="2.33" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#666666" stroke-width="1.89" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#666666" stroke-width="1.48" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#666666" stroke-width="1.13" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#666666" stroke-width="0.86" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="0.64" stroke-linecap="butt" /></rule>
 		</rule>
 
  			<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="13" zoom-max="13"><line stroke="#666666" stroke-width="3.88" stroke-linecap="butt" /></rule>
@@ -1253,15 +1253,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="highway" v="trunk|motorway" zoom-min="20" zoom-max="99"><line stroke="#666666" stroke-width="1.20" stroke-linecap="butt" /></rule>
 
 <!-- gap -->
-		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">		
- 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="1.80" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="1.60" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="1.34" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.16" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="0.96" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="0.70" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.50" stroke-linecap="butt" /></rule>
-			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.30" stroke-linecap="butt" /></rule>
+
+		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">
+ 			<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="1.55" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><line stroke="#DDDDDD" stroke-width="1.53" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><line stroke="#DDDDDD" stroke-width="1.32" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><line stroke="#DDDDDD" stroke-width="1.06" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#DDDDDD" stroke-width="0.83" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#DDDDDD" stroke-width="0.64" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19"><line stroke="#DDDDDD" stroke-width="0.48" stroke-linecap="butt" /></rule>
+			<rule e="way" k="*" v="*" zoom-min="20" zoom-max="99"><line stroke="#DDDDDD" stroke-width="0.36" stroke-linecap="butt" /></rule>
 		</rule>
 		
  			<rule e="way" k="highway" v="cycleway" zoom-min="13" zoom-max="13"><line stroke="#DDDDDD" stroke-width="2.68" stroke-linecap="butt" /></rule>
