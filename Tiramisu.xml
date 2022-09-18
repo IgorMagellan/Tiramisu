@@ -3431,6 +3431,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<rule cat="tms_man-made" e="any" k="man_made" v="windpump">
+		<symbol id="s_windpump" priority="200" src="file:/res/s_windpump.svg" symbol-height="36" />
+		<rule e="any" k="*" v="*">
+			<caption cat="tms_landnames" priority="200" k="name" symbol-id="s_windpump" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse">
 		<symbol display="always" id="s_lighthouse" src="file:/res/s_lighthouse.svg" symbol-width="24"/>
 		<rule e="node" k="*" v="*" zoom-min="16">
