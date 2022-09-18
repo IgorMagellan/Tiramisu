@@ -3417,6 +3417,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<rule cat="tms_man-made" e="any" k="man_made" v="watermill">
+		<symbol id="s_watermill" priority="57" display="always" src="file:/res/s_watermill3.svg" symbol-height="25" />
+		<rule e="any" k="*" v="*">
+			<caption cat="tms_landnames" priority="200" symbol-id="s_watermill" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
 	<rule cat="tms_man-made" e="any" k="man_made|tower" v="windmill">
 		<symbol priority="200" display="always" id="s_windmill" src="file:/res/s_windmill.svg" symbol-width="25" />
 		<rule e="node" k="*" v="*" zoom-min="16">

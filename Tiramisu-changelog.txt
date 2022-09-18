@@ -138,3 +138,5 @@ MTB IMBA в категорию tms_mtbnw
 добавил книжный шкаф amenity=public_bookcase
 исправил swimming_pool, swimming|water_park (переставил повыше)
 пересчитаны stroke-width для мостов steps|footway|path
+18/09/2022
+добваил водяную мельницу watermill
