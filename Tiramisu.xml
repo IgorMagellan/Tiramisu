@@ -2785,9 +2785,19 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>	
 	
-<!-- pic-nic -->
-	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="205" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
-	<rule cat="tms_picnic" e="any"  zoom-min="14" k="amenity" v="toilets">		<symbol priority="235" src="file:/res/s_toilets.svg" symbol-width="21" /> </rule>
+<!-- pic-nic --> 
+<!--    TODO: нужно оптимизировать  -->
+	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench"><symbol priority="205" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
+
+	<rule cat="tms_picnic" e="any" zoom-min="14" k="amenity" v="toilets">
+		<rule e="any" k="fee" v="~">
+			<symbol id="s_toilets" priority="235" display="always" src="file:/res/s_toilets.svg" symbol-width="21" />
+		</rule>
+		<rule e="any" k="fee" v="fee_yes">
+			<symbol id="s_toilets" priority="235" display="always" src="file:/res/s_toilets_fee.svg" symbol-width="21" />
+		</rule>
+	</rule>
+
 	<rule cat="tms_picnic" e="any"  zoom-min="14" k="tourism|leisure" v="picnic_site|picnic_table">	
 		<symbol priority="235" id="s_picnic_site" src="file:/res/s_picnic_site.svg" symbol-width="21" /> 
 		<caption cat="tms_landnames" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="8" fill="#66001a" stroke="#ffffff" stroke-width="2" />			
