@@ -367,7 +367,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
 		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
 	</rule>
-	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park|swimming_area|beach_resort" zoom-min="13">
 		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
 	</rule>	
 	<rule cat="tms_terrain" e="way" k="leisure" v="stadium"> <area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" /> </rule>
@@ -2777,6 +2777,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_acco" e="any"  zoom-min="14" k="tourism|building" v="caravan_site|hostel|chalet|hotel|motel|chalet|guest_house">
 		<caption cat="tms_landnames" priority="130" symbol-id="tms_touring" k="name" font-size="8" font-style="normal" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+	<rule cat="tms_acco" e="any" k="tourism" v="apartment">
+		<symbol id="s_apartment" priority="230" src="file:/res/s_apartment.svg" display="always" symbol-height="21" />
+		<rule e="any" k="*" v="*" cat="tms_landnames">
+			<caption k="name" priority="230" symbol-id="s_apartment" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption k="ele" priority="-5" symbol-id="s_apartment" position="below" font-style="bold" font-size="8" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
 	
 <!-- pic-nic -->
 	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">		<symbol priority="205" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
@@ -3198,7 +3205,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- sport -->
-
+<!-- TODO: Разделить sport=swimming, water_park, beach_resort, swimming_area -->
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="14">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="225" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
@@ -3319,6 +3326,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre">
 		<caption priority="-15" symbol-id="tms_leisure" cat="tms_landnames" k="name" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+
+	<rule cat="tms_leisure" e="any" k="leisure" v="beach_resort">
+		<symbol id="s_beach_resort" priority="220" src="file:/res/s_beach_resort.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*">
+			<caption cat="tms_landnames" priority="220" k="name" symbol-id="s_beach_resort" position="above" font-style="bold" font-size="8" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
 		<symbol priority="215" id="tms_viewpoint" src="file:/res/s_viewpoint.svg" display="always" symbol-width="17" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
