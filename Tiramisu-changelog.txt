@@ -139,4 +139,5 @@ MTB IMBA в категорию tms_mtbnw
 исправил swimming_pool, swimming|water_park (переставил повыше)
 пересчитаны stroke-width для мостов steps|footway|path
 18-20/09/2022
-добавил водяную мельницу watermill, ветряк windpump, пляж beach_resort, квартира apartment, платный туалет toilets_fee
+добавил водяную мельницу watermill, ветряк windpump, пляж beach_resort, квартира apartment, платный туалет toilets_fee,
+приватную детскую игровую площадку s_playground_private
