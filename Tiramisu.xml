@@ -367,9 +367,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
 		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
 	</rule>
-	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park|swimming_area|beach_resort" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
 		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
 	</rule>	
+	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_area|beach_resort" zoom-min="13">
+		<area fill="#806892ff" stroke="#6060FF" stroke-width="0.25" />
+	</rule>		
 	<rule cat="tms_terrain" e="way" k="leisure" v="stadium"> <area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" /> </rule>
 
 	<!-- end leisure areas -->
@@ -465,7 +468,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<area stroke="#9EA199" stroke-width="0.2" />
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="natural" v="beach|sand" zoom-min="11"> <area fill="#BBFAEBB9" /> </rule>
+	<rule cat="tms_terrain" e="way" k="natural" v="beach|sand" zoom-min="11"> <area fill="#BFFAEBB9" /> </rule>
 
 <!-- Misc land use -->
 	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13"> <area fill="#BBC9DDDD" /> </rule>
@@ -2836,28 +2839,29 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	<rule cat="tms_huts" e="any" k="amenity" v="shelter" zoom-min="14">
 		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14"><symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_rock.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="shelter_type" v="picnic_shelter" zoom-min="14"><symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_picnic.svg" symbol-width="21" /></rule>		
 		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">
 			<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter_basic_hut.svg" symbol-width="21" />
 			
-			<rule e="node" k="shelter_type" v="basic_hut" zoom-min="14"> 
+			<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14"> 
 				<caption cat="tms_landnames" priority="320" symbol-id="tms_hut"  k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> 
 			</rule>
-			<rule e="node" k="shelter_type" v="basic_hut" zoom-min="17">
+			<rule e="any" k="shelter_type" v="basic_hut" zoom-min="17">
 				<caption cat="tms_landnames" priority="320" symbol-id="tms_hut"  k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> 
 			</rule>			
 			
 		</rule>
-		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">	
-			<symbol display="always" priority="435" id="tms_shelter" src="file:/res/s_shelter.svg" symbol-width="21"/> 
-				<rule e="any" k="*" v="*"  zoom-min="14">
+		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to" zoom-min="14">	
+			<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter.svg" symbol-width="21"/> 
+<!-- 			<rule e="any" k="*" v="*"  zoom-min="14">
 				<caption cat="tms_landnames" priority="320" symbol-id="tms_shelter" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
 				<caption cat="tms_landnames" priority="320" symbol-id="tms_shelter" k="ele" position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />	
-			</rule>		
+			</rule>	 -->	
 		</rule>
 		
-		<rule e="node" k="tourism" v="~">
-			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="1"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+		<rule e="any" k="tourism" v="~">
+			<rule e="any" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="any" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		</rule>
 	</rule>
 
@@ -3216,9 +3220,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- sport -->
 <!-- TODO: Разделить sport=swimming, water_park, beach_resort, swimming_area -->
-	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="14">
+	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="13">
 		<rule e="any" k="access" v="~|yes">
-			<symbol id="s_swim" priority="225" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
+			<symbol id="s_swim" priority="230" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3249,11 +3253,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<rule cat="tms_sport" e="any" k="leisure" v="swimming_area" zoom-min="13">
+		<symbol id="s_swimming_area" priority="220" src="file:/res/s_swimming_area.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_swimming_area" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
-		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" display="always"  symbol-width="28"/>
+		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" display="always" symbol-width="28" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" symbol-id="s_stadium" k="name" display="always" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
 		<symbol priority="245" id="s_gym" display="always" src="file:/res/s_gym.svg" symbol-height="23" />
@@ -3265,7 +3276,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<symbol display="always" priority="225" id="s_bicycle_rental" src="file:/res/s_bicycle_rental.svg" symbol-width="24" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_bicycle_rental" position="below" font-size="8" font-style="bold" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+		</rule>
 	</rule>
 
 <!-- car stuff -->
