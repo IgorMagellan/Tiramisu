@@ -3502,7 +3502,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="13">	
+	<rule cat="tms_man-made" e="any" k="man_made" v="petroleum_well" zoom-min="14">
+		<symbol display="always" id="s_petroleum_well" src="file:/res/s_petroleum_well3.svg" symbol-height="25" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="name" priority="200" symbol-id="s_petroleum_well" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="13">
 	<rule e="any" k="*" v="wind" >	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="48" /></rule>
 	<rule e="any" k="*" v="hydro|tidal|wave" ><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
 	<rule e="any" k="*" v="solar" ><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
