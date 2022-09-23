@@ -142,4 +142,4 @@ MTB IMBA в категорию tms_mtbnw
 добавил водяную мельницу watermill, ветряк windpump, пляж beach_resort, квартира apartment, платный туалет toilets_fee,
 приватную детскую игровую площадку s_playground_private
 22/09/2022
-добавил swimming_area, picnic_shelter
+добавил swimming_area, picnic_shelter, gate_private

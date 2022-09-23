@@ -2881,6 +2881,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="lift_gate|chain"><symbol priority="415" display="always" id="s_barrier" src="file:/res/s_lift_gate.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="stile">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_stile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="cycle_barrier">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_cycle_barrier.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="gate">
+			<rule e="any" k="access|bicycle" v="private|acc_no|bic_no|forestry|bic_forestry">
+				<symbol priority="416" src="file:/res/s_gate_private.svg" symbol-height="21" />
+			</rule>
+		</rule>
 		<rule e="any" k="*" v="gate">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_gate.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
