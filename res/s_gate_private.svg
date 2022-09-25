@@ -1,0 +1,15 @@
+<svg height="29" viewBox="0 0 8.4667 7.6729" width="32" xmlns="http://www.w3.org/2000/svg">
+	<path d="m4.2371.79 3.4314 6.0854h-6.871z" style="fill:#f00;stroke:#ff0;stroke-dashoffset:.18;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5875"/>
+	<path d="m4.2371.79 3.4314 6.0854h-6.871z" style="fill:#f00;stroke:#f00;stroke-dashoffset:.18;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.0583"/>
+	<g fill="#ff0">
+		<path d="m1.9907 4.7578h4.4948" stroke="#ff0" stroke-linecap="round" stroke-width=".52915"/>
+		<path d="m1.9907 6.0809h4.4948" stroke="#ff0" stroke-linecap="round" stroke-width=".52915"/>
+		<path d="m2.7752 6.8811 3.1737-2.9177" stroke="#ff0" stroke-linecap="round" stroke-width=".52915"/>
+		<path d="m3.482 1.5766h3.3057v.60104h-3.3057z" stroke="#000" stroke-width=".60104"/>
+		<path d="m5.8639 1.8784h.60104v.90157h-.60104z" stroke="#000" stroke-width=".60104"/>
+		<path d="m2.881.6633c-.6639 0-1.2021.53819-1.2021 1.2021s.53819 1.2021 1.2021 1.2021 1.2021-.53819 1.2021-1.2021-.53819-1.2021-1.2021-1.2021zm0 .60104c.33195 0 .60104.2691.60104.60104s-.2691.60104-.60104.60104-.60104-.2691-.60104-.60104.2691-.60104.60104-.60104z" stroke="#000" stroke-width=".60104"/>
+		<path d="m3.482 1.5649h3.3057v.60104h-3.3057z"/>
+		<path d="m5.8639 1.8667h.60104v.90157h-.60104z"/>
+		<path d="m2.881.65155c-.6639 0-1.2021.53819-1.2021 1.2021s.53819 1.2021 1.2021 1.2021 1.2021-.53819 1.2021-1.2021-.53819-1.2021-1.2021-1.2021zm0 .60104c.33195 0 .60104.2691.60104.60104s-.2691.60104-.60104.60104-.60104-.2691-.60104-.60104.2691-.60104.60104-.60104z"/>
+	</g>
+</svg>
