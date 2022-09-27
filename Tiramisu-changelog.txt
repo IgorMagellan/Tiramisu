@@ -143,3 +143,5 @@ MTB IMBA в категорию tms_mtbnw
 приватную детскую игровую площадку s_playground_private
 22-23/09/2022
 добавил swimming_area, picnic_shelter, gate_private, petroleum_well
+27/09/2022
+name как в El для orchard|forest|wood
