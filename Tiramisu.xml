@@ -355,13 +355,22 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 <!-- Background -->
 	<rule cat="tms_terrain" e="way" k="natural" v="sea"> <area fill="#85a7ff" /> </rule>
 	<rule cat="tms_terrain" e="way" k="natural" v="nosea"> <area fill="#ffffff" /> </rule>
-	
+
+		
 <!-- landcover -->
+<!-- 	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13"> <area fill="#BBC7F1A3" /> </rule>	 -->
+		<rule cat="tms_terrain" e="way" k="boundary" v="~" zoom-min="11">
+			<rule e="way" k="leisure" v="park" closed="yes">
+				<area fill="#BBC7F1A3" />
+			</rule>
+		</rule>
+		
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>
 	<!-- leisure areas -->
+	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> <area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> </rule>	
 	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting"> <area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
 		<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
@@ -472,7 +481,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- Misc land use -->
 	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13"> <area fill="#BBC9DDDD" /> </rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13"> <area fill="#BBC7F1A3" /> </rule>
+
 	
 	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13"> <area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="allotments|village_green|recreation_ground|greenfield" zoom-min="13"> <area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" /> </rule>
@@ -852,7 +861,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="tourism" v="zoo"> <area fill="#BBC7F1A3" stroke="#6FC18E" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="tourism" v="picnic_site|camp_site|caravan_site"> <area fill="#BBC7F1A3" stroke="#6FC18E" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="parking"> <area fill="#d3dfe2" stroke="#93b1b8" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> <area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="fountain" closed="yes">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
 		<rule e="any" k="drinking_water" v="yes"> <symbol src="file:/res/s_fountain_d.svg" symbol-width="25" /> </rule>
