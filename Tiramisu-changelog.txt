@@ -146,3 +146,5 @@ MTB IMBA в категорию tms_mtbnw
 27/09/2022
 name как в El для orchard|forest|wood; 
 исправил неверное отображение сочетания  leisure=park и tourism=museum -> передвинул в начало всех заливок
+28/09/2022
+fuel zmin=12

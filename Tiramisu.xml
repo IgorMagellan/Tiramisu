@@ -3334,7 +3334,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" >
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" zoom-min="12" >
 		<symbol priority="310" id="s_trans-priv" display="always" src="file:/res/s_fuel.svg" symbol-height="19" />
 		<caption priority="310" cat="tms_landnames" symbol-id="s_trans-priv" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
