@@ -148,3 +148,6 @@ name как в El для orchard|forest|wood;
 исправил неверное отображение сочетания  leisure=park и tourism=museum -> передвинул в начало всех заливок
 28/09/2022
 fuel zmin=12
+цвет name orchard|forest|wood с fill="#444444" на #5e775e
+29/09/2022
+поправил pipeline
