@@ -150,4 +150,4 @@ name как в El для orchard|forest|wood;
 fuel zmin=12
 цвет name orchard|forest|wood с fill="#444444" на #5e775e
 29/09/2022
-поправил pipeline
+поправил pipeline, name shop=bicycle
