@@ -811,7 +811,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
 				<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="2.2,0.7" scale="all" stroke-linecap="butt" />
 				<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="2.0" />
+				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat-start="100" repeat-gap="300"  />
 			</rule>
 		</rule>
 	</rule>
@@ -819,6 +819,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
 		<rule e="way" k="man_made" v="pipeline">
 			<line stroke="#809CA6BA" stroke-width="1.1" stroke-dasharray="1.1,0.35" scale="all" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat-start="100" repeat-gap="300"  />			
 		</rule>
 	</rule>
 	
