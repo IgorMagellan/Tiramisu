@@ -151,3 +151,5 @@ fuel zmin=12
 цвет name orchard|forest|wood с fill="#444444" на #5e775e
 29/09/2022
 поправил pipeline, name shop=bicycle
+30/09/2022
+добавил labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean
