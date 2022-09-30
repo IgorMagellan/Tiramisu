@@ -152,4 +152,4 @@ fuel zmin=12
 29/09/2022
 поправил pipeline, name shop=bicycle
 30/09/2022
-добавил трещины ледника crevasse; labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean
+добавил трещины ледника crevasse; labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean, glacier, desert
