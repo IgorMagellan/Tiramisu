@@ -512,7 +512,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="natural" v="tree_row">
 		<line stroke="#90679632" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
-
+		
 	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
 		<line stroke="#A5CBA5" stroke-width="0.52" stroke-linecap="round" />
 		<line stroke="#CBE1CB" stroke-width="0.46" scale="all" stroke-dasharray="0.2,0.5"  stroke-linecap="butt" />
@@ -927,6 +927,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
 			<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
+		</rule>
+		
+		<!-- Трещины ледника -->
+		<rule e="way" k="natural" v="crevasse" closed="no">
+			<line stroke="#73dcff" stroke-width="0.7" stroke-linecap="butt" />
+			<line stroke="#ff7396" stroke-width="0.5" stroke-dasharray="2,2" stroke-linecap="butt" />
+			<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		</rule>
+		<rule e="way" k="natural" v="crevasse" closed="yes">
+			<line stroke="#73dcff" stroke-width="0.3" />
+			<area fill="#50ff7396" />
+			<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>
 
 	</rule>
@@ -2892,7 +2904,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 	
 <!-- pic-nic --> 
-<!--    TODO: нужно оптимизировать  -->
+
 	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench"><symbol priority="205" src="file:/res/s_bench.svg" symbol-width="17" /> </rule>
 
 	<rule cat="tms_picnic" e="any" zoom-min="14" k="amenity" v="toilets">
@@ -3327,7 +3339,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 
 <!-- sport -->
-<!-- TODO: Разделить sport=swimming, water_park, beach_resort, swimming_area -->
+
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="13">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="230" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
