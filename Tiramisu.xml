@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Tiramisù 4.3 for Oruxmaps and MapsForge compatible applications
+Tiramisù 4.4 for Oruxmaps and MapsForge compatible applications
 
 by Maki
 
@@ -930,15 +930,15 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 		
 		<!-- Трещины ледника -->
-		<rule e="way" k="natural" v="crevasse" closed="no">
+		<rule e="way" k="*" v="crevasse" closed="no">
 			<line stroke="#73dcff" stroke-width="0.7" stroke-linecap="butt" />
 			<line stroke="#ff7396" stroke-width="0.5" stroke-dasharray="2,2" stroke-linecap="butt" />
-			<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>
-		<rule e="way" k="natural" v="crevasse" closed="yes">
+		<rule e="way" k="*" v="crevasse" closed="yes">
 			<line stroke="#73dcff" stroke-width="0.3" />
 			<area fill="#50ff7396" />
-			<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>
 
 	</rule>
@@ -2575,7 +2575,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<caption k="addr:housenumber" font-style="normal" font-size="8" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	
-<rule cat="tms_landnames" e="any" k="*" v="*">	
+<rule cat="tms_landnames" e="any" k="*" v="*">
 	<rule cat="tms_terrain" e="node" k="landuse|natural" v="reservoir|basin|water">
 		<rule e="any" k="amenity" v="~">
 			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
