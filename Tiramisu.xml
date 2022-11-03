@@ -3255,6 +3255,21 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption k="ele" priority="-5" symbol-id="s_cairn" position="below" font-size="9" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+
+	<rule cat="tms_info" zoom-min="14" e="any" k="historic" v="wayside_cross">
+		<symbol display="always" id="s_wayside_cross" src="file:/res/s_wayside_cross.svg" symbol-height="15" />
+		<rule e="any" k="*" v="*" zoom-min="17">
+			<caption cat="tms_landnames" k="name" symbol-id="s_wayside_cross" position="above" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>	
+	</rule>
+	
+	<rule cat="tms_info" e="any" k="man_made" v="cross" zoom-min="14" >
+		<rule e="any" k="natural" v="~">
+			<symbol display="always" id="s_cross" priority="53" src="file:/res/s_wayside_cross.svg" symbol-height="16" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_cross" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
 	
 <!-- safety measures -->
 	<rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set" zoom-min="13">
@@ -3550,36 +3565,36 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 	
 <!-- place of worship -->
-	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross">
-		<symbol display="always" id="s_wayside_cross" src="file:/res/s_wayside_cross.svg" symbol-height="15" />
-		<rule e="any" k="*" v="*" zoom-min="17">
-			<caption cat="tms_landnames" k="name" symbol-id="s_wayside_cross" position="above" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>	
-	</rule>
-	<rule cat="tms_religion" e="any" k="man_made" v="cross" zoom-min="14" >
-		<rule e="any" k="natural" v="~">
-			<symbol display="always" id="s_cross" priority="53" src="file:/res/s_wayside_cross.svg" symbol-height="16" />
-			<caption cat="tms_landnames" k="name" symbol-id="s_cross" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
-			<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+	<rule cat="tms_religion" e="any" k="building" v="church">
+		<symbol display="always" id="tms_church" src="file:/res/s_church.svg" symbol-height="21" />
+		<rule e="any" k="*" v="*" cat="tms_landnames">
+			<caption k="name" symbol-id="tms_church" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption k="ele" priority="-5" symbol-id="tms_church" position="below" font-size="8" font-style="bold" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
-	</rule>	
-<!-- 	<rule cat="tms_religion" e="any" k="building" v="church"><symbol id="tms_worship" src="file:/res/s_church.svg" symbol-width="21" /></rule>
- -->	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
-		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/res/s_church.svg" symbol-width="21" /></rule>
-		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/res/s_synagogue.svg" symbol-width="21" /></rule>
-		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/res/s_mosque.svg" symbol-width="21" /></rule>
-		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/res/s_place_of_worship.svg" symbol-width="17" /></rule>
 	</rule>
-	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship"><caption cat="tms_landnames" symbol-id="tms_worship" k="name" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /></rule>
+
+	<rule cat="tms_religion" e="any" k="*" v="*">
+		<rule e="any" k="amenity" v="place_of_worship">
+			<rule e="any" k="historic" v="~">
+				<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" display="always" src="file:/res/s_church.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" display="always" src="file:/res/s_synagogue.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" display="always" src="file:/res/s_mosque.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="~">			<symbol id="tms_worship" display="always" src="file:/res/s_place_of_worship.svg" symbol-height="17" /></rule>
+				<rule e="any" k="*" v="*" zoom-min="14">
+					<caption symbol-id="tms_worship" cat="tms_landnames" display="always" k="name" position="above" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+				</rule>
+			</rule>
+		</rule>
+	</rule>
 
 <!-- bureaucracy -->
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">			
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">
 		<symbol priority="225" id="s_atm" src="file:/res/s_atm.svg" display="always" symbol-width="13" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="8" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
-		</rule>	
+		</rule>
 	</rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">			
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
 		<symbol priority="230" id="s_bank" src="file:/res/s_bank.svg" display="always" symbol-height="20" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_landnames" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="9" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
@@ -3600,14 +3615,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>
 	
 <!-- man_made -->
-	<rule cat="tms_man-made" e="node" k="tower" v="communication" >
+	<rule cat="tms_man-made" e="any" k="tower" v="communication" >
 		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_communication.svg" symbol-height="30" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="node" k="tower" v="observation" >
+	<rule cat="tms_man-made" e="any" k="tower" v="observation" >
 		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_observation.svg" symbol-height="25" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3623,7 +3638,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<rule cat="tms_man-made" e="any" k="man_made" v="watermill">
 		<symbol id="s_watermill" priority="57" display="always" src="file:/res/s_watermill3.svg" symbol-height="25" />
-		<rule e="any" k="*" v="*">
+		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_watermill" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
@@ -3637,12 +3652,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<rule cat="tms_man-made" e="any" k="man_made" v="windpump">
 		<symbol id="s_windpump" priority="200" src="file:/res/s_windpump.svg" symbol-height="36" />
-		<rule e="any" k="*" v="*">
+		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" k="name" symbol-id="s_windpump" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse">
+	<rule cat="tms_man-made" e="any" k="man_made" v="lighthouse">
 		<symbol display="always" id="s_lighthouse" src="file:/res/s_lighthouse.svg" symbol-width="24"/>
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_lighthouse" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
