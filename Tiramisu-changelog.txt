@@ -154,5 +154,5 @@ fuel zmin=12
 30/09/2022
 добавил трещины ледника crevasse; labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean, glacier, desert
 Release version 4.3
-03/11/2022
-исправил tms_religion, перенес historic=wayside_cross; man_made=cross в tms_info
+04/01/2023
+исправил tms_religion; добавлен chapel; перенес historic=wayside_cross, man_made=cross в tms_info

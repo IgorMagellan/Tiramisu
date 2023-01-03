@@ -3002,20 +3002,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 			<rule e="any" k="shelter_type" v="basic_hut" zoom-min="17">
 				<caption cat="tms_landnames" priority="320" symbol-id="tms_hut"  k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> 
-			</rule>			
-			
+			</rule>
 		</rule>
+		
 		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to" zoom-min="14">	
 			<symbol display="always" priority="435" id="tms_hut" src="file:/res/s_shelter.svg" symbol-width="21"/> 
-<!-- 			<rule e="any" k="*" v="*"  zoom-min="14">
-				<caption cat="tms_landnames" priority="320" symbol-id="tms_shelter" k="name" position="above" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
-				<caption cat="tms_landnames" priority="320" symbol-id="tms_shelter" k="ele" position="below" font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />	
-			</rule>	 -->	
 		</rule>
 		
 		<rule e="any" k="tourism" v="~">
 			<rule e="any" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="14"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="name" position="above"  font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
-			<rule e="any" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="17"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
+			<rule e="any" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="16"> <caption cat="tms_landnames" priority="320" symbol-id="tms_hut" k="ele"  position="below"  font-style="bold" font-size="8" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 		</rule>
 	</rule>
 
@@ -3044,10 +3040,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="*" v="toll_booth">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_toll_booth.svg" symbol-width="21" /> </rule>
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>
 	</rule>
 
 	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="14">
@@ -3058,6 +3050,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<rule cat="tms_barriers" e="any" k="barrier" v="toll_booth" zoom-min="15">
+		<symbol id="s_toll_booth" priority="420" display="always" src="file:/res/s_toll_booth.svg" symbol-width="21" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_toll_booth" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
 	<rule cat="tms_barriers" e="any" k="bridge" v="movable" zoom-min="14">
 		<symbol id="s_bridge_movable" priority="420" display="always" src="file:/res/s_bridge_movable.svg" symbol-width="23" />
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -3272,20 +3271,27 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 	
 <!-- safety measures -->
-	<rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set" zoom-min="13">
-		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
-		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
-		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" scale="all" stroke-linecap="butt" />
-		<rule e="any" k="*" v="*" zoom-min="15">
-			<symbol id="s_via_ferrata" display="always" src="file:/res/s_via_ferrata.svg" symbol-height="17" />
-			<caption cat="tms_landnames" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="8" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
+	<rule cat="tms_safety" e="any" k="*" v="*" zoom-min="13">
+		<rule e="any" k="via_ferrata_flag" v="set" >
+			<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt" />
+			<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt" />
+			<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" scale="all" stroke-linecap="butt" />
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<symbol id="s_via_ferrata" display="always" priority="250" src="file:/res/s_via_ferrata.svg" symbol-height="17" />
+				<caption cat="tms_landnames" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="8" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
+			</rule>
+		</rule>
+
+		<rule e="any" k="safety_rope" v="sr_yes" zoom-min="14" >
+			<symbol priority="250" display="always" src="file:/res/s_safety_rope.svg" symbol-width="17" />
+		</rule>
+		<rule e="any" k="ladder" v="ld_yes" zoom-min="14" >
+			<symbol priority="250" display="always" src="file:/res/s_ladder.svg" symbol-width="17" />
+		</rule>
+		<rule e="any" k="rungs" v="rn_yes" zoom-min="14" >
+			<symbol priority="250" display="always" src="file:/res/s_rungs.svg" symbol-width="17" />
 		</rule>
 	</rule>
-	
-	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="sr_yes"><symbol priority="250" display="always" src="file:/res/s_safety_rope.svg" symbol-width="17" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="ld_yes">		<symbol priority="250" display="always" src="file:/res/s_ladder.svg" symbol-width="17" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="rn_yes">		<symbol priority="250" display="always" src="file:/res/s_rungs.svg" symbol-width="17" /> </rule>
-
 
 <!-- emergency -->
 	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		
@@ -3566,7 +3572,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	
 <!-- place of worship -->
 	<rule cat="tms_religion" e="any" k="building" v="church|chapel">
-		<symbol display="always" id="tms_church" src="file:/res/s_church.svg" symbol-height="21" />
+		<symbol display="always" id="tms_church" priority="200" src="file:/res/s_place_of_worship.svg" symbol-height="17" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
 			<caption k="name" symbol-id="tms_church" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
 			<caption k="ele" priority="-5" symbol-id="tms_church" position="below" font-size="8" font-style="bold" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3576,10 +3582,10 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_religion" e="any" k="*" v="*">
 		<rule e="any" k="amenity" v="place_of_worship">
 			<rule e="any" k="historic" v="~">
-				<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" display="always" src="file:/res/s_church.svg" symbol-height="21" /></rule>
-				<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" display="always" src="file:/res/s_synagogue.svg" symbol-height="21" /></rule>
-				<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" display="always" src="file:/res/s_mosque.svg" symbol-height="21" /></rule>
-				<rule e="any" k="religion" v="~">			<symbol id="tms_worship" display="always" src="file:/res/s_place_of_worship.svg" symbol-height="17" /></rule>
+				<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" display="always" priority="210" src="file:/res/s_church.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" display="always" priority="210" src="file:/res/s_synagogue.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" display="always" priority="210" src="file:/res/s_mosque.svg" symbol-height="21" /></rule>
+				<rule e="any" k="religion" v="~">			<symbol id="tms_worship" display="always" priority="210" src="file:/res/s_place_of_worship.svg" symbol-height="17" /></rule>
 				<rule e="any" k="*" v="*" zoom-min="14">
 					<caption symbol-id="tms_worship" cat="tms_landnames" display="always" k="name" position="above" font-size="8" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 				</rule>
@@ -3674,7 +3680,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_man-made" e="any" k="man_made" v="petroleum_well" zoom-min="14">
 		<symbol display="always" id="s_petroleum_well" src="file:/res/s_petroleum_well3.svg" symbol-height="25" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption k="name" priority="200" symbol-id="s_petroleum_well" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" priority="200" symbol-id="s_petroleum_well" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
