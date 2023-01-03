@@ -3565,7 +3565,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 	
 <!-- place of worship -->
-	<rule cat="tms_religion" e="any" k="building" v="church">
+	<rule cat="tms_religion" e="any" k="building" v="church|chapel">
 		<symbol display="always" id="tms_church" src="file:/res/s_church.svg" symbol-height="21" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
 			<caption k="name" symbol-id="tms_church" position="above" font-style="bold" font-size="9" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
