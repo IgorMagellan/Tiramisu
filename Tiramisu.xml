@@ -161,7 +161,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<name lang="fr" value="Réseaux cyclables ^" />
 		<cat id="tms_cynw" />
 	</layer>
-	<layer id="tms_barriers-cy" enabled="true">
+	<layer id="tms_barriers-cy" enabled="false">
 		<name lang="en" value="Barriers" />
 		<name lang="ru" value="Барьеры и препятствия" />
 		<name lang="es" value="Barreras" />
@@ -256,7 +256,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<cat id="tms_shops" />
 		<cat id="tms_bureaucracy" />
 	</layer>
-	<layer id="tms_religion" enabled="false">
+	<layer id="tms_religion" enabled="true">
 		<name lang="en" value="Religion" />
 		<name lang="ru" value="Религия" />
 		<name lang="es" value="Religión" />
@@ -1665,7 +1665,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule e="way" k="tunnel" v="~|no|false">
 		<rule e="way" k="area" v="~|no|false">
 
-<!-- paths and footways -->
+<!-- paths and footways linea #ff6b00 Naranja cálido -->
 			<rule cat="tms_hk" e="way" k="highway" v="steps" zoom-min="13">
 				<line stroke="#5a5f54" stroke-width="0.9" stroke-linecap="butt"/>
 				<line stroke="#CACCC6" stroke-width="0.8" stroke-linecap="butt"/>
@@ -1675,14 +1675,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 				</rule>
 			</rule>
 			
-		<rule e="way" k="highway" v="footway" zoom-min="13" zoom-max="13"><line stroke="#0000FF" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="14" zoom-max="14"><line stroke="#0000FF" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="15" zoom-max="15"><line stroke="#0000FF" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="16" zoom-max="16"><line stroke="#0000FF" stroke-width="0.58"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="17" zoom-max="17"><line stroke="#0000FF" stroke-width="0.46"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="18" zoom-max="18"><line stroke="#0000FF" stroke-width="0.35"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="19" zoom-max="19"><line stroke="#0000FF" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
-		<rule e="way" k="highway" v="footway" zoom-min="20" zoom-max="99"><line stroke="#0000FF" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.58"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.46"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.35"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
+		<rule e="way" k="highway" v="footway" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
 	
  		<rule cat="tms_hk" e="way" k="highway" v="path">
  			<rule e="way" k="sac_scale" v="~" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
