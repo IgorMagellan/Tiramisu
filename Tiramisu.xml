@@ -363,12 +363,11 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<rule e="way" k="leisure" v="park" closed="yes">
 				<area fill="#BBC7F1A3" />
 			</rule>
-		</rule>
-		
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
-	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>
+		</rule>			
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BBE6DFDF" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBF0F2E9" /></rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBF0F2E9" /> </rule>
+	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>	
 	<!-- leisure areas -->
 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> <area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> </rule>	
 	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting"> <area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" /> </rule>
