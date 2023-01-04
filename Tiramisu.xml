@@ -971,13 +971,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-<!-- Buildings -->
+<!-- Buildings 
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">				<area fill="#555555" stroke="#000000" stroke-width="0.3" /> </rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="15" zoom-max="15">	<area fill="#666666" stroke="#000000" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="16" zoom-max="16">	<area fill="#777777" stroke="#000000" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="17" zoom-max="17">	<area fill="#888888" stroke="#000000" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="18">				<area fill="#999999" stroke="#000000" stroke-width="0.2" /> </rule>
-
+-->
 <!-- aeroways -->
 	<!-- runways areas -->
 		<rule cat="tms_terrain" e="way" k="aeroway" v="aerodrome|helipad" closed="yes"> <area fill="#90D8DCCE" stroke="#000000" stroke-width="0.5" /> </rule>
