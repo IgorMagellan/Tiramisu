@@ -519,30 +519,30 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</rule>	
 
 <!-- Contour lines -->
-	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_minor" zoom-min="01" zoom-max="12"><line stroke="#80766C" stroke-width="0.12" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="13" zoom-max="13"><line stroke="#80766C" stroke-width="0.12" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="14" zoom-max="14"><line stroke="#80766C" stroke-width="0.12" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="15" zoom-max="15"><line stroke="#80766C" stroke-width="0.10" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="16" zoom-max="16"><line stroke="#80766C" stroke-width="0.08" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="17" zoom-max="17"><line stroke="#80766C" stroke-width="0.06" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="18" zoom-max="18"><line stroke="#80766C" stroke-width="0.05" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="19" zoom-max="19"><line stroke="#80766C" stroke-width="0.04" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="20" zoom-max="99"><line stroke="#80766C" stroke-width="0.03" /></rule>
+	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_minor" zoom-min="01" zoom-max="12"><line stroke="#80766C" stroke-width="0.12" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="13" zoom-max="13"><line stroke="#80766C" stroke-width="0.12" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="14" zoom-max="14"><line stroke="#80766C" stroke-width="0.12" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="15" zoom-max="15"><line stroke="#80766C" stroke-width="0.10" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="16" zoom-max="16"><line stroke="#80766C" stroke-width="0.08" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="17" zoom-max="17"><line stroke="#80766C" stroke-width="0.06" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="18" zoom-max="18"><line stroke="#80766C" stroke-width="0.05" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="19" zoom-max="19"><line stroke="#80766C" stroke-width="0.04" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="20" zoom-max="99"><line stroke="#80766C" stroke-width="0.03" curve="cubic" /></rule>
 
-	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="01" zoom-max="11"><line stroke="#80766C" stroke-width="0.32" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="12" zoom-max="12"><line stroke="#80766C" stroke-width="0.32" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="13" zoom-max="13"><line stroke="#80766C" stroke-width="0.32" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="14" zoom-max="14"><line stroke="#80766C" stroke-width="0.32" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="15"><line stroke="#80766C" stroke-width="0.27" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="16" zoom-max="16"><line stroke="#80766C" stroke-width="0.22" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="17" zoom-max="17"><line stroke="#80766C" stroke-width="0.17" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="18" zoom-max="18"><line stroke="#80766C" stroke-width="0.13" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="19" zoom-max="19"><line stroke="#80766C" stroke-width="0.10" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="20" zoom-max="99"><line stroke="#80766C" stroke-width="0.07" /></rule>
+	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="01" zoom-max="11"><line stroke="#80766C" stroke-width="0.32" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="12" zoom-max="12"><line stroke="#80766C" stroke-width="0.32" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="13" zoom-max="13"><line stroke="#80766C" stroke-width="0.32" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="14" zoom-max="14"><line stroke="#80766C" stroke-width="0.32" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="15"><line stroke="#80766C" stroke-width="0.27" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="16" zoom-max="16"><line stroke="#80766C" stroke-width="0.22" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="17" zoom-max="17"><line stroke="#80766C" stroke-width="0.17" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="18" zoom-max="18"><line stroke="#80766C" stroke-width="0.13" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="19" zoom-max="19"><line stroke="#80766C" stroke-width="0.10" curve="cubic" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="20" zoom-max="99"><line stroke="#80766C" stroke-width="0.07" curve="cubic" /></rule>
 
-	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-max="12"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="8" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="13" zoom-max="14"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="8" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" /></rule>
-	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="99"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="9" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" /></rule>
+	<rule cat="tms_contours-lz" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-max="12"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="8" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" text-orientation="left" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="13" zoom-max="14"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="8" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" text-orientation="left" /></rule>
+	<rule cat="tms_contours" e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="15" zoom-max="99"><pathText  priority="-50" k="ele" font-family="sans_serif" font-style="normal" font-size="9" fill="#80766C" stroke="#aaFFFFFF" stroke-width="2.0" text-orientation="left" /></rule>
 
 <!-- natural reserve -->
 
@@ -3042,9 +3042,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
 	</rule>
 
-	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="14">
+	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes|yes" zoom-min="14">
 		<symbol id="s_ford" priority="300" src="file:/res/s_ford_6w.svg" display="always" symbol-height="21" />
-		<line stroke="#99B3DDFF" stroke-width="0.65" />
+		<line stroke="#AAB3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="8" fill="#ff2626" stroke="#e0ffff00" stroke-width="2" />
 		</rule>
