@@ -158,4 +158,6 @@ Release version 4.3
 исправил tms_religion; добавлен chapel; перенес historic=wayside_cross, man_made=cross в tms_info
 30/08/2023
 text-orientation="left" и curve="cubic"  на горизонталях 
-для совместимости с LomapsV4 добавил в highway|ford=yes
+для совместимости с LomapsV4 добавил в highway|ford=yes; e="node" natural=nat_stone|stone|rock
+31/08/2023
+добавил amenity=bbq; leisure=firepit (только для LomapsV4!)
