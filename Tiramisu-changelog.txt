@@ -161,3 +161,7 @@ text-orientation="left" и curve="cubic"  на горизонталях
 для совместимости с LomapsV4 добавил в highway|ford=yes; e="node" natural=nat_stone|stone|rock
 31/08/2023
 добавил amenity=bbq; leisure=firepit (только для LomapsV4!)
+07/12/2023
+поправил ссылку на актуальную xsi:schemaLocation
+новая стильная иконка - благодарность Антону (luxcalor - https://github.com/luxcalor) 
+ремонт подписей кладбищ cemetery|grave_yard

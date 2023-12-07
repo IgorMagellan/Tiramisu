@@ -30,7 +30,7 @@ Fixed and changed by IgorMagellan (see Tiramisu-changelog.txt)
 Contact: igor.magellan@yandex.ru
 -->
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
-xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
+xsi:schemaLocation="http://mapsforge.org/renderTheme https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd"
 version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
@@ -409,8 +409,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="17" zoom-max="17">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="140" /> </rule>
 		<rule e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="18" zoom-max="99">		<area src="file:/res/p_wood-mixed.svg"       symbol-width="160" /> </rule>
 
-		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" ><area fill="#28125f16" /></rule> 
-		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#289fdd0d" /></rule>		
+		<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="13" ><area fill="#28125f16" /></rule>
+		<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="13" ><area fill="#289fdd0d" /></rule>
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="natural" v="scrub" zoom-min="13" zoom-max="13"> <area src="file:/res/p_scrub.svg" symbol-width="25" /> </rule>
@@ -486,8 +486,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13"> <area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" /> </rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="allotments|village_green|recreation_ground|greenfield" zoom-min="13"> <area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" /> </rule>
 
-	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11"><area fill="#adc4b6" stroke="#333333" stroke-width="0.3" /></rule>
-	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15"><symbol src="file:/res/s_cemetery.svg" symbol-width="21" /></rule>
+	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11">
+		<area fill="#adc4b6" stroke="#333333" stroke-width="0.3" />
+		<rule e="way" k="*" v="*" zoom-min="15">
+			<symbol id="s_cemetery" src="file:/res/s_cemetery.svg" symbol-width="16" />
+			<caption cat="tms_landnames" symbol-id="s_cemetery" position="below" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="120" />
+		</rule>
+	</rule>
 
 	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="11" zoom-max="11"> <area src="file:/res/p_military.svg" symbol-width="20" /> </rule>
 	<rule cat="tms_terrain" e="way" k="landuse" v="military" zoom-min="12" zoom-max="12"> <area src="file:/res/p_military.svg" symbol-width="30" /> </rule>
@@ -999,7 +1004,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- hiking relations -->
 
-	<rule cat="tms_hknw" e="way" k="hknetwork" v="iwn|nwn|rwn|lwn|own">
+	<rule cat="tms_hknw" e="way" k="network|hknetwork" v="iwn|nwn|rwn|lwn|own">
 	
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64e52929" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64e52929" stroke-width="2.52" dy="0.84" stroke-linecap="butt" /></rule>
@@ -1127,7 +1132,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_mtbnw" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
+	<rule cat="tms_mtbnw" e="any" k="mtbnetwork|network" v="imn|nmn|rmn|lmn|omn">
 
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64ce1be1" stroke-width="2.55" dy="-0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64ce1be1" stroke-width="2.52" dy="-0.84" stroke-linecap="butt" /></rule>
