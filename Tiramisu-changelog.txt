@@ -165,3 +165,8 @@ text-orientation="left" и curve="cubic"  на горизонталях
 поправил ссылку на актуальную xsi:schemaLocation
 новая стильная иконка - благодарность Антону (luxcalor - https://github.com/luxcalor) 
 ремонт подписей кладбищ cemetery|grave_yard
+23/12/2025
+hillshading для Cruiser, Orux,...
+трубопроводы pipeline разделены на underground и overground
+Добавлен tower=watchtower
+Поправил military|police=checkpoint в barrier

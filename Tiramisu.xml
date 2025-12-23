@@ -588,7 +588,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 	</rule>
-	
+	<!-- underground pipelines -->
+	<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+		<rule e="way" k="tunnel|location" v="yes|underground">
+			<line stroke="#80cccccc" stroke-width="0.9" stroke-linecap="butt" />
+			<line stroke="#809ca6ba" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
+			<line stroke="#80FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
+		</rule>
+	</rule>
+
+<hillshading zoom-min="9" zoom-max="17" />
+
 <!-- tunnels -->
 	<!-- zoom 12- -->
 	<rule e="way" k="tunnel" v="true|yes">
@@ -805,20 +816,32 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<area fill="#85a7ff" />
 	</rule>
 
-<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
+		<!-- waterway structures -->
 		<rule cat="tms_water_land" e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock"> <area fill="#90CCCCCC" /> <line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="lock" v="yes|true"> <line stroke="#666666" stroke-width="2.0" stroke-linecap="square" /> <line stroke="#B5D6F1" stroke-width="1.6" stroke-linecap="butt" /> </rule>
 			<rule e="way" k="waterway" v="weir"> <line stroke="#666666" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" /> </rule>
 			<rule e="any" k="waterway" v="weir"> <symbol src="file:/res/s_weir.svg" symbol-width="17" /> </rule>
-			<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
-				<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
-				<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="2.2,0.7" scale="all" stroke-linecap="butt" />
-				<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat="true" repeat-start="100" repeat-gap="300"  />
+
+		</rule>
+
+		<!-- overground pipelines -->
+		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+			<rule e="way" k="location" v="~|overground|overhead">
+				<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
+				<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
+				<line stroke="#ffffff" stroke-width="0.15" stroke-linecap="butt" />
+				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
 			</rule>
 		</rule>
+	</rule>
+
+<!-- 	<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+		<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
+		<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="2.2,0.7" scale="all" stroke-linecap="butt" />
+		<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
+		<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat="true" repeat-start="100" repeat-gap="300"  />
 	</rule>
 
 	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
@@ -826,7 +849,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<line stroke="#809CA6BA" stroke-width="1.1" stroke-dasharray="1.1,0.35" scale="all" stroke-linecap="butt" />
 			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat="true" repeat-start="100" repeat-gap="300"  />			
 		</rule>
-	</rule>
+	</rule> -->
 	
 	<rule cat="tms_water_land" e="way" k="waterway" v="dam">
 		<line stroke="#333333" stroke-width="1" />
@@ -3088,7 +3111,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_barriers" e="any" k="barrier" v="checkpoint" zoom-min="12">
+	<rule cat="tms_barriers" e="any" k="military|police" v="checkpoint" zoom-min="12">
 		<symbol priority="420" display="always" id="s_checkpoint" src="file:/res/s_checkpoint.svg" symbol-width="20" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_checkpoint" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3645,7 +3668,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="any" k="tower" v="observation" >
+	<rule cat="tms_man-made" e="any" k="tower" v="observation|watchtower" >
 		<symbol priority="200" display="always" id="s_tower" src="file:/res/s_tower_observation.svg" symbol-height="25" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
