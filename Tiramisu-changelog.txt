@@ -1,5 +1,5 @@
 ﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Tiramisu 4.3  for OpenAndroMap *
+* Tiramisu 4.4  for OpenAndroMap *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (mapsforge V4+)
 
