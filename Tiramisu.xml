@@ -35,7 +35,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- *** Styles *** -->
 
-<stylemenu id="tiramisu_4_3" defaultvalue="tms_hiking" defaultlang="en">
+<stylemenu id="tiramisu_4_4" defaultvalue="tms_hiking" defaultlang="en">
 
 <!-- Layers -->
 	<layer id="tms_contours" enabled="true">
@@ -190,7 +190,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	</layer>
 	<layer id="tms_trans-priv" enabled="false">
 		<name lang="en" value="Transportation (private)" />
-		<name lang="ru" value="Транспорт (частный): парковки, заправки" />
+		<name lang="ru" value="Транспорт (частный): парковки, заправки, зарядки, автомагазины и сервисы" />
 		<name lang="es" value="Transporte (privado)" />
 		<name lang="de" value="Transport (privat)" />
 		<name lang="it" value="Trasporti (privati)" />
@@ -371,7 +371,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"><area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /></rule>
 	<!-- leisure areas -->
 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> <area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> </rule>	
-	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting"> <area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" /> </rule>
+	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting" closed="yes"> 
+		<rule e="way" k="building" v="~">
+			<area fill="#DDBDE3CB" />
+			<line stroke="#6FC18E" stroke-width="0.2" />	 	
+		</rule>		
+	</rule>
 	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
 		<area fill="#B5D6F1" stroke="#666666" stroke-width="0.3" />
 		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
@@ -877,7 +882,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>	
 	
 	<rule cat="tms_terrain" e="way" k="tourism" v="attraction" closed="yes">
-		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
+<!--  Переделать после оптимизации! 	
+		<line stroke="#CCAAC5" stroke-width="0.1" />
+		<area fill="#BBF2CAEA" />		 -->
 		<symbol id="tms_attraction" src="file:/res/s_attraction.svg" symbol-width="17" />
 		<rule e="any" k="*" v="*" zoom-min="15"><caption  cat="tms_landnames" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" /> </rule>
 	</rule>
@@ -2995,16 +3002,22 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 		<rule e="any" k="leisure" v="firepit" >
 			<symbol id="s_firepit" priority="215" src="file:/res/s_firepit.svg" display="always" symbol-width="19" />
-			<rule e="any" k="*" v="*" zoom-min="18">
-				<caption cat="tms_land-names" k="name" symbol-id="s_firepit" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			<rule e="any" k="*" v="*" zoom-min="16">
+				<caption cat="tms_landnames" k="name" symbol-id="s_firepit" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="bbq" >
 			<symbol id="s_bbq" priority="220" src="file:/res/s_bbq.svg" display="always" symbol-width="19" />
 			<rule e="any" k="*" v="*" zoom-min="17">
-				<caption cat="tms_land-names" k="name" symbol-id="s_bbq" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption cat="tms_landnames" k="name" symbol-id="s_bbq" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
+		<rule e="any" k="amenity" v="lounger" >
+			<symbol id="s_lounger" priority="200" src="file:/res/s_lounger-2.svg" display="always" symbol-width="18" />
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<caption cat="tms_landnames" k="name" symbol-id="s_lounger" position="above" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>		
 	</rule>
 
 <!-- huts and shelters -->
@@ -3080,6 +3093,8 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="*" v="turnstile">		<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_turnstile.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_barrier_log.svg" symbol-width="21" /> </rule>
 		<rule e="any" k="*" v="kissing_gate">	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_kissing_gate.svg" symbol-width="21" /> </rule>
+		<rule e="any" k="*" v="cattle_grid" >	<symbol priority="415" display="always" id="s_barrier" src="file:/res/s_cattle_grid5.svg" symbol-height="21" /> </rule>
+
 	</rule>
 
 	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes|yes" zoom-min="14">
@@ -3168,6 +3183,16 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			</rule>
 		</rule>
 	</rule>	
+
+	<rule cat="tms_water" e="any" k="amenity" v="watering_place" zoom-min="16">
+		<area fill="#c26ee2ff" stroke="#888888" stroke-width="0.1" />
+		<rule e="any" k="*" v="*" >
+			<symbol id="s_watering_place" src="file:/res/s_watering_place.svg" symbol-height="20" />
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<caption cat="tms_landnames" k="name" symbol-id="s_watering_place" font-style="normal" position="below" font-family="sans_serif" font-size="9" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="1.6" />
+			</rule>
+		</rule>
+	</rule>
 
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
@@ -3440,7 +3465,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 <!-- sport -->
 
-	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="13">
+	<rule cat="tms_sport" e="any" k="sport" v="swimming" zoom-min="13">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="230" src="file:/res/s_swimming_outdoor.svg" display="always" symbol-height="23" />
 		</rule>
@@ -3472,13 +3497,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-
-	<rule cat="tms_sport" e="any" k="leisure" v="swimming_area" zoom-min="13">
-		<symbol id="s_swimming_area" priority="220" src="file:/res/s_swimming_area.svg" display="always" symbol-height="23" />
-		<rule e="any" k="*" v="*" zoom-min="15">
-			<caption cat="tms_landnames" k="name" symbol-id="s_swimming_area" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>
-	</rule>
 	
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium">
 		<symbol priority="225" id="s_stadium" src="file:/res/s_stadium.svg" display="always" symbol-width="28" />
@@ -3487,7 +3505,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
-		<symbol priority="245" id="s_gym" display="always" src="file:/res/s_gym.svg" symbol-height="23" />
+		<symbol priority="220" id="s_gym" display="always" src="file:/res/s_gym.svg" symbol-height="23" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_gym" display="always" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
@@ -3525,6 +3543,20 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="any" k="bicycle" v="bic_yes">
 			<symbol priority="310" id="s_charging_stat" display="always" src="file:/res/s_charging_station2.svg" symbol-height="19" />
 			<caption priority="310" symbol-id="s_charging_stat" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="9" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="ebike_charging_station|ebike_charging_public|ebike_charging_customer" zoom-min="14">
+		<symbol id="s_bicycle_charging_station" display="always" priority="300" src="file:/res/s_bicycle_charging_station.svg" symbol-height="22" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_bicycle_charging_station" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+		
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="ebike_charging_commercial" zoom-min="14">
+		<symbol id="s_bicycle_charging_station_fee" display="always" priority="300" src="file:/res/s_bicycle_charging_station_fee.svg" symbol-height="22" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_bicycle_charging_station_fee" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -3570,19 +3602,42 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 			<symbol id="s_leisure" priority="100" src="file:/res/s_playground_private.svg" symbol-height="23" />
 		</rule>
 	</rule>
-
-	<rule cat="tms_leisure" e="any" k="amenity" v="cinema"><symbol priority="220" id="s_leisure" src="file:/res/s_cinema.svg" display="always" symbol-width="23" /></rule>
-	<rule cat="tms_leisure" e="any" k="amenity" v="theatre"><symbol priority="220" id="s_leisure" src="file:/res/s_theatre.svg" display="always" symbol-width="23" /></rule>
-	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre">
-		<caption priority="-15" symbol-id="s_leisure" cat="tms_landnames" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
+	
+	<rule cat="tms_leisure" e="any" k="leisure" v="swimming_area" zoom-min="13">
+		<symbol id="s_swimming_area" priority="220" src="file:/res/s_swimming_area.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" symbol-id="s_swimming_area" position="above" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
+
+	<rule cat="tms_leisure" e="any" k="leisure" v="water_park" zoom-min="13">
+		<symbol id="s_w_park" priority="240" src="file:/res/s_water_park.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_w_park" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>		
 
 	<rule cat="tms_leisure" e="any" k="leisure" v="beach_resort">
 		<symbol id="s_beach_resort" priority="220" src="file:/res/s_beach_resort.svg" display="always" symbol-height="23" />
 		<rule e="any" k="*" v="*">
 			<caption cat="tms_landnames" priority="220" k="name" symbol-id="s_beach_resort" position="above" font-style="bold" font-size="8" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
+	</rule>	
+
+	<rule cat="tms_leisure" e="any" k="amenity" v="public_bath" zoom-min="15">
+		<symbol id="s_public_bath" priority="220" src="file:/res/s_public_bath.svg" display="always" symbol-height="23" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" priority="240" k="name" symbol-id="s_public_bath" position="above" font-style="bold" font-size="8" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
+	
+	<rule cat="tms_leisure" e="any" k="amenity" v="cinema"><symbol priority="220" id="s_leisure" src="file:/res/s_cinema.svg" display="always" symbol-width="23" /></rule>
+	<rule cat="tms_leisure" e="any" k="amenity" v="theatre"><symbol priority="220" id="s_leisure" src="file:/res/s_theatre.svg" display="always" symbol-width="23" /></rule>
+	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre">
+		<caption priority="-15" symbol-id="s_leisure" cat="tms_landnames" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+
+	
 
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
 		<symbol priority="215" id="tms_viewpoint" src="file:/res/s_viewpoint.svg" display="always" symbol-width="17" />
@@ -3724,10 +3779,24 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		</rule>
 	</rule>
 
+	<rule cat="tms_man-made" e="any" k="man_made" v="water_works" zoom-min="14"> 
+		<symbol display="always" id="s_water_works" src="file:/res/s_water_works.svg" symbol-width="24" />
+		<rule e="any" k="*" v="*" >
+			<caption cat="tms_landnames" k="name" priority="180" symbol-id="s_water_works" dy="-4" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_man-made" e="any" k="man_made" v="wastewater_plant" zoom-min="14">
+		<symbol display="always" id="s_wastewater_plant" src="file:/res/s_wastewater_plant-3.svg" symbol-height="24" />
+		<rule e="any" k="*" v="*" >
+			<caption cat="tms_landnames" k="name" priority="180" symbol-id="s_wastewater_plant" dy="-4" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
+
 <rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="13">
 	<rule e="any" k="*" v="wind" >	<symbol id="s_generator" display="always" src="file:/res/s_power_wind.svg" symbol-height="48" /></rule>
 	<rule e="any" k="*" v="hydro|tidal|wave" ><symbol id="s_generator" display="always" src="file:/res/s_power_water.svg" symbol-width="21" /></rule>
-	<rule e="any" k="*" v="solar" ><symbol id="s_generator" display="always" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule>
+	<rule e="any" k="*" v="solar" ><symbol id="s_generator" src="file:/res/s_power_solar.svg" symbol-width="21" /></rule> <!-- display="always" -->
 	<rule e="any" k="*" v="gas" >	<symbol id="s_generator" display="always" src="file:/res/s_power_gas.svg" symbol-width="21" /></rule>	
 	<rule e="any" k="*" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" ><symbol id="s_generator" display="always" src="file:/res/s_power.svg" symbol-width="21" /></rule>
 	<rule e="any" k="*" v="coal" >	<symbol id="s_generator" display="always" src="file:/res/s_power_coal.svg" symbol-width="21" /></rule>

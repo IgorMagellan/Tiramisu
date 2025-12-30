@@ -154,6 +154,7 @@ fuel zmin=12
 30/09/2022
 добавил трещины ледника crevasse; labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean, glacier, desert
 Release version 4.3
+
 04/01/2023
 исправил tms_religion; добавлен chapel; перенес historic=wayside_cross, man_made=cross в tms_info
 30/08/2023
@@ -170,3 +171,15 @@ hillshading для Cruiser, Orux,...
 трубопроводы pipeline разделены на underground и overground
 Добавлен tower=watchtower
 Поправил military|police=checkpoint в barrier
+26/12/2025
+Добавлен public_bath, water_park в cat="tms_leisure", amenity=lounger, barrier=cattle_grid, wastewater_plant
+Изменен swimming_area в cat="tms_leisure"
+27/12/2025
+Добавлен water_works, watering_place
+28/12/2025
+Добавлено два правила для зарядки электровелосипедов ebike_charging: бесплатные и платные станции в слое Транспорт(частный)
+29/12/2025
+Переделал sports_centre - разделил area и stroke, исключил в нем building
+Убрал заливку для any tourism=attraction closed=yes, display=always для solar generator - редакторы OSM вешают тег 
+на каждую отдельную панель
+Release 4.4
