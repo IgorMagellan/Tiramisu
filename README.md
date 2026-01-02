@@ -3,8 +3,8 @@
 Rendertheme for OpenAndroMaps and Locus, Orux, Cruiser and other mapsforge-compatible programms.
 <div align="center">
 
-![Tiramisu.png](Tiramisu.png)
-
+ <img style="align:center;" src="Tiramisu.png" alt="Tiramisu Rendertheme" width="100" />
+ 
 </div>
 
 My thanks to Maki, the creator of this beautiful theme!
