@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Tiramisù 4.4 for Oruxmaps and MapsForge compatible applications
+Tiramisù 4.5 for Oruxmaps and MapsForge compatible applications
 
 by Maki
 
@@ -31,11 +31,11 @@ Contact: igor.magellan@yandex.ru
 -->
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 xsi:schemaLocation="http://mapsforge.org/renderTheme https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd"
-version="5" map-background="#ffffff" map-background-outside="#ffffff">
+version="5" map-background="#ffffff" map-background-outside="#ffffff" base-stroke-width="1">
 
 <!-- *** Styles *** -->
 
-<stylemenu id="tiramisu_4_4" defaultvalue="tms_hiking" defaultlang="en">
+<stylemenu id="tiramisu_4_5" defaultvalue="tms_hiking" defaultlang="en">
 
 <!-- Layers -->
 	<layer id="tms_contours" enabled="true">
@@ -117,48 +117,48 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<cat id="tms_picnic" />
 	</layer>
 	<layer id="tms_hknw" enabled="true">
-		<name lang="en" value="Hiking networks ⁿ" />
-		<name lang="ru" value="Пешеходные сети ⁿ" />
-		<name lang="es" value="Rutas de senderismo, PR, GR" />
-		<name lang="de" value="Wandernetzwerke ⁿ" />
-		<name lang="it" value="Reti escursionistiche ⁿ" />
-		<name lang="fr" value="Réseaux de randonnée ⁿ" />
+		<name lang="en" value="🟥Hiking networks ⁿ" />
+		<name lang="ru" value="🟥Пешеходные сети ⁿ" />
+		<name lang="es" value="🟥Rutas de senderismo, PR, GR" />
+		<name lang="de" value="🟥Wandernetzwerke ⁿ" />
+		<name lang="it" value="🟥Reti escursionistiche ⁿ" />
+		<name lang="fr" value="🟥Réseaux de randonnée ⁿ" />
 		<cat id="tms_hknw" />
 	</layer>
 	<layer id="tms_mtbnw" enabled="true">
-		<name lang="en" value="MTB networks ^" />
-		<name lang="ru" value="MTB-сети ^" />
-		<name lang="es" value="Rutas BTT" />
-		<name lang="de" value="MTB-Netzwerke ^" />
-		<name lang="it" value="reti MTB ^" />
-		<name lang="fr" value="Réseaux VTT ^" />
+		<name lang="en" value="🟪MTB networks ^" />
+		<name lang="ru" value="🟪MTB-сети ^" />
+		<name lang="es" value="🟪Rutas BTT" />
+		<name lang="de" value="🟪MTB-Netzwerke ^" />
+		<name lang="it" value="🟪reti MTB ^" />
+		<name lang="fr" value="🟪Réseaux VTT ^" />
 		<cat id="tms_mtbnw" />
 	</layer>
 	<layer id="tms_hknw-mtb" enabled="false">
-		<name lang="en" value="Hiking networks ^" />
-		<name lang="ru" value="Пешеходные сети ^" />
-		<name lang="es" value="Rutas de senderismo, PR, GR" />
-		<name lang="de" value="Wandernetzwerke ^" />
-		<name lang="it" value="Reti escursionistiche ^" />
-		<name lang="fr" value="Réseaux de randonnée ^" />
+		<name lang="en" value="🟥Hiking networks ^" />
+		<name lang="ru" value="🟥Пешеходные сети ^" />
+		<name lang="es" value="🟥Rutas de senderismo, PR, GR" />
+		<name lang="de" value="🟥Wandernetzwerke ^" />
+		<name lang="it" value="🟥Reti escursionistiche ^" />
+		<name lang="fr" value="🟥Réseaux de randonnée ^" />
 		<cat id="tms_hknw" />
 	</layer>
 	<layer id="tms_cynw-mtb" enabled="false">
-		<name lang="en" value="Cycling networks ^" />
-		<name lang="ru" value="Велосипедные сети ^" />
-		<name lang="es" value="Redes ciclistas" />
-		<name lang="de" value="Fahrradnetzwerke ^" />
-		<name lang="it" value="Reti ciclistiche ^" />
-		<name lang="fr" value="Réseaux cyclables ^" />
+		<name lang="en" value="🟦Cycling networks ^" />
+		<name lang="ru" value="🟦Велосипедные сети ^" />
+		<name lang="es" value="🟦Redes ciclistas" />
+		<name lang="de" value="🟦Fahrradnetzwerke ^" />
+		<name lang="it" value="🟦Reti ciclistiche ^" />
+		<name lang="fr" value="🟦Réseaux cyclables ^" />
 		<cat id="tms_cynw" />
 	</layer>
 	<layer id="tms_cynw" enabled="true">
-		<name lang="en" value="Cycling networks ^" />
-		<name lang="ru" value="Велосипедные сети ^" />
-		<name lang="es" value="Redes ciclistas" />
-		<name lang="de" value="Fahrradnetzwerke ^" />
-		<name lang="it" value="Reti ciclistiche ^" />
-		<name lang="fr" value="Réseaux cyclables ^" />
+		<name lang="en" value="🟦Cycling networks ^" />
+		<name lang="ru" value="🟦Велосипедные сети ^" />
+		<name lang="es" value="🟦Redes ciclistas" />
+		<name lang="de" value="🟦Fahrradnetzwerke ^" />
+		<name lang="it" value="🟦Reti ciclistiche ^" />
+		<name lang="fr" value="🟦Réseaux cyclables ^" />
 		<cat id="tms_cynw" />
 	</layer>
 	<layer id="tms_barriers-cy" enabled="true">
@@ -180,12 +180,12 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<cat id="tms_barriers" />
 	</layer>
 	<layer id="tms_tracks-cycle" enabled="true">
-		<name lang="en" value="Easy Tracks ^" />
-		<name lang="ru" value="Легкие треки ^" />
-		<name lang="es" value="Pistas ciclables" />
-		<name lang="de" value="Easy Tracks ^" />
-		<name lang="it" value="Easy Tracks ^" />
-		<name lang="fr" value="Easy Tracks ^" />
+		<name lang="en" value="Easy Tracks (tracktype=1,2)" />
+		<name lang="ru" value="Легкие треки (tracktype=1,2)" />
+		<name lang="es" value="Pistas ciclables (tracktype=1,2)" />
+		<name lang="de" value="Easy Tracks (tracktype=1,2)" />
+		<name lang="it" value="Easy Tracks (tracktype=1,2)" />
+		<name lang="fr" value="Easy Tracks (tracktype=1,2)" />
 		<cat id="tms_tracks-cycle" />
 	</layer>
 	<layer id="tms_trans-priv" enabled="false">
@@ -961,7 +961,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="*" v="ridge|arete">
 			<line stroke="#80000000" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
 			<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="13" fill="#80000000" stroke="#80bbbbbb" stroke-width="1.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
-			<lineSymbol src="file:/res/s_ridge.svg" align-center="true" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
+			<lineSymbol src="file:/res/s_ridge.svg" position="center" repeat="true" repeat-gap="180" repeat-start="10" display="always" symbol-percent="60" />
 		</rule>
 		
 		<!-- Трещины ледника -->
@@ -2573,7 +2573,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff">
 		<rule e="way" k="area" v="~|false|no">
 			<rule e="way" k="highway" v="*">
 				<rule e="way" k="oneway" v="yes|true" zoom-min="15">
-					<lineSymbol src="file:/res/s_oneway.svg" symbol-width="30" align-center="true" repeat="true" />
+					<lineSymbol src="file:/res/s_oneway.svg" symbol-width="30" position="center" repeat="true" />
 				</rule>
 			</rule>
 		</rule>

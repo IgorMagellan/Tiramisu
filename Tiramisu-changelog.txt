@@ -1,5 +1,5 @@
 ﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Tiramisu 4.4  for OpenAndroMap *
+* Tiramisu 4.5  for OpenAndroMap *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (mapsforge V4+)
 
@@ -180,6 +180,11 @@ hillshading для Cruiser, Orux,...
 Добавлено два правила для зарядки электровелосипедов ebike_charging: бесплатные и платные станции в слое Транспорт(частный)
 29/12/2025
 Переделал sports_centre - разделил area и stroke, исключил в нем building
-Убрал заливку для any tourism=attraction closed=yes, display=always для solar generator - редакторы OSM вешают тег 
-на каждую отдельную панель
+Убрал заливку для any tourism=attraction closed=yes
+Убрал display=always для solar generator - редакторы OSM вешают тег на каждую отдельную панель
 Release 4.4
+
+01/01/2026
+Замена атрибута align-center="true" на position="center" для lineSymbol s_oneway, ridge|arete
+04/01/2026
+Емодзи (цветные квадраты) в меню на hiking, mtb, cycling networks
