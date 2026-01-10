@@ -188,3 +188,17 @@ Release 4.4
 Замена атрибута align-center="true" на position="center" для lineSymbol s_oneway, ridge|arete
 04/01/2026
 Емодзи (цветные квадраты) в меню на hiking, mtb, cycling networks
+07/01/2026
+Для LoMaps_V4+ устранено неотображение троп на стиле hiking, имеющих тег sac_scale путем добавления для всех блоков правил trail_visibility:
+T1 --> T1|hiking
+T2 --> T2|mountain_hiking
+T3 --> T3|demanding_mountain_hiking
+а также:
+T4 --> T4|alpine_hiking
+T5|RT5 --> T5|RT5|demanding_alpine_hiking
+T6|RT6 --> T6|RT6|difficult_alpine_hiking
+08/01/2026
+Добавил иконку s_farmyard
+Добавил правило leisure=fitness_station. (s_fitness_dumbbell-4) Отображается ТОЛЬКО(!) в LoMaps_V4+
+Ремонт leisure=track|byway|ls_track неотображения на OAM, добавил based_on_rel area_no или mp
+Исправил неотображение тротуаров в отношениях на OAM и LoMaps_V4 (based_on_rel=area_no)

@@ -842,20 +842,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		</rule>
 	</rule>
 
-<!-- 	<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
-		<line stroke="#CCCCCC" stroke-width="1.1" stroke-linecap="butt" />
-		<line stroke="#9CA6BA" stroke-width="0.8" stroke-dasharray="2.2,0.7" scale="all" stroke-linecap="butt" />
-		<line stroke="#FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-		<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat="true" repeat-start="100" repeat-gap="300"  />
-	</rule>
-
-	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
-		<rule e="way" k="man_made" v="pipeline">
-			<line stroke="#809CA6BA" stroke-width="1.1" stroke-dasharray="1.1,0.35" scale="all" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="8" fill="#545f78" stroke="#FFFFFF" stroke-width="2.0" repeat="true" repeat-start="100" repeat-gap="300"  />			
-		</rule>
-	</rule> -->
-	
 	<rule cat="tms_water_land" e="way" k="waterway" v="dam">
 		<line stroke="#333333" stroke-width="1" />
 		<line stroke="#CCCCCC" stroke-width="1" stroke-dasharray="10,1" stroke-linecap="butt" />
@@ -909,9 +895,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 	<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
 </rule>
 
-<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
-		<rule e="way" k="area" v="yes|true"> <area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" /> </rule>
-		<rule e="way" k="area" v="~|no|false">
+	<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
+		<rule e="way" k="area|based_on_rel" v="yes|true|mp"> <area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" /> </rule>
+		<rule e="way" k="area|based_on_rel" v="~|area_no|no|false">
 			<line stroke="#6FC18E" stroke-width="0.8" />
 			<line stroke="#BDE3CB" stroke-width="0.7" />
 		</rule>
@@ -1034,7 +1020,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 
 <!-- hiking relations -->
 
-	<rule cat="tms_hknw" e="way" k="network|hknetwork" v="iwn|nwn|rwn|lwn|own">
+	<rule cat="tms_hknw" e="way" k="hknetwork|network" v="iwn|nwn|rwn|lwn|own">
 	
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#64e52929" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="14" zoom-max="14"><line stroke="#64e52929" stroke-width="2.52" dy="0.84" stroke-linecap="butt" /></rule>
@@ -1098,6 +1084,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		</rule>
 	</rule>
 
+	
 	<rule cat="tms_cynw" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
 
 		<rule e="way" k="highway" v="path|footway|steps" zoom-min="13" zoom-max="13"><line stroke="#641639cb" stroke-width="2.55" dy="0.85" stroke-linecap="butt" /></rule>
@@ -1698,18 +1685,18 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		</rule>
 	</rule>
 	<rule e="way" k="tunnel" v="~|no|false">
-		<rule e="way" k="area" v="~|no|false">
+		<rule e="way" k="area|based_on_rel" v="~|no|false|area_no">
 
 <!-- paths and footways -->
-			<rule cat="tms_hk" e="way" k="highway" v="steps" zoom-min="13">
-				<line stroke="#5a5f54" stroke-width="0.9" stroke-linecap="butt"/>
-				<line stroke="#CACCC6" stroke-width="0.8" stroke-linecap="butt"/>
-				<line stroke="#444444" stroke-width="0.9" stroke-dasharray="0.24,0.38" stroke-linecap="butt" scale="all" />
-				<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16">
-					<pathText cat="tms_landnames" k="name" font-style="normal" font-size="10" stroke="#555555" stroke-width="2" />
-				</rule>
+		<rule cat="tms_hk" e="way" k="highway" v="steps" zoom-min="13">
+			<line stroke="#5a5f54" stroke-width="0.9" stroke-linecap="butt"/>
+			<line stroke="#CACCC6" stroke-width="0.8" stroke-linecap="butt"/>
+			<line stroke="#444444" stroke-width="0.9" stroke-dasharray="0.24,0.38" stroke-linecap="butt" scale="all" />
+			<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="16">
+				<pathText cat="tms_landnames" k="name" font-style="normal" font-size="10" stroke="#555555" stroke-width="2" />
 			</rule>
-			
+		</rule>
+		
 		<rule e="way" k="highway" v="footway" zoom-min="13" zoom-max="13"><line stroke="#0000FF" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="14" zoom-max="14"><line stroke="#0000FF" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="15" zoom-max="15"><line stroke="#0000FF" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
@@ -1718,7 +1705,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		<rule e="way" k="highway" v="footway" zoom-min="18" zoom-max="18"><line stroke="#0000FF" stroke-width="0.35"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="19" zoom-max="19"><line stroke="#0000FF" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
 		<rule e="way" k="highway" v="footway" zoom-min="20" zoom-max="99"><line stroke="#0000FF" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
-	
+
  		<rule cat="tms_hk" e="way" k="highway" v="path">
  			<rule e="way" k="sac_scale" v="~" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.68"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.67"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
@@ -1737,110 +1724,110 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 			<rule e="way" k="sac_scale" v="~" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-dasharray="10.05,11.11" stroke-linecap="round" /></rule>
 			<rule e="way" k="sac_scale" v="~" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-dasharray="10.75,11.88" stroke-linecap="round" /></rule>
 			<rule e="way" k="trail_visibility" v="good|excellent"> 
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1"   zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2"	 zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3"   zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking"   zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking"	 zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking"   zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-linecap="round" /></rule>
  			</rule>
 			<rule e="way" k="trail_visibility" v="intermediate|bad">
-				<rule e="way" k="sac_scale" v="T1" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
 			</rule>
 			<rule e="way" k="trail_visibility" v="horrible|no">
-				<rule e="way" k="sac_scale" v="T1" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.98"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.97"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.83"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.67"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.52"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.40"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.30"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.23"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.88"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.87"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.75"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.60"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.47"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.36"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.27"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.20"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.78"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.77"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.66"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.54"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.42"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.32"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.24"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.18"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.98"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.97"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.83"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.67"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.52"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.40"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.30"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.23"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.88"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.87"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.75"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.60"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.47"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.36"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.27"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.20"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.78"  stroke-dasharray="0.2,3.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.77"  stroke-dasharray="0.2,4.24" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.66"  stroke-dasharray="0.2,5.20" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.54"  stroke-dasharray="0.2,6.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.42"  stroke-dasharray="0.2,6.71" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.32"  stroke-dasharray="0.2,7.35" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.24"  stroke-dasharray="0.2,7.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.18"  stroke-dasharray="0.2,8.49" stroke-linecap="round" /></rule>
 			</rule>
  			<rule e="way" k="trail_visibility" v="~">
-				<rule e="way" k="sac_scale" v="T1" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T1" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T2" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
-				<rule e="way" k="sac_scale" v="T3" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13" zoom-max="13"><line stroke="#AB0F23" stroke-width="0.85"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="14" zoom-max="14"><line stroke="#AB0F23" stroke-width="0.84"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="15" zoom-max="15"><line stroke="#AB0F23" stroke-width="0.72"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="16" zoom-max="16"><line stroke="#AB0F23" stroke-width="0.58"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="17" zoom-max="17"><line stroke="#AB0F23" stroke-width="0.46"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="18" zoom-max="18"><line stroke="#AB0F23" stroke-width="0.35"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="19" zoom-max="19"><line stroke="#AB0F23" stroke-width="0.26"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="20" zoom-max="99"><line stroke="#AB0F23" stroke-width="0.20"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#E1001A" stroke-width="0.77"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#E1001A" stroke-width="0.76"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#E1001A" stroke-width="0.65"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#E1001A" stroke-width="0.52"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#E1001A" stroke-width="0.41"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#E1001A" stroke-width="0.31"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#E1001A" stroke-width="0.24"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#E1001A" stroke-width="0.18"  stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13" zoom-max="13"><line stroke="#ff6b00" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="14" zoom-max="14"><line stroke="#ff6b00" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="15" zoom-max="15"><line stroke="#ff6b00" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="16" zoom-max="16"><line stroke="#ff6b00" stroke-width="0.47"  stroke-dasharray="08.00,08.00" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="17" zoom-max="17"><line stroke="#ff6b00" stroke-width="0.37"  stroke-dasharray="08.94,08.94" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="18" zoom-max="18"><line stroke="#ff6b00" stroke-width="0.28"  stroke-dasharray="09.80,09.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="19" zoom-max="19"><line stroke="#ff6b00" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="round" /></rule>
+				<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="20" zoom-max="99"><line stroke="#ff6b00" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="round" /></rule>
 			</rule>
- 			<rule e="way" k="sac_scale" v="T4">
+ 			<rule e="way" k="sac_scale" v="T4|alpine_hiking">
 				<rule e="way" k="sac_scale" v="*"   zoom-min="13" zoom-max="13"><line stroke="#D9CDBA" stroke-width="0.68"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="sac_scale" v="*"   zoom-min="14" zoom-max="14"><line stroke="#D9CDBA" stroke-width="0.67"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="sac_scale" v="*"   zoom-min="15" zoom-max="15"><line stroke="#D9CDBA" stroke-width="0.58"  stroke-linecap="butt" /></rule>
@@ -1858,7 +1845,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 				<rule e="way" k="sac_scale" v="*"   zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="butt" /></rule>
 				<rule e="way" k="sac_scale" v="*"   zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="butt" /></rule>
 			</rule>
- 			<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5">
+ 			<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking">
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="13" zoom-max="13"><line stroke="#D9CDBA" stroke-width="0.68"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="14" zoom-max="14"><line stroke="#D9CDBA" stroke-width="0.67"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="15" zoom-max="15"><line stroke="#D9CDBA" stroke-width="0.58"  stroke-linecap="butt" /></rule>
@@ -1867,14 +1854,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="18" zoom-max="18"><line stroke="#D9CDBA" stroke-width="0.28"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="19" zoom-max="19"><line stroke="#D9CDBA" stroke-width="0.21"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="20" zoom-max="99"><line stroke="#D9CDBA" stroke-width="0.16"  stroke-linecap="butt" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="13" zoom-max="13"><line stroke="#FFAA00" stroke-width="0.77"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="14" zoom-max="14"><line stroke="#FFAA00" stroke-width="0.76"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="15" zoom-max="15"><line stroke="#FFAA00" stroke-width="0.65"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="16" zoom-max="16"><line stroke="#FFAA00" stroke-width="0.52"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="17" zoom-max="17"><line stroke="#FFAA00" stroke-width="0.41"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="18" zoom-max="18"><line stroke="#FFAA00" stroke-width="0.31"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="19" zoom-max="19"><line stroke="#FFAA00" stroke-width="0.24"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5"  zoom-min="20" zoom-max="99"><line stroke="#FFAA00" stroke-width="0.18"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="13" zoom-max="13"><line stroke="#FFAA00" stroke-width="0.77"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="14" zoom-max="14"><line stroke="#FFAA00" stroke-width="0.76"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="15" zoom-max="15"><line stroke="#FFAA00" stroke-width="0.65"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="16" zoom-max="16"><line stroke="#FFAA00" stroke-width="0.52"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="17" zoom-max="17"><line stroke="#FFAA00" stroke-width="0.41"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="18" zoom-max="18"><line stroke="#FFAA00" stroke-width="0.31"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="19" zoom-max="19"><line stroke="#FFAA00" stroke-width="0.24"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking"  zoom-min="20" zoom-max="99"><line stroke="#FFAA00" stroke-width="0.18"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="butt" /></rule>
@@ -1884,7 +1871,7 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="19" zoom-max="19"><line stroke="#000000" stroke-width="0.21"  stroke-dasharray="10.58,10.58" stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="20" zoom-max="99"><line stroke="#000000" stroke-width="0.16"  stroke-dasharray="11.31,11.31" stroke-linecap="butt" /></rule>
 			</rule>
- 			<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6">
+ 			<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking">
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="13" zoom-max="13"><line stroke="#D9CDBA" stroke-width="0.68"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="14" zoom-max="14"><line stroke="#D9CDBA" stroke-width="0.67"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="15" zoom-max="15"><line stroke="#D9CDBA" stroke-width="0.58"  stroke-linecap="butt" /></rule>
@@ -1893,14 +1880,14 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="18" zoom-max="18"><line stroke="#D9CDBA" stroke-width="0.28"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="19" zoom-max="19"><line stroke="#D9CDBA" stroke-width="0.21"  stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="20" zoom-max="99"><line stroke="#D9CDBA" stroke-width="0.16"  stroke-linecap="butt" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="13" zoom-max="13"><line stroke="#FF0000" stroke-width="0.77"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="14" zoom-max="14"><line stroke="#FF0000" stroke-width="0.76"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="15" zoom-max="15"><line stroke="#FF0000" stroke-width="0.65"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="16" zoom-max="16"><line stroke="#FF0000" stroke-width="0.52"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="17" zoom-max="17"><line stroke="#FF0000" stroke-width="0.41"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="18" zoom-max="18"><line stroke="#FF0000" stroke-width="0.31"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="19" zoom-max="19"><line stroke="#FF0000" stroke-width="0.24"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6"  zoom-min="20" zoom-max="99"><line stroke="#FF0000" stroke-width="0.18"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="13" zoom-max="13"><line stroke="#FF0000" stroke-width="0.77"  stroke-dasharray="0,05.90,0.20,1.90" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="14" zoom-max="14"><line stroke="#FF0000" stroke-width="0.76"  stroke-dasharray="0,08.34,0.28,2.69" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="15" zoom-max="15"><line stroke="#FF0000" stroke-width="0.65"  stroke-dasharray="0,10.22,0.35,3.29" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="16" zoom-max="16"><line stroke="#FF0000" stroke-width="0.52"  stroke-dasharray="0,11.80,0.40,3.80" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="17" zoom-max="17"><line stroke="#FF0000" stroke-width="0.41"  stroke-dasharray="0,13.19,0.45,4.25" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="18" zoom-max="18"><line stroke="#FF0000" stroke-width="0.31"  stroke-dasharray="0,14.45,0.49,4.65" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="19" zoom-max="19"><line stroke="#FF0000" stroke-width="0.24"  stroke-dasharray="0,15.61,0.53,5.03" stroke-linecap="round" /></rule>
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking"  zoom-min="20" zoom-max="99"><line stroke="#FF0000" stroke-width="0.18"  stroke-dasharray="0,16.69,0.57,5.37" stroke-linecap="round" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="13" zoom-max="13"><line stroke="#000000" stroke-width="0.68"  stroke-dasharray="04.00,04.00" stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="14" zoom-max="14"><line stroke="#000000" stroke-width="0.67"  stroke-dasharray="05.66,05.66" stroke-linecap="butt" /></rule>
 				<rule e="way" k="raw_sac_scale|sac_scale" v="*"   zoom-min="15" zoom-max="15"><line stroke="#000000" stroke-width="0.58"  stroke-dasharray="06.93,06.93" stroke-linecap="butt" /></rule>
@@ -3486,7 +3473,9 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		<rule e="any" k="*" v="roller_skating">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_roller_skating.svg" symbol-width="23" /></rule>
 		<rule e="any" k="*" v="miniature_golf">		<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_minigolf.svg" symbol-width="23" /></rule>
 		<rule e="any" k="*" v="climbing_adventure">	<symbol priority="225" id="s_sport" display="always" src="file:/res/s_sport_climbing_adventure.svg" symbol-width="23" /></rule>
-		<rule e="any" k="*" v="*" zoom-min="15">
+		<rule e="any" k="*" v="fitness_station">	<symbol priority="220" id="s_sport" display="always" src="file:/res/s_fitness_dumbbell-4.svg" symbol-height="16" /> </rule>
+		<!-- вариант для fitness_station -> fitness_runner-2.svg -->
+		<rule e="any" k="*" v="*" zoom-min="15"> 
 			<caption cat="tms_landnames" symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="9" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
@@ -3637,7 +3626,6 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		<caption priority="-15" symbol-id="s_leisure" cat="tms_landnames" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
-	
 
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
 		<symbol priority="215" id="tms_viewpoint" src="file:/res/s_viewpoint.svg" display="always" symbol-width="17" />
@@ -3790,6 +3778,13 @@ version="5" map-background="#ffffff" map-background-outside="#ffffff" base-strok
 		<symbol display="always" id="s_wastewater_plant" src="file:/res/s_wastewater_plant-3.svg" symbol-height="24" />
 		<rule e="any" k="*" v="*" >
 			<caption cat="tms_landnames" k="name" priority="180" symbol-id="s_wastewater_plant" dy="-4" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
+
+	<rule cat="tms_man-made" e="any" k="landuse" v="farmyard" zoom-min="14">
+		<symbol display="always" id="s_farmyard" src="file:/res/s_farmyard_v.svg" symbol-width="25" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" priority="200" symbol-id="s_farmyard" position="below" font-style="bold" font-size="9" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>	
 
